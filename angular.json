@@ -27,11 +27,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/shared/styles"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
           },
+          
           "configurations": {
             "production": {
               "budgets": [
@@ -63,8 +69,10 @@
               "namedChunks": true
             }
           },
+          
           "defaultConfiguration": "production"
         },
+        
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
@@ -102,6 +110,10 @@
           }
         }
       }
+      
     }
+  },
+  "cli": {
+    "analytics": "02c0f60d-ee57-4c00-827e-675dd1bb65dc"
   }
 }
