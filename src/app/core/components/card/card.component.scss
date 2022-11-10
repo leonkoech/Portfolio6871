@@ -1,0 +1,28 @@
+$gold: rgba(202, 181, 88, 0.952);
+.card {
+  &__parent {
+    height: auto;
+    width: auto;
+    padding: 30px;
+    width: fit-content;
+    border: 1px solid $gold
+  }
+  &__image {
+    height: 30vh;
+    width: fit-content;
+    img {
+      object-fit: contain;
+      height: inherit;
+    }
+  }
+  &__details {
+    color: $gold;
+    max-width: 25vw;
+    text-align: center;
+  }
+}
+// child one 
+// position: absolute;
+// /* height: 98vh; */
+// right: 0;
+// top: 10%;
