@@ -2,9 +2,11 @@ $phone: 600px;
 $tablet: 900px;
 $large: 1200px;
 $extra_large: 1800px;
+
 $sm:"small";
 $md:"med";
 $lg: "large";
+
 $primary: white;
 $secondary: rgb(8 12 31);
 
@@ -47,6 +49,9 @@ $secondary: rgb(8 12 31);
     @include tablet-up{
         font-size: 18px;
     }
+    @include large-screen{
+        font-size: 23px;
+    }
   }
   @if $size == $md {
     @include tablet-down{
@@ -55,12 +60,18 @@ $secondary: rgb(8 12 31);
     @include tablet-up{
         font-size: 22px;
     }
+    @include large-screen{
+        font-size: 27px;
+    }
   }
   @if $size == $lg {
     @include tablet-down{
         font-size: 30px;
     }
     @include tablet-up{
+        font-size: 45px;
+    }
+    @include large-screen{
         font-size: 45px;
     }
   }

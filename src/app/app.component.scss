@@ -9,7 +9,8 @@ $selected: #ff8484;
 .side_nav {
   position: fixed;
   width: 10vw;
-  height: 99.9vh;
+  height: 89.9vh;
+    padding-top: 10vh;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@ $selected: #ff8484;
     span {
       transform: rotate(-90deg);
       text-align: center;
+      @include fontSize($md);
       @include tablet-down{
         @include fontSize($sm);
       }
@@ -117,7 +119,14 @@ $selected: #ff8484;
         width: 80vw;
     }
     @include tablet-up{
-        display: none;
+        width: 10vw;
+        .mat-icon{
+            @include fontSize($md)
+        }
+        &_clicked{
+            width: 50vw;
+            @include fontSize($lg)
+        }
     }
 }
 .main_content {
@@ -157,14 +166,16 @@ $selected: #ff8484;
         border-radius: 25vh;
         width: 65vw;
     }
-    img {
+    div {
       height: inherit;
       margin-left: -90%;
       background-size: cover;
       @include tablet-down{
         height: inherit;
-    width: inherit;
-    margin-left: 0%;
+        width: inherit;
+        margin-left: 0%;
+        background-repeat: no-repeat;
+        background-position: center;
    
       }
     }
@@ -191,6 +202,7 @@ $selected: #ff8484;
       }
   }
   .active {
+    background-color: $selected;
     height: 20px;
     width: 20px;
     @include tablet-down{
@@ -262,7 +274,37 @@ $selected: #ff8484;
     }
     p {
     //   font-size: 25px;
-    @include fontSize($md)
+    @include fontSize($md);
+    a{
+        text-decoration: none;
+        color: #c7deed;
+    }
+    }
+  }
+  &_buttons{
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: 45%;
+        height: 8vh;
+        background: transparent;
+       
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+    &_inactive{
+         @include fontSize($sm);
+        color: $primary;
+        border: 1px solid $primary;
+    }
+    &_active{
+        @include fontSize($sm);
+        color: $selected;
+        border: 1px solid $selected;
     }
   }
 }

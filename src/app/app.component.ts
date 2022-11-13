@@ -20,6 +20,7 @@ export class AppComponent {
     }
   ]
   currentImage = 0;
+  summary = true;
   expanded: boolean = false;
    ngOnInit(): void{
     this.changeImage()
@@ -40,5 +41,8 @@ export class AppComponent {
       await new Promise(resolve => setTimeout(resolve, 3000)); 
       
     }
+  }
+  summarize(param:boolean){
+    this.summary = param;
   }
 }
