@@ -1,61 +1,160 @@
 <div class="parent">
-  <div (click)="expandSideNav()" [ngClass]="!expanded?'menu-button':'menu-button menu-button_clicked'">
-     <mat-icon class="mat-icon">{{!expanded?'chevron_right':'close'}}</mat-icon>
-     <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
-     <!-- <mat-icon *ngIf="expanded" aria-hidden="false" aria-label="close nav" fontIcon="close"></mat-icon>
+  <div
+    (click)="expandSideNav()"
+    [ngClass]="!expanded ? 'menu-button' : 'menu-button menu-button_clicked'"
+  >
+    <mat-icon class="mat-icon">{{
+      !expanded ? "chevron_right" : "close"
+    }}</mat-icon>
+    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
+    <!-- <mat-icon *ngIf="expanded" aria-hidden="false" aria-label="close nav" fontIcon="close"></mat-icon>
      <mat-icon *ngIf="!expanded" aria-hidden="false" aria-label="open nav" fontIcon="arrow_forward"></mat-icon> -->
   </div>
- 
-  <div [ngClass]="!expanded?'side_nav':'side_nav side_nav_expanded'">
-    <div class="active"> <span>Who?</span> </div>
-     <div> <span>Education</span></div>
-     <div><span>Experience (Past Internships)</span></div> 
-      <div><span>Projects & Teamwork</span></div>
-      <div><span>Achievements, Awards & misc.</span></div>
+
+  <div [ngClass]="!expanded ? 'side_nav' : 'side_nav side_nav_expanded'">
+    <div class="active"><span>Who?</span></div>
+    <div><span>Education</span></div>
+    <div><span>Experience (Past Internships)</span></div>
+    <div><span>Projects & Teamwork</span></div>
+    <div><span>Achievements, Awards & misc.</span></div>
   </div>
   <div class="main_content">
     <!-- right side of the page -->
     <div class="image_component">
-      <div class="image"> 
-        <div [ngStyle]="{ 'background-image': 'url(' + images[currentImage].src + ')'}"></div>
+      <div class="image">
+        <div
+          [ngStyle]="{
+            'background-image': 'url(' + images[currentImage].src + ')'
+          }"
+        ></div>
       </div>
       <div class="round_indicators">
-        <span *ngFor="let item of images; let i=index;" > 
-          <div [ngClass]="currentImage==i?'active':''"></div>
+        <span *ngFor="let item of images; let i = index">
+          <div [ngClass]="currentImage == i ? 'active' : ''"></div>
         </span>
       </div>
     </div>
     <div class="right_component">
-      <div class="first_header_container"><h2>Hi there, I'm Leon :)</h2><div></div></div>
-      <div class="first_header_spinner">
-        <img src="../assets/images/fullStack.svg"/>
-        <img src="../assets/images/githubCampusExpert.svg"/>
-        <img src="../assets/images/techClubPresident.svg"/>
+     
+      <div class="first_header_container">
+        <h2>Hi there, I'm Leon :)</h2>
+        <div></div>
       </div>
-      <div class="right_component_content">
+      <!-- <div class="first_header_spinner spin_image">
+        <img src="../assets/images/fullStack.svg" />
+        <img src="../assets/images/githubCampusExpert.svg" />
+        <img src="../assets/images/techClubPresident.svg" />
+      </div> -->
+      <div class="right_component_content right_component_content_intro">
         <span>Full Stack Engineer | VR Enthusiast</span>
-        <p *ngIf="summary">I am a very passionate Full Stack software engineer currently interning at <a href="https://sustainible.io/">Sustainible</a>. <br>Previously, I interned at <a href="https://www.instrument.com/">Instrument(Stagwell)</a>.
-          I am enthusiastic about the developer community having founded, and currently the president, of the <a href="https://fnutech.org/">FNU tech club</a>I am also a <a>Github Campus Expert</a>
-        </p>
-        <p *ngIf="!summary">
-          Hello, my name is Leon Kipkoech. 
-          I am originally from Nairobi, Kenya but currently studying in Miami, Florida. <br>
-          I believe in community, especially regarding inclusion, because the more the merrier, right? 
-          I have participated in various hackathons ever since I started my studies and I fell in love with them. 
-          I even traveled to France for Laval Virtual student hackathon in 2021. <br>
-          Currently I'm interning at a small startup in Pittsburgh (remote) where I fell in love with full stack web development, 
-          I also ventured into front-end development for Stagwell's <a href="https://www.instrument.com/">Instrument</a>. While at instrument I worked on a project for 
-          Microsoft <a href="https://unlocked.microsoft.com">(unlocked.microsoft.com)</a> and Google <a href="https://design.google.com">(design.google.com)</a>. 
-          The google one will be made open source, so I count it as one of the open source projects I’ve done, yatta!<br>
-          Also, I am the tech club president(<a href="https://fnutech.org/">FNU tech club</a>) at my school and since taking that chair, we’ve seen an increase of members by a substantial amount. 
-          Stack I use? I do/have done a lot (i think) Flask, Django, Flutter, Android Java, Angular, Vue, Next, Unity C#(VR dev scripting), LUA, etc haha
-          I am a Junior set to graduate in 2024. 
+        <div [ngClass]="!summary ? 'hidden_text' : 'visible_text'">
+          <p>
+            I am a very passionate Full Stack software engineer currently
+            interning at <a href="https://sustainible.io/">Sustainible</a>.
+            <br />Previously, I interned at
+            <a href="https://www.instrument.com/">Instrument(Stagwell)</a>. I am
+            enthusiastic about the developer community having founded, and
+            currently the president, of the
+            <a href="https://fnutech.org/">FNU tech club</a>I am also a
+            <a>Github Campus Expert</a>
+          </p>
+        </div>
+
+        <p [ngClass]="summary ? 'hidden_text' : 'visible_text'">
+          Hello, my name is Leon Kipkoech. I am originally from Nairobi, Kenya
+          but currently studying in Miami, Florida. <br />
+          I believe in community, especially regarding inclusion, because the
+          more the merrier, right? I have participated in various hackathons
+          ever since I started my studies and I fell in love with them. I even
+          traveled to France for Laval Virtual student hackathon in 2021. <br />
+          Currently I'm interning at a small startup in Pittsburgh (remote)
+          where I fell in love with full stack web development, I also ventured
+          into front-end development for Stagwell's
+          <a href="https://www.instrument.com/">Instrument</a>. While at
+          instrument I worked on a project for Microsoft
+          <a href="https://unlocked.microsoft.com">(unlocked.microsoft.com)</a>
+          and Google
+          <a href="https://design.google.com">(design.google.com)</a>. The
+          google one will be made open source, so I count it as one of the open
+          source projects I’ve done, yatta!<br />
+          Also, I am the tech club president(<a href="https://fnutech.org/"
+            >FNU tech club</a
+          >) at my school and since taking that chair, we’ve seen an increase of
+          members by a substantial amount. Stack I use? I do/have done a lot (i
+          think) Flask, Django, Flutter, Android Java, Angular, Vue, Next, Unity
+          C#(VR dev scripting), LUA, etc haha I am a Junior set to graduate in
+          2024.
         </p>
         <p>Also, I am actively looking for internships for 2023 :)</p>
-        <div class="right_component_buttons">
-          <button (click)="summarize(true)" [ngClass]="summary?'right_component_buttons_active':'right_component_buttons_inactive'">shorter version</button>
-          <button (click)="summarize(false)" [ngClass]="!summary?'right_component_buttons_active':'right_component_buttons_inactive'">longer version</button>
+       
+      </div>
+      <div class="right_component_buttons">
+        <button
+          (click)="summarize(true)"
+          [ngClass]="
+            summary
+              ? 'right_component_buttons_active'
+              : 'right_component_buttons_inactive'
+          "
+        >
+        <mat-icon>unfold_less</mat-icon>
+          shorter version
+        </button>
+        <button
+          (click)="summarize(false)"
+          [ngClass]="
+            !summary
+              ? 'right_component_buttons_active'
+              : 'right_component_buttons_inactive'
+          "
+        ><mat-icon>unfold_more</mat-icon>
+          longer version
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="main_content one_col">
+    <div  class="right_component right_component_full right_component_two_col experience_card">
+      <div class="spin_image experience_card_image_container">
+        <a href="https://www.instrument.com/"  class="experience_card_image_container_title">
+          
+          <h2>Instrument</h2>
+          <mat-icon class="mat-icon">arrow_outward</mat-icon>
+        
+        </a>
+        <img src="../assets/images/fullStack.svg" />
+        <div class="experience_card_image_container_text">
+          <h2 class="experience_card_image_container_text_h2">01</h2>
         </div>
+      </div>
+      <div class="experience_card_text_container">
+        <div class="justify_start">
+          <div class="eyebrow">
+            <mat-icon class="mat-icon">date_range</mat-icon
+            ><span>June - August 2022 </span>
+          </div>
+          <!-- <span> | </span> -->
+          <div class="eyebrow">
+            <mat-icon class="mat-icon">pin_drop</mat-icon><span>Remote</span>
+          </div>
+        </div>
+        <div class="text_with_title">
+          <h2>Development Intern</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+            in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        
       </div>
     </div>
   </div>

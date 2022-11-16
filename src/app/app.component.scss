@@ -1,16 +1,15 @@
-@import './shared/styles/globals.scss';
+@import "./shared/styles/globals.scss";
 $selected: #ff8484;
 
 ::ng-deep * {
-    margin: 0;
-    padding: 0;
-   
-  }
+  margin: 0;
+  padding: 0;
+}
 .side_nav {
   position: fixed;
   width: 10vw;
   height: 89.9vh;
-    padding-top: 10vh;
+  padding-top: 10vh;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@ $selected: #ff8484;
   backdrop-filter: invert(10%);
   transition: backdrop-filter 2s;
   transition: width 1s;
-  @include tablet-down{
+  @include tablet-down {
     width: 20vw;
     height: 89.9vh;
     padding-top: 10vh;
@@ -38,145 +37,142 @@ $selected: #ff8484;
       transform: rotate(-90deg);
       text-align: center;
       @include fontSize($md);
-      @include tablet-down{
+      @include tablet-down {
         @include fontSize($sm);
       }
-      
+
       transition: font-size 0.5s;
       transition: transform 1s;
-    
     }
-    &:hover{
-        border: 0.5px solid $primary;
-        cursor: pointer;   
-        backdrop-filter: invert(10%);
-        span{
-            transform: rotate(0deg);
-            color: $selected;
-            @include fontSize($md)
-        }
+    &:hover {
+      border: 0.5px solid $primary;
+      cursor: pointer;
+      backdrop-filter: invert(10%);
+      span {
+        transform: rotate(0deg);
+        color: $selected;
+        @include fontSize($md);
+      }
     }
-    
   }
-  .active{
-        border: 0.5px solid $selected;
-        span{
-            
-            color: $selected;
-            @include fontSize($md);
-            @include tablet-down{
-                transform: rotate(0deg);
-                @include fontSize($sm)
-            } 
-        }
+  .active {
+    // border: 0.5px solid $selected;
+    background: #ff6c6c21;
+    span {
+      color: $selected;
+      @include fontSize($md);
+      @include tablet-down {
+        transform: rotate(0deg);
+        @include fontSize($sm);
+      }
     }
-  &_expanded{
+  }
+  &_expanded {
     width: 50vw;
     backdrop-filter: blur(15px);
-    @include tablet-down{
-        width: 80vw;
+    @include tablet-down {
+      width: 80vw;
     }
-    div{
-        span{
-            transform: rotate(0deg); 
-            @include fontSize($md);
-            transition: font-size 0.5s;
-        }
-        &:hover{
+    div {
+      span {
+        transform: rotate(0deg);
+        @include fontSize($md);
+        transition: font-size 0.5s;
+      }
+      &:hover {
         border: 0.5px transparent;
         border-bottom: 0.5px solid $primary;
 
-        span{
-            @include fontSize($lg)
+        span {
+          @include fontSize($lg);
         }
-        }
+      }
     }
-    .active{
-        border-color: transparent;
-        border-bottom: 0.5px solid $selected;
-        span{
-            color: $selected;
-            @include fontSize($lg)
-        }
+    .active {
+      border-color: transparent;
+      border-bottom: 0.5px solid $selected;
+      span {
+        color: $selected;
+        @include fontSize($lg);
+      }
     }
   }
 }
-.menu-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 10vh;
-    transition: backdrop-filter 2s;
-    transition: width 1s;
-    position: fixed;
-    z-index: 2;
-    .mat-icon{
-        @include fontSize($md);
-        color: rgb(255, 255, 255);
-    } 
-    &_clicked{
-        width: 80vw;
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 10vh;
+  transition: backdrop-filter 2s;
+  transition: width 1s;
+  position: fixed;
+  z-index: 2;
+  .mat-icon {
+    @include fontSize($md);
+    color: rgb(255, 255, 255);
+  }
+  &_clicked {
+    width: 80vw;
+  }
+  @include tablet-up {
+    width: 10vw;
+    .mat-icon {
+      @include fontSize($md);
     }
-    @include tablet-up{
-        width: 10vw;
-        .mat-icon{
-            @include fontSize($md)
-        }
-        &_clicked{
-            width: 50vw;
-            @include fontSize($lg)
-        }
+    &_clicked {
+      width: 50vw;
+      @include fontSize($lg);
     }
+  }
 }
 .main_content {
-  position: absolute;
-  right: 0;
-  width: 85vw;
+  @include two_grid;
   display: grid;
-  grid-template-columns: 30% 70%;
   height: 95%;
-  align-items: end;
-  margin: 1.5% 2.5%;
-  @include tablet-down{
+  margin-left: 13vw;
+  margin-right: 3vw;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  @include tablet-down {
     width: 80vw;
     display: initial;
     margin: unset;
   }
 }
 .image_component {
-  height: 90vh;
-  width: 20vw;
   border-radius: 20vw;
-  @include tablet-down{
-        height: auto;
-        width: 90%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet-down {
+    height: auto;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
   .image {
     height: 70vh;
     width: 20vw;
     border-radius: 20vw;
     overflow: hidden;
-    @include tablet-down{
-        height: 25vh;
-        border-radius: 25vh;
-        width: 65vw;
+    @include tablet-down {
+      height: 25vh;
+      border-radius: 25vh;
+      width: 65vw;
     }
     div {
       height: inherit;
       margin-left: -90%;
       background-size: cover;
-      @include tablet-down{
+      @include tablet-down {
         height: inherit;
         width: inherit;
         margin-left: 0%;
         background-repeat: no-repeat;
         background-position: center;
-   
       }
     }
   }
@@ -187,27 +183,27 @@ $selected: #ff8484;
   justify-content: space-around;
   align-items: center;
   padding: 20%;
-  @include tablet-down{
+  @include tablet-down {
     padding: 10px;
   }
-  
+
   div {
     background-color: $primary;
     height: 15px;
     width: 15px;
     border-radius: 15px;
-    @include tablet-down{
-        height: 5px;
-        width: 5px;
-      }
+    @include tablet-down {
+      height: 5px;
+      width: 5px;
+    }
   }
   .active {
     background-color: $selected;
     height: 20px;
     width: 20px;
-    @include tablet-down{
-        height: 10px;
-        width: 10px;
+    @include tablet-down {
+      height: 10px;
+      width: 10px;
     }
   }
 }
@@ -217,7 +213,6 @@ $selected: #ff8484;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    padding: 0 5% 5% 5%;
     h2 {
       @include fontSize($lg);
       min-width: fit-content;
@@ -235,13 +230,7 @@ $selected: #ff8484;
     justify-content: space-evenly;
     img {
       height: 20vh;
-      animation-name: spin;
-      animation-duration: 10s;
-      animation-iteration-count: infinite;
-    //   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(336deg) brightness(102%) contrast(104%);
-
-      
-      @include tablet-down{
+      @include tablet-down {
         height: 11vh;
       }
     }
@@ -260,62 +249,272 @@ $selected: #ff8484;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 70%;
-  padding:0 5% 0% 5%;
-  @include tablet-up{
-    padding: unset;
-    height: 100%;
+  height: 90%;
+  padding: 0 5% 0% 5%;
+  &_full {
+    width: inherit;
   }
-  
+  &_two_col {
+    @include two_grid;
+  }
+
+  @include tablet-up {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
   &_content {
+    height: inherit;
+    &_intro {
+      display: flex;
+      row-gap: 20px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 10%;
+    }
+
     span {
       opacity: 0.7;
-      @include fontSize($sm)
+      @include fontSize($sm);
     }
     p {
-    //   font-size: 25px;
-    @include fontSize($md);
-    a{
+      //   font-size: 25px;
+      @include fontSize($md);
+      transition: display 2s;
+      transition-delay: 1s;
+      a {
         text-decoration: none;
         color: #c7deed;
-    }
+      }
     }
   }
-  &_buttons{
+  &_buttons {
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    button{
-        width: 45%;
-        height: 8vh;
-        background: transparent;
-       
-        &:hover{
-            cursor: pointer;
-        }
-
+    
+    button {
+      width: 45%;
+      height: 8vh;
+      background: transparent;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 10%;
+      align-items: center;
+      background: transparent;
+      // @include fontSize($md);
+      font-size: 25px;
+      .mat-icon{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
-    &_inactive{
-         @include fontSize($sm);
-        color: $primary;
-        border: 1px solid $primary;
+    &_inactive {
+      @include fontSize($sm);
+      color: $primary;
+      border: 2px solid $secondary;
+      border-bottom: 2px solid $primary;
+      transition: border 0.5s;
+      &:hover{
+        border: 2px solid $primary;
+      }
     }
-    &_active{
-        @include fontSize($sm);
-        color: $selected;
-        border: 1px solid $selected;
+    &_active {
+      @include fontSize($sm);
+      border: 2px solid $secondary;
+      color: $selected;
+      border-bottom: 2px solid $selected;
+      &:hover{
+        border: 2px solid $selected;
+      }
     }
   }
 }
-.parent{
-    height: 100vh;
-    background-color: transparent;
-    background: 
-    radial-gradient(circle farthest-corner at top left, #cf12124d 0%, transparent 26%), 
-    radial-gradient(circle farthest-corner at 0% 30%, rgba(116, 255, 51, 0.315) 0%, transparent 26%), 
-    radial-gradient(circle at 0% 50%, #19ffe86e 0%, transparent 25%),
-     $secondary
-     ;
+.parent {
+  // height: 100vh;
+  background-color: transparent;
+  background: radial-gradient(
+      circle farthest-corner at top left,
+      rgba(207, 18, 18, 0.3019607843) 0,
+      transparent 26vw
+    ),
+    radial-gradient(
+      circle farthest-corner at 0 30vw,
+      rgba(116, 255, 51, 0.315) 0%,
+      transparent 26vw
+    ),
+    radial-gradient(
+      circle at 0% 50vw,
+      rgba(25, 255, 232, 0.431372549) 0%,
+      transparent 25vw
+    ),
+    $secondary;
+}
+.hidden_text {
+  transition: display 2s;
+  // visibility: hidden;
+  transition: visibility 2s;
+  transition-delay: 2s;
+  visibility: hidden;
+  display: none;
+}
+.visible_text {
+  transition: display 2s;
+  transition: visibility 2s;
+  transition-delay: 2s;
+  visibility: visible;
+  // visibility: visible;
+  display: block;
+}
 
+.spin_image {
+  img {
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+}
+.experience_card {
+  height: 55vh;
+  display: grid;
+  &_image_container {
+    position: relative;
+    height: inherit;
+    width: 20vw;
+    border-top: 2px solid $primary;
+    @include centerFlex;
+    flex-direction: column;
+
+    padding: 20px 0;
+    &_title {
+      position: absolute;
+      top: 20px;
+      width: inherit;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      h2 {
+        @include fontSize($lg);
+        text-align: left;
+      }
+      .mat-icon {
+        @include fontSize($lg);
+        height: 45px;
+        width: 45px;
+        color: $primary;
+      }
+      &:hover {
+        cursor: pointer;
+        h2 {
+          color: $selected;
+        }
+        .mat-icon {
+          color: $selected;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      width: 16vw;
+    }
+
+    &_text {
+      position: relative;
+      width: 20vw;
+      height: 100%;
+      pointer-events: none;
+      aspect-ratio: 1/1;
+      @include centerFlex;
+      &_h2 {
+        font-size: 121px;
+        color: #15151f;
+      }
+    }
+  }
+  &_text_container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 2px solid $primary;
+    padding-top: 20px;
+    span {
+      @include fontSize($sm);
+    }
+    // padding: 5% 0;
+    h2 {
+      @include fontSize($lg);
+      text-align: left;
+    }
+    p {
+      @include fontSize($md);
+    }
+    div {
+      display: flex;
+      width: 60%;
+      padding: 10px 20%;
+      justify-content: space-evenly;
+      p {
+        @include fontSize($sm);
+      }
+      span {
+        @include fontSize($sm);
+      }
+    }
+    .justify_start {
+      padding: 0;
+      .eyebrow {
+        padding: 0;
+        width: 100%;
+        justify-content: flex-start;
+        height: 45px;
+        align-items: flex-end;
+        .mat-icon {
+          color: $primary;
+          margin-right: 20px;
+        }
+      }
+    }
+    .text_with_title {
+      padding: 10% 0;
+      width: inherit;
+      height: inherit;
+      justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      p {
+        @include fontSize($sm);
+      }
+      span {
+        @include fontSize($sm);
+      }
+    }
+  }
+}
+
+.one_col {
+  grid-template-columns: auto;
+}
+
+.page_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    @include fontSize($lg);
+  }
+  .mat-icon {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+    transform: rotate(-90deg);
+    color: white;
+  }
 }
