@@ -1,25 +1,62 @@
-$gold: rgba(202, 181, 88, 0.952);
+@import "../../../shared/styles/globals.scss";
+$gold: rgba(201, 201, 201, 0.952);
 .card {
+ 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @include fontSize($sm);
+    padding: 30px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
   &__parent {
     height: auto;
-    width: auto;
-    padding: 30px;
-    width: fit-content;
-    border: 1px solid $gold
-  }
-  &__image {
-    height: 30vh;
-    width: fit-content;
-    img {
-      object-fit: contain;
-      height: inherit;
+    border: 1px solid gray;
+    transform: background-color 1s;
+    border-left: 1px transparent;
+    border-right: 1px transparent;
+    &:hover{
+      border: 1px solid gray;
     }
   }
   &__details {
-    color: $gold;
-    max-width: 25vw;
-    text-align: center;
+    @include fontSize($md);
+    padding: 30px;
+    &_langs{
+      padding: 30px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-row-gap: 10px;
+      // justify-content: space-between;
+      &_container{
+        display: grid;
+        grid-template-columns: 25px auto;
+        align-items: center;
+        .circle{
+          height: 15px;
+          width: 15px;
+          border-radius: 10px;
+        }
+        p{
+          @include fontSize($sm);
+          color: gray;
+        }
+      }
+    }
   }
+  &_category{
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    @include fontSize($sm);
+    color: black;
+    text-transform: uppercase;
+  }
+  
 }
 // child one 
 // position: absolute;

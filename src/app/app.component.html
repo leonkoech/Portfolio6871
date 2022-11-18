@@ -18,7 +18,13 @@
     <div><span>Projects & Teamwork</span></div>
     <div><span>Achievements, Awards & misc.</span></div>
   </div>
-  <div class="main_content">
+  <div class="section-header sticky">
+  
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        WHO   
+    </p>
+  </div>
+  <div class="main_content main_content_left">
     <!-- right side of the page -->
     <div class="image_component">
       <div class="image">
@@ -49,14 +55,14 @@
         <span>Full Stack Engineer | VR Enthusiast</span>
         <div [ngClass]="!summary ? 'hidden_text' : 'visible_text'">
           <p>
-            I am a very passionate Full Stack software engineer currently
-            interning at <a href="https://sustainible.io/">Sustainible</a>.
+            I am a very passionate software engineer currently
+            interning at <a href="https://sustainible.io/">Sustainible</a> as a Full Stack Software Developer.
             <br />Previously, I interned at
             <a href="https://www.instrument.com/">Instrument(Stagwell)</a>. I am
             enthusiastic about the developer community having founded, and
-            currently the president, of the
-            <a href="https://fnutech.org/">FNU tech club</a>I am also a
-            <a>Github Campus Expert</a>
+            currently the president of, the
+            <a href="https://fnutech.org/">FNU tech club</a>. I am also a
+            <a href="https://githubcampus.expert/leonkoech/">Github Campus Expert</a> and I absolutely love Hackathons, inclusivity and trying to get my hands dirty with accessibility
           </p>
         </div>
 
@@ -113,7 +119,66 @@
       </div>
     </div>
   </div>
-  <div class="main_content one_col">
+  <div class="section-header ">
+  
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        Education   
+    </p>
+  </div>
+  <div class="main_content one_col education main_content_right_mini">
+    <h2>Florida National University</h2>
+    <div class="eyebrow">
+      <mat-icon class="mat-icon">pin_drop</mat-icon><span>Miami, Florida, USA</span><div></div>
+      <mat-icon class="mat-icon">date_range</mat-icon><span>August 2020 - April 2024</span>
+    </div>
+    <div class="education_slider_container">
+      <span>2020</span>
+      <div class="education_slider_container_slider">
+        <div class="education_slider_container_slider_line"></div>
+        <div class="education_slider_container_slider_pointer">
+          <mat-icon class="mat-icon">school</mat-icon>
+        </div>
+      </div>
+      <span>2024</span>
+    </div>
+    <div class="education_information">
+      <div class="education_information_container education_information_container_major">
+          <div>Major</div>
+          <div>
+            <p>Bachelor of Science</p>
+            <p>Information Technology</p>
+          </div>
+      </div>
+      <div class="education_information_container education_information_container_cocurricular">
+            <div>
+              <span>Leadership</span>
+              <span>Community</span>
+              <span>athletics</span>
+            </div>
+            <div>
+              <ol>
+                <li>Student Government Association</li>
+              </ol>
+              <ol>
+                <li>Github Campus Expert</li>
+                <li>FNU tech club president</li>
+                <li>Intro to CS concepts instructor</li>
+              </ol>
+              <ol>
+                <li>Cross Country</li>
+                <li>Track and Field</li>
+              </ol>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-header ">
+  
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        Experience   
+    </p>
+  </div>
+  <div class="main_content one_col main_content_left_mini">
     <div  class="right_component right_component_full right_component_two_col experience_card">
       <div class="spin_image experience_card_image_container">
         <a href="https://www.instrument.com/"  class="experience_card_image_container_title">
@@ -157,6 +222,99 @@
         
       </div>
     </div>
+    <div  class="right_component right_component_full right_component_two_col experience_card">
+      <div class="spin_image experience_card_image_container">
+        <a href="https://www.instrument.com/"  class="experience_card_image_container_title">
+          
+          <h2>Sustainible</h2>
+          <mat-icon class="mat-icon">arrow_outward</mat-icon>
+        
+        </a>
+        <img src="../assets/images/fullStack.svg" />
+        <div class="experience_card_image_container_text">
+          <h2 class="experience_card_image_container_text_h2">01</h2>
+        </div>
+      </div>
+      <div class="experience_card_text_container">
+        <div class="justify_start">
+          <div class="eyebrow">
+            <mat-icon class="mat-icon">date_range</mat-icon
+            ><span>June - August 2022 </span>
+          </div>
+          <!-- <span> | </span> -->
+          <div class="eyebrow">
+            <mat-icon class="mat-icon">pin_drop</mat-icon><span>Remote</span>
+          </div>
+        </div>
+        <div class="text_with_title">
+          <h2>Development Intern</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+            in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="section-header ">
+  
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        Projects   
+    </p>
+  </div>
+  <div class="section-header section-filter">
+    <div class="title"><h2 (click)="team=false" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
+    <div class="filter">
+      <div class="filter_select">
+      <div class="filter_select_button" (click)="langSelect=!langSelect; catSelect=false">
+        <span>{{selectedLanguage}}</span>
+        <mat-icon>{{langSelect?"keyboard_arrow_up":"keyboard_arrow_down"}}</mat-icon>
+      </div>
+      <div [ngClass]="langSelect?'filter_option':'filter_option filter_hidden'">
+        <div *ngFor="let i of languages" (click)="selectOption(0,i)">{{i}}</div>
+      </div>
+      </div>
+      <div  class="filter_select no_select">
+        <div class="filter_select_button" (click)="catSelect=!catSelect; langSelect=false; ">
+          <span>{{selectedCategory}}</span>
+          <mat-icon>{{catSelect?"keyboard_arrow_up":"keyboard_arrow_down"}}</mat-icon>
+        </div>
+      <div  [ngClass]="catSelect?'filter_option':' filter_option filter_hidden'">
+        <div *ngFor="let i of categories" (click)="selectOption(1,i)">{{i}}</div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="main_content one_col projects main_content_right_mini">
+    <app-card *ngFor="let project of projects" [project]="project"></app-card>
+  </div>
+  <div class="section-header">
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        Awards   
+    </p>
+  </div>
+  <div class="main_content one_col projects main_content_left_mini">
+    
+  </div>
+  <div class="section-header ">
+  
+    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
+        Articles   
+    </p>
+  </div>
+  
+  <div class="main_content one_col projects main_content_right_mini">
+    
   </div>
 </div>
 <router-outlet></router-outlet>

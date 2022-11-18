@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { projects } from './core/modules/projects';
+import { project } from './core/models/projectModel';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +8,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  projects: project[] = projects
+  team: boolean = false;
   title = 'portfolio';
+  langSelect: any = false;
+  languages = ["Any Language","Python","Dart","Javascript","Typescript","Java", "C#", "C++", "Lua"];
+  selectedLanguage: string = this.languages[0];
+
+  catSelect: any = false;
+  categories = ["Any Category","Full Stack","Front End","Networking","Python Scripting","Compilers", "VR/AR", "fun"];
+  selectedCategory: string = this.categories[0];
   //  @ViewChild('side_nav', { static: true }) sideNav:any;
   images = [
     {
@@ -27,7 +38,6 @@ export class AppComponent {
    }
   expandSideNav(){
    this.expanded=!this.expanded
-   console.log(this.expanded)
   }
   async changeImage(){
     while(true){
@@ -37,12 +47,28 @@ export class AppComponent {
       if(this.currentImage==3){
         this.currentImage=0
       }
-      console.log(this.currentImage)
       await new Promise(resolve => setTimeout(resolve, 3000)); 
       
     }
   }
   summarize(param:boolean){
     this.summary = param;
+  }
+
+  selectOption(type: number, option: string){
+    // if number is 0 then language select
+    // if number is 1 then category select
+    switch (type){
+      case 0:
+        this.selectedLanguage  = option;
+        break
+      case 1:
+        this.selectedCategory = option;
+        break
+      default:
+        break
+    }
+    this.langSelect = false;
+    this.catSelect = false;
   }
 }

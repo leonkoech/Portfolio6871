@@ -3,9 +3,11 @@ $tablet: 900px;
 $large: 1200px;
 $extra_large: 1800px;
 
+$xsm: "extra_small";
 $sm:"small";
 $md:"med";
 $lg: "large";
+$xlg: "extra_large";
 
 $primary: white;
 $secondary: rgb(8 12 31);
@@ -42,38 +44,20 @@ $secondary: rgb(8 12 31);
 }
 @mixin fontSize($size: $sm) {
     color: $primary;
-  @if $size == $sm {
-    @include tablet-down{
-        font-size: 12px;
+    @if $size== $xsm{
+      font-size: 1vw;
     }
-    @include tablet-up{
-        font-size: 18px;
+    @if $size == $sm {
+      font-size: 1.2vw;
     }
-    @include large-screen{
-        font-size: 23px;
-    }
-  }
   @if $size == $md {
-    @include tablet-down{
-        font-size: 16px;
-    }
-    @include tablet-up{
-        font-size: 22px;
-    }
-    @include large-screen{
-        font-size: 27px;
-    }
+    font-size: 1.4vw;
   }
   @if $size == $lg {
-    @include tablet-down{
-        font-size: 30px;
-    }
-    @include tablet-up{
-        font-size: 45px;
-    }
-    @include large-screen{
-        font-size: 45px;
-    }
+    font-size: 1.8vw;
+  }
+  @if $size == $xlg {
+    font-size: 3.1vw;
   }
 }
 @mixin centerFlex{
@@ -85,4 +69,13 @@ $secondary: rgb(8 12 31);
 @mixin two_grid{
   display: grid;
   grid-template-columns: 30% 70%;
+}
+@mixin no_select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

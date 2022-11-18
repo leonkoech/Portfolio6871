@@ -1,12 +1,18 @@
 <div class="card__parent">
-    <div class="card__image">
-         <img  src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg"/>
+    <div class="card__top">
+        <h2>{{project.name}}</h2>
+        <mat-icon class="mat-icon">arrow_outward</mat-icon>
     </div>
-   
     <div class="card__details">
-        <h3>name of project</h3>
-        <p>python | google cloud </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-            lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+        <p>{{project.details}}</p>
+    </div>
+    <div class="card__details_langs">
+        <div class="card__details_langs_container" *ngFor="let item of project.languages">
+            <div class="circle" [style]="'background: red;'"></div>
+            <p>{{item}}</p>
+        </div>
+    </div>
+    <div class="card_category">
+        <p>{{project.category}}</p>
     </div>
 </div>
