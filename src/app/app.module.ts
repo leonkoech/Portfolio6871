@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ExperienceCardComponent } from './core/components/experience-card/experience-card.component';
 import { AwardsCardComponent } from './core/components/awards-card/awards-card.component';
 import { ProjectsCardComponent } from './core/components/projects-card/projects-card.component';
+import { EducationComponent } from './core/components/education/education.component';
 
 let components=[
   AppComponent,
@@ -17,7 +18,8 @@ let components=[
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
+    EducationComponent
   ],
   imports: [
     BrowserModule,

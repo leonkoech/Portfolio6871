@@ -14,8 +14,8 @@ export const experiences=[
     {
         company: "Sustainible",
         website: "https://sustaininble.io",
-        start: "June",
-        end: "August 2022",
+        start: "January",
+        end: "December 2022",
         location: "Remote",
         title: "Developer Intern",
         imageUrl: "../assets/images/fullStack.svg",
