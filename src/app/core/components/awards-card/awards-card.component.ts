@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { awards } from '../../modules/awards';
+import { award } from '../../models/awardModel';
 
 @Component({
-  selector: 'app-awards-card',
+  selector: 'awards-card',
   templateUrl: './awards-card.component.html',
   styleUrls: ['./awards-card.component.scss']
 })
 export class AwardsCardComponent implements OnInit {
-  awards = awards
+  awards:award[] = awards as award[]
   @Input() year = 2020
   constructor() { }
 

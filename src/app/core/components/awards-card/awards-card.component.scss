@@ -1,7 +1,9 @@
 @import "../../../shared/styles/globals.scss";
 @import '../../../app.component.scss';
+@import "../../../shared/styles/button.scss";
 
 .awards{
+ 
     &_year{
       h2{
         @include fontSize($lg)
@@ -14,6 +16,7 @@
       height: auto;
       margin-bottom: 5%;
       margin-top: 5%;
+      margin-bottom: 50px;
       &_number{
           color: $primary;
           @include fontSize($lg)
@@ -24,6 +27,18 @@
           flex-direction: column;
           justify-content: space-between;
           width: inherit;
+          height: 20vh;
+          h2{
+            @include fontSize($md)
+          }
+          p{
+            @include fontSize($sm)
+          }
       }
+    }
+    &_link{
+      @include button($xsm);
+      width: 55%;
+      padding: 0;
     }
   }

@@ -3,15 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './core/components/card/card.component';
-import { CardParentComponent } from './core/components/card-parent/card-parent.component';
 import {MatIconModule} from '@angular/material/icon';
+import { ExperienceCardComponent } from './core/components/experience-card/experience-card.component';
+import { AwardsCardComponent } from './core/components/awards-card/awards-card.component';
+import { ProjectsCardComponent } from './core/components/projects-card/projects-card.component';
+
+let components=[
+  AppComponent,
+  ExperienceCardComponent,
+  AwardsCardComponent,
+  ProjectsCardComponent
+]
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CardComponent,
-    CardParentComponent
+    ...components
   ],
   imports: [
     BrowserModule,

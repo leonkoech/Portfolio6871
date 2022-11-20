@@ -2,6 +2,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { projects } from './core/modules/projects';
 import { project } from './core/models/projectModel';
 import { languages,categories } from './core/modules/projectCats';
+import { experiences } from './core/modules/experience';
+import { experience } from './core/models/experienceModel';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +12,7 @@ import { languages,categories } from './core/modules/projectCats';
 })
 export class AppComponent {
   projects: project[] = projects
+  experiences: experience[] = experiences
   team: boolean = false;
   title = 'portfolio';
   langSelect: any = false;
