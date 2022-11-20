@@ -1,29 +1,66 @@
 @import "../../../shared/styles/globals.scss";
-$gold: rgba(201, 201, 201, 0.952);
+$gold: #c9c9c9f3;
 .card {
- 
+  
+ &__background{
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  z-index: 0;
+  background: $primary;
+  transition: height 1.2s;
+  bottom: 0;
+ }
+&__foreground{
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
   &__top {
     display: flex;
     justify-content: space-between;
     @include fontSize($sm);
     padding: 30px;
+    transition: color 2s;
     &:hover{
       cursor: pointer;
     }
   }
   &__parent {
-    height: auto;
+    aspect-ratio: 7.7/8;
     border: 1px solid gray;
     transform: background-color 1s;
     border-left: 1px transparent;
     border-right: 1px transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     &:hover{
-      border: 1px solid gray;
+      // border: 1px solid gray;
+      // cursor:;
+      .card{
+        // &__top{
+        //   color: $secondary;
+        // }
+        &__details{
+          color: $secondary;
+        }
+        &__background{
+        height: 82%;
+          }
+        }
     }
   }
   &__details {
     @include fontSize($md);
     padding: 30px;
+    transition: color 2s;
     &_langs{
       padding: 30px;
       display: grid;
@@ -56,7 +93,6 @@ $gold: rgba(201, 201, 201, 0.952);
     color: black;
     text-transform: uppercase;
   }
-  
 }
 // child one 
 // position: absolute;

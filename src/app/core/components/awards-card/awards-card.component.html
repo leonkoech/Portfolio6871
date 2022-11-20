@@ -1,0 +1,14 @@
+<div class="awards_container">
+    <div class="first_header_container awards_year">
+      <h2>{{year}}</h2>
+      <div></div>
+    </div>
+    <div class="awards_details" *ngFor="let i of awards; let j = index">
+      <div class="awards_details_number"><h2>0{{j+1}}</h2></div>
+      <div class="awards_details_text">
+        <h2>{{i.name}}</h2>
+        <p>{{i.details}}</p>
+        <button>read more</button>
+      </div>
+    </div>
+  </div>

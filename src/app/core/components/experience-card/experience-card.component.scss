@@ -1,0 +1,121 @@
+@import "../../../shared/styles/globals.scss";
+@import '../../../app.component.scss';
+
+.experience_card {
+    height: 55vh;
+    display: grid;
+    padding-left: 0;
+    &_image_container {
+      position: relative;
+      height: inherit;
+      width: 20vw;
+      border-top: 1px solid $primary;
+      @include centerFlex;
+      flex-direction: column;
+  
+      padding: 20px 0;
+      &_title {
+        position: absolute;
+        top: 20px;
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        h2 {
+          @include fontSize($lg);
+          text-align: center;
+        }
+        .mat-icon {
+          @include fontSize($lg);
+          height: 2.1vw;
+          width: 2.1vw;
+          color: $primary;
+        }
+        &:hover {
+          cursor: pointer;
+          h2 {
+            color: $selected;
+          }
+          .mat-icon {
+            color: $selected;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        width: 16vw;
+      }
+  
+      &_text {
+        position: relative;
+        width: 20vw;
+        height: 100%;
+        pointer-events: none;
+        aspect-ratio: 1/1;
+        @include centerFlex;
+        &_h2 {
+          @include fontSize($xlg);
+          color: #15151f;
+        }
+      }
+    }
+    &_text_container {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid $primary;
+      padding-top: 20px;
+      span {
+        @include fontSize($sm);
+      }
+      // padding: 5% 0;
+      h2 {
+        @include fontSize($xlg);
+        text-align: left;
+      }
+      p {
+        @include fontSize($md);
+      }
+      div {
+        display: flex;
+        width: 60%;
+        padding: 10px 20%;
+        justify-content: space-evenly;
+        p {
+          @include fontSize($sm);
+        }
+        span {
+          @include fontSize($sm);
+        }
+      }
+      .justify_start {
+        padding: 0;
+        .eyebrow {
+          padding: 0;
+          width: 100%;
+          justify-content: flex-start;
+          height: 45px;
+          align-items: flex-end;
+          .mat-icon {
+            color: $primary;
+            margin-right: 20px;
+          }
+        }
+      }
+      .text_with_title {
+        padding: 10% 0;
+        width: inherit;
+        height: inherit;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        p {
+          @include fontSize($sm);
+        }
+        span {
+          @include fontSize($sm);
+        }
+      }
+    }
+  }
