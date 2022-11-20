@@ -8,8 +8,8 @@
     </div>
     <div class="card__details_langs">
         <div class="card__details_langs_container" *ngFor="let item of project.languages">
-            <div class="circle" [style]="'background: red;'"></div>
-            <p>{{item}}</p>
+            <div class="circle" [style]="'background:'+item.color+';'"></div>
+            <p>{{item.name}}</p>
         </div>
     </div>
     <div class="card_category">

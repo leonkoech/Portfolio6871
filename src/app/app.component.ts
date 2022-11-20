@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { projects } from './core/modules/projects';
 import { project } from './core/models/projectModel';
-
+import { languages,categories } from './core/modules/projectCats';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,12 +12,13 @@ export class AppComponent {
   team: boolean = false;
   title = 'portfolio';
   langSelect: any = false;
-  languages = ["Any Language","Python","Dart","Javascript","Typescript","Java", "C#", "C++", "Lua"];
+  languages = ["Any Language",...Object.values(languages).map((x)=>{return x.name})];
   selectedLanguage: string = this.languages[0];
 
   catSelect: any = false;
-  categories = ["Any Category","Full Stack","Front End","Networking","Python Scripting","Compilers", "VR/AR", "fun"];
+  categories = [...Object.values(categories)];
   selectedCategory: string = this.categories[0];
+
   //  @ViewChild('side_nav', { static: true }) sideNav:any;
   images = [
     {
@@ -68,7 +69,32 @@ export class AppComponent {
       default:
         break
     }
+    this.filter()
     this.langSelect = false;
     this.catSelect = false;
+  }
+  filter(){
+    //type 1 being language and 2 being category
+    let arrCopy = this.selectedLanguage== "Any Language"?projects:[]
+    let newCopy = this.selectedCategory==(categories as any).anyCategory?projects:[]
+
+    if(this.selectedLanguage!= "Any Language"){
+    arrCopy =  projects.filter((val)=>{
+        return val.languages.includes((languages as any)[this.selectedLanguage]) && val.team == this.team       
+      })
+    }
+    if(this.selectedCategory!=(categories as any).anyCategory){
+      newCopy = arrCopy.filter((val)=>{
+        return val.category == this.selectedCategory && val.team == this.team
+      })
+    }
+    this.projects = this.selectedLanguage!= "Any Language"?arrCopy:newCopy;
+  }
+
+  selectTeam(){
+    this.projects =  projects.filter((val)=>{
+      return val.team == this.team
+    })
+    
   }
 }

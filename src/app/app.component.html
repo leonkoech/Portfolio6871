@@ -273,10 +273,10 @@
     </p>
   </div>
   <div class="section-header section-filter">
-    <div class="title"><h2 (click)="team=false" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
+    <div class="title"><h2 (click)="team=false; selectTeam()" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true; selectTeam()"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
     <div class="filter">
       <div class="filter_select">
-      <div class="filter_select_button" (click)="langSelect=!langSelect; catSelect=false">
+      <div class="filter_select_button" (click)="langSelect=!langSelect; catSelect=false; ">
         <span>{{selectedLanguage}}</span>
         <mat-icon>{{langSelect?"keyboard_arrow_up":"keyboard_arrow_down"}}</mat-icon>
       </div>
