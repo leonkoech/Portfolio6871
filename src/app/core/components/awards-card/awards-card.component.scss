@@ -1,0 +1,29 @@
+@import "../../../shared/styles/globals.scss";
+@import '../../../app.component.scss';
+
+.awards{
+    &_year{
+      h2{
+        @include fontSize($lg)
+      }
+    }
+    &_details{
+      display: grid;
+      grid-template-columns: 20% 70%;
+      min-height: 10vh;
+      height: auto;
+      margin-bottom: 5%;
+      margin-top: 5%;
+      &_number{
+          color: $primary;
+          @include fontSize($lg)
+      }
+      &_text{
+          color: $primary;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: inherit;
+      }
+    }
+  }

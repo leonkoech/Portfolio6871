@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { project } from '../../models/projectModel';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'project-card',
+  templateUrl: './projects-card.component.html',
+  styleUrls: ['./projects-card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class ProjectsCardComponent implements OnInit {
   @Input() project: project  = {name: "",    repoUrl: "",     details: "",    languages: [],    category: "",    demoUrl: "" , team: false }
 
   constructor() { }
