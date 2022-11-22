@@ -1,4 +1,5 @@
 @import "../../../shared/styles/globals.scss";
+@import "../../../shared/styles/button.scss";
 $gold: #c9c9c9f3;
 .card {
   
@@ -7,7 +8,7 @@ $gold: #c9c9c9f3;
   height: 0%;
   width: 100%;
   z-index: 0;
-  background: $primary;
+  backdrop-filter: invert(100%);
   transition: height 1.2s;
   bottom: 0;
  }
@@ -22,14 +23,7 @@ $gold: #c9c9c9f3;
   height: 100%;
 }
   &__top {
-    display: flex;
-    justify-content: space-between;
-    @include fontSize($sm);
-    padding: 30px;
-    transition: color 2s;
-    &:hover{
-      cursor: pointer;
-    }
+    @include button($xsm)
   }
   &__parent {
     aspect-ratio: 7.7/8;
@@ -48,6 +42,11 @@ $gold: #c9c9c9f3;
         // &__top{
         //   color: $secondary;
         // }
+        &_category{
+          backdrop-filter: invert(0%);
+          // color: $secondary;
+          border: 1px solid transparent;
+        }
         &__details{
           color: $secondary;
         }
@@ -88,10 +87,11 @@ $gold: #c9c9c9f3;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $primary;
+    backdrop-filter: invert(100%);
     @include fontSize($sm);
-    color: black;
+    color: $secondary;
     text-transform: uppercase;
+    transition: backdrop-filter 2s;
   }
 }
 // child one 

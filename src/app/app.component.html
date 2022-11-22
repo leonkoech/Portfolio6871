@@ -14,9 +14,9 @@
   <div [ngClass]="!expanded ? 'side_nav' : 'side_nav side_nav_expanded'">
     <div class="active"><span>Who?</span></div>
     <div><span>Education</span></div>
-    <div><span>Experience (Past Internships)</span></div>
-    <div><span>Projects & Teamwork</span></div>
-    <div><span>Achievements, Awards & misc.</span></div>
+    <div><span>Experience</span></div>
+    <div><span>Projects</span></div>
+    <div><span>Awards</span></div>
   </div>
   <div class="section-header sticky">
   
@@ -120,58 +120,11 @@
     </div>
   </div>
   <div class="section-header ">
-  
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Education   
     </p>
   </div>
-  <div class="main_content one_col education main_content_right_mini">
-    <h2>Florida National University</h2>
-    <div class="eyebrow">
-      <mat-icon class="mat-icon">pin_drop</mat-icon><span>Miami, Florida, USA</span><div></div>
-      <mat-icon class="mat-icon">date_range</mat-icon><span>August 2020 - April 2024</span>
-    </div>
-    <div class="education_slider_container">
-      <span>2020</span>
-      <div class="education_slider_container_slider">
-        <div class="education_slider_container_slider_line"></div>
-        <div class="education_slider_container_slider_pointer">
-          <mat-icon class="mat-icon">school</mat-icon>
-        </div>
-      </div>
-      <span>2024</span>
-    </div>
-    <div class="education_information">
-      <div class="education_information_container education_information_container_major">
-          <div>Major</div>
-          <div>
-            <p>Bachelor of Science</p>
-            <p>Information Technology</p>
-          </div>
-      </div>
-      <div class="education_information_container education_information_container_cocurricular">
-            <div>
-              <span>Leadership</span>
-              <span>Community</span>
-              <span>athletics</span>
-            </div>
-            <div>
-              <ol>
-                <li>Student Government Association</li>
-              </ol>
-              <ol>
-                <li>Github Campus Expert</li>
-                <li>FNU tech club president</li>
-                <li>Intro to CS concepts instructor</li>
-              </ol>
-              <ol>
-                <li>Cross Country</li>
-                <li>Track and Field</li>
-              </ol>
-            </div>
-      </div>
-    </div>
-  </div>
+   <education></education>
   <div class="section-header ">
   
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
@@ -179,92 +132,7 @@
     </p>
   </div>
   <div class="main_content one_col main_content_left_mini">
-    <div  class="right_component right_component_full right_component_two_col experience_card">
-      <div class="spin_image experience_card_image_container">
-        <a href="https://www.instrument.com/"  class="experience_card_image_container_title">
-          
-          <h2>Instrument</h2>
-          <mat-icon class="mat-icon">arrow_outward</mat-icon>
-        
-        </a>
-        <img src="../assets/images/fullStack.svg" />
-        <div class="experience_card_image_container_text">
-          <h2 class="experience_card_image_container_text_h2">01</h2>
-        </div>
-      </div>
-      <div class="experience_card_text_container">
-        <div class="justify_start">
-          <div class="eyebrow">
-            <mat-icon class="mat-icon">date_range</mat-icon
-            ><span>June - August 2022 </span>
-          </div>
-          <!-- <span> | </span> -->
-          <div class="eyebrow">
-            <mat-icon class="mat-icon">pin_drop</mat-icon><span>Remote</span>
-          </div>
-        </div>
-        <div class="text_with_title">
-          <h2>Development Intern</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        
-      </div>
-    </div>
-    <div  class="right_component right_component_full right_component_two_col experience_card">
-      <div class="spin_image experience_card_image_container">
-        <a href="https://www.instrument.com/"  class="experience_card_image_container_title">
-          
-          <h2>Sustainible</h2>
-          <mat-icon class="mat-icon">arrow_outward</mat-icon>
-        
-        </a>
-        <img src="../assets/images/fullStack.svg" />
-        <div class="experience_card_image_container_text">
-          <h2 class="experience_card_image_container_text_h2">01</h2>
-        </div>
-      </div>
-      <div class="experience_card_text_container">
-        <div class="justify_start">
-          <div class="eyebrow">
-            <mat-icon class="mat-icon">date_range</mat-icon
-            ><span>June - August 2022 </span>
-          </div>
-          <!-- <span> | </span> -->
-          <div class="eyebrow">
-            <mat-icon class="mat-icon">pin_drop</mat-icon><span>Remote</span>
-          </div>
-        </div>
-        <div class="text_with_title">
-          <h2>Development Intern</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        
-      </div>
-    </div>
+    <experience-card *ngFor="let experience of experiences; let index = index" [index]="index" [experience]="experience"></experience-card>
   </div>
   <div class="section-header ">
   
@@ -296,15 +164,15 @@
     </div>
   </div>
   <div class="main_content one_col projects main_content_right_mini">
-    <app-card *ngFor="let project of projects" [project]="project"></app-card>
+    <project-card *ngFor="let project of projects" [project]="project"></project-card>
   </div>
   <div class="section-header">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Awards   
     </p>
   </div>
-  <div class="main_content one_col projects main_content_left_mini">
-    
+  <div class="main_content one_col projects main_content_left_mini awards">
+    <awards-card *ngFor="let i of [].constructor(3); let idx=index" [year]="2022-idx"></awards-card>
   </div>
   <div class="section-header ">
   

@@ -1,0 +1,11 @@
+@mixin button($size){
+    display: flex;
+    justify-content: space-between;
+    @include fontSize($size);
+    padding: 30px;
+    transition: color 2s;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+    }
+}

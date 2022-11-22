@@ -8,7 +8,11 @@
       <div class="awards_details_text">
         <h2>{{i.name}}</h2>
         <p>{{i.details}}</p>
-        <button>read more</button>
+        <div *ngIf="i.url" class="awards_link">
+          <h2>Read More</h2>
+          <mat-icon class="mat-icon">arrow_outward</mat-icon>
+        </div>
+        <div *ngIf="!i.url"> </div>
       </div>
     </div>
   </div>

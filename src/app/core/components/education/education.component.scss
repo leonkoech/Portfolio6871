@@ -1,0 +1,116 @@
+@import "../../../shared/styles/globals.scss";
+@import '../../../app.component.scss';
+
+.education {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 80vh;
+    .eyebrow {
+      width: 80%;
+      color: white;
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10%;
+      .mat-icon{
+        @include fontSize($md);
+        height: 25px;
+        width: 25px;
+        margin:  0 10px;
+      }
+      span{
+        @include fontSize($sm);
+      }
+      div{
+        width: 20px;
+      }
+    }
+    h2 {
+      @include fontSize($xlg);
+      text-align: center;
+      // padding: 50px;
+    }
+    &_slider_container {
+      width: inherit;
+      height: 10vh;
+      margin: 70px 0;
+      display: flex;
+      align-items: center;
+      span {
+        @include fontSize($sm);
+        margin: 0 15px;
+      }
+      &_slider {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        &_line {
+          height: 2px;
+          background: white;
+          width: inherit;
+        }
+        &_pointer {
+          height: 35px;
+          width: 35px;
+          @include fontSize($md);
+          margin-top: 45px;
+          position: absolute;
+          margin-left: calc(($monthsRemaining * 100%) / $months);
+        }
+      }
+    }
+    &_information {
+      display: grid;
+      grid-template-columns: 20% 75%;
+      grid-column-gap: 5%;
+      height: max-content;
+      &_container {
+        border-bottom: 1px solid white;
+        div {
+          @include fontSize($sm);
+  
+          &:first-child {
+            // @include fontSize($sm);
+            height: 45px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+          }
+          &:nth-child(2) {
+            padding: 50px 0;
+            text-align: center;
+          }
+        }
+        &_cocurricular {
+          div {
+            &:first-child {
+              justify-content: space-between;
+              span {
+                width: 25%;
+              }
+            }
+            &:nth-child(2) {
+              width: 100%;
+              text-align: left;
+              display: flex;
+              justify-content: space-between;
+              ol {
+                width: 25%;
+                list-style: none;
+                li {
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+                }
+                // background: beige;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
