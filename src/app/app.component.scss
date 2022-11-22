@@ -1,7 +1,10 @@
 @import "./shared/styles/globals.scss";
+@import "./shared/styles/type";
+
 $selected: #ff8484;
 $months: 44; // from august 2020 to april 2024
 $monthsRemaining: 17;
+
 // $percentage: calc(($monthsRemaining * 100%)/$months);
 ::ng-deep * {
   margin: 0;
@@ -380,8 +383,9 @@ $monthsRemaining: 17;
       padding: 0 10%;
       align-items: center;
       background: transparent;
-      // @include fontSize($md);
-      font-size: 25px;
+      // @include fontSize($sm);
+      // color: $selected;
+      // font-size: 25px;
       .mat-icon {
         height: 25px;
         width: 25px;

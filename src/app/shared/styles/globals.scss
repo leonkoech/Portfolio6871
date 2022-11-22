@@ -1,4 +1,5 @@
 // @import '../../app.component.scss';
+@import "../styles/type";
 
 $phone: 600px;
 $tablet: 900px;
@@ -47,19 +48,19 @@ $secondary: rgb(8 12 31);
 @mixin fontSize($size: $sm) {
     color: $primary;
     @if $size== $xsm{
-      font-size: 1vw;
+      @include body-small();
     }
     @if $size == $sm {
-      font-size: 1.2vw;
+      @include body-small();
     }
   @if $size == $md {
-    font-size: 1.4vw;
+    @include body-regular();
   }
   @if $size == $lg {
-    font-size: 1.8vw;
+    @include body-large-bold();
   }
   @if $size == $xlg {
-    font-size: 3.1vw;
+    @include headline-bold();
   }
 }
 @mixin centerFlex{
