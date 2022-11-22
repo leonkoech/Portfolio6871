@@ -5,6 +5,10 @@
     padding-top: 50px;
     padding-bottom: 50px;
     height: 80vh;
+    @include tablet-down{
+      padding-top: 0;
+      height: auto;
+    }
     .eyebrow {
       width: 80%;
       color: white;
@@ -18,6 +22,12 @@
         height: 25px;
         width: 25px;
         margin:  0 10px;
+        @include tablet-down{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+        }
       }
       span{
         @include fontSize($sm);
@@ -37,6 +47,9 @@
       margin: 70px 0;
       display: flex;
       align-items: center;
+      @include tablet-down{
+        margin: 30px 0;
+      }
       span {
         @include fontSize($sm);
         margin: 0 15px;
@@ -58,6 +71,19 @@
           margin-top: 45px;
           position: absolute;
           margin-left: calc(($monthsRemaining * 100%) / $months);
+          
+            @include tablet-down{
+              height: 20px;
+              width: 20px;
+              
+              .mat-icon{
+                height: 20px;
+                font-size: 15px;
+              width: 20px;
+              }
+              
+            }
+          
         }
       }
     }
@@ -66,6 +92,12 @@
       grid-template-columns: 20% 75%;
       grid-column-gap: 5%;
       height: max-content;
+      @include tablet-down{
+        display: grid;
+        grid-template-columns: unset;
+        grid-row-gap: 40px;
+        grid-column-gap: 5%;
+      }
       &_container {
         border-bottom: 1px solid white;
         div {
@@ -80,10 +112,16 @@
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
+            @include tablet-down{
+              height: 30px;
+            }
           }
           &:nth-child(2) {
             padding: 50px 0;
             text-align: center;
+            @include tablet-down{
+              padding: 25px 0 ;
+            }
           }
         }
         &_cocurricular {

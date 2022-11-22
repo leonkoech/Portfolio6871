@@ -5,6 +5,10 @@
     height: 55vh;
     display: grid;
     padding-left: 0;
+    @include tablet-down{
+      height: auto;
+      grid-template-columns: 100%;
+    }
     &_image_container {
       position: relative;
       height: inherit;
@@ -14,6 +18,9 @@
       flex-direction: column;
   
       padding: 20px 0;
+      @include tablet-down{
+        width: inherit;
+      }
       &_title {
         position: absolute;
         top: 20px;
@@ -21,6 +28,9 @@
         display: flex;
         justify-content: space-between;
         text-decoration: none;
+        @include tablet-down{
+          top: unset
+        }
         h2 {
           @include fontSize($lg);
           text-align: center;
@@ -66,6 +76,9 @@
       justify-content: space-between;
       border-top: 1px solid $primary;
       padding-top: 20px;
+      @include tablet-down{
+        align-items: center
+      }
       span {
         @include fontSize($sm);
       }
@@ -73,6 +86,9 @@
       h2 {
         @include fontSize($xlg);
         text-align: left;
+        @include tablet-down{
+          margin-bottom: 20px;
+        }
       }
       p {
         @include fontSize($md);
@@ -100,6 +116,18 @@
           .mat-icon {
             color: $primary;
             margin-right: 20px;
+           
+          }
+          @include tablet-down{
+            height: auto;
+            align-items: center;
+            .mat-icon{
+              display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            }
+            
           }
         }
       }

@@ -1,9 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { projects } from './core/modules/projects';
 import { project } from './core/models/projectModel';
 import { languages,categories } from './core/modules/projectCats';
 import { experiences } from './core/modules/experience';
 import { experience } from './core/models/experienceModel';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { experience } from './core/models/experienceModel';
 })
 export class AppComponent {
   projects: project[] = projects
+  focus = "who"
   experiences: experience[] = experiences
   team: boolean = false;
   title = 'portfolio';
@@ -22,6 +24,7 @@ export class AppComponent {
   catSelect: any = false;
   categories = [...Object.values(categories)];
   selectedCategory: string = this.categories[0];
+
 
   //  @ViewChild('side_nav', { static: true }) sideNav:any;
   images = [
@@ -100,5 +103,9 @@ export class AppComponent {
       return val.team == this.team
     })
     
+  }
+  scrollTo(location:string){
+      (document.getElementById(location) as any).scrollIntoView(); 
+      this.focus = location  
   }
 }

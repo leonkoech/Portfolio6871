@@ -6,25 +6,22 @@
     <mat-icon class="mat-icon">{{
       !expanded ? "chevron_right" : "close"
     }}</mat-icon>
-    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
-    <!-- <mat-icon *ngIf="expanded" aria-hidden="false" aria-label="close nav" fontIcon="close"></mat-icon>
-     <mat-icon *ngIf="!expanded" aria-hidden="false" aria-label="open nav" fontIcon="arrow_forward"></mat-icon> -->
   </div>
 
   <div [ngClass]="!expanded ? 'side_nav' : 'side_nav side_nav_expanded'">
     <div class="active"><span>Who?</span></div>
-    <div><span>Education</span></div>
-    <div><span>Experience</span></div>
-    <div><span>Projects</span></div>
-    <div><span>Awards</span></div>
+    <div (click)="scrollTo('education')"><span>Education</span></div>
+    <div (click)="scrollTo('experience')"><span>Experience</span></div>
+    <div (click)="scrollTo('projects')"><span>Projects</span></div>
+    <div (click)="scrollTo('awards')"><span>Awards</span></div>
+    
   </div>
   <div class="section-header sticky">
-  
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         WHO   
     </p>
   </div>
-  <div class="main_content main_content_left">
+  <div id="who" class="main_content main_content_left who">
     <!-- right side of the page -->
     <div class="image_component">
       <div class="image">
@@ -94,6 +91,7 @@
         <p>Also, I am actively looking for internships for 2023 :)</p>
        
       </div>
+      
       <div class="right_component_buttons">
         <button
           (click)="summarize(true)"
@@ -117,15 +115,22 @@
           longer version
         </button>
       </div>
+      
     </div>
   </div>
-  <div class="section-header ">
+  <div id="contact" class="main_content one_col contact">
+    <contact></contact>
+  </div>
+  
+  <div id="education" class="section-header ">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Education   
     </p>
   </div>
    <education></education>
-  <div class="section-header ">
+
+
+  <div id="experience" class="section-header ">
   
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Experience   
@@ -134,12 +139,14 @@
   <div class="main_content one_col main_content_left_mini">
     <experience-card *ngFor="let experience of experiences; let index = index" [index]="index" [experience]="experience"></experience-card>
   </div>
-  <div class="section-header ">
+
+  <div id="projects" class="section-header ">
   
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Projects   
     </p>
   </div>
+
   <div class="section-header section-filter">
     <div class="title"><h2 (click)="team=false; selectTeam()" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true; selectTeam()"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
     <div class="filter">
@@ -166,23 +173,14 @@
   <div class="main_content one_col projects main_content_right_mini">
     <project-card *ngFor="let project of projects" [project]="project"></project-card>
   </div>
-  <div class="section-header">
+  <div id="awards" class="section-header">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Awards   
     </p>
   </div>
-  <div class="main_content one_col projects main_content_left_mini awards">
+  <div  class="main_content one_col projects main_content_left_mini awards">
     <awards-card *ngFor="let i of [].constructor(3); let idx=index" [year]="2022-idx"></awards-card>
   </div>
-  <div class="section-header ">
-  
-    <p *ngFor="let i of  [0,1,2,3,4,5,6]">
-        Articles   
-    </p>
-  </div>
-  
-  <div class="main_content one_col projects main_content_right_mini">
-    
-  </div>
+
 </div>
 <router-outlet></router-outlet>
