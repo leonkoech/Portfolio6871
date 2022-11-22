@@ -1,0 +1,29 @@
+$text-fluidity-start: 320px;
+// end fluid type
+$text-fluidity-end: 2500px;
+
+
+// strip unit value (px, vh, %, etc.)
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// interpolates type size between min and max
+@mixin text-size($min-font-size, $max-font-size) {
+  font-size: $min-font-size;
+
+  @media screen and (min-width: $text-fluidity-start) {
+    font-size: calc(#{$min-font-size}
+                + #{strip-unit($max-font-size - $min-font-size)}
+                * ((100vw - #{$text-fluidity-start})
+                / #{strip-unit($text-fluidity-end - $text-fluidity-start)}));
+  }
+
+  @media screen and (min-width: $text-fluidity-end) {
+    font-size: $max-font-size;
+  }
+}
+
+@mixin big-header(){
+  
+}

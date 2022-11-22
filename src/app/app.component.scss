@@ -10,9 +10,9 @@ $monthsRemaining: 17;
 .side_nav {
   position: fixed;
   width: 10vw;
-  height: 89.9vh;
-  padding-top: 10vh;
-  z-index: 3;
+  height: 93vh;
+  padding-top: 80px;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,9 +22,10 @@ $monthsRemaining: 17;
   transition: backdrop-filter 2s;
   transition: width 1s;
   @include tablet-down {
-    width: 20vw;
-    height: 89.9vh;
-    padding-top: 10vh;
+    // width: 20vw;
+    // height: 89.9vh;
+    // padding-top: 10vh;
+    padding-top: 60px;
   }
   div {
     height: inherit;
@@ -107,14 +108,23 @@ $monthsRemaining: 17;
   justify-content: center;
   align-items: center;
   width: 20vw;
-  height: 10vh;
+  height: 80px;
   transition: backdrop-filter 2s;
   transition: width 1s;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
+  @include tablet-down{
+    width: 10vw;
+    height: 60px;
+  }
   .mat-icon {
     @include fontSize($md);
     color: rgb(255, 255, 255);
+    @include tablet-down{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &_clicked {
     width: 80vw;
@@ -144,9 +154,10 @@ $monthsRemaining: 17;
   padding-right: 3vw;
   padding-top: 5%;
   @include tablet-down {
-    width: 80vw;
-    display: initial;
-    padding: unset;
+    // width: 80vw;
+    // display: initial;
+    display: block;
+    // padding: unset;
   }
   &_left {
     background: radial-gradient(
@@ -491,6 +502,9 @@ $monthsRemaining: 17;
     color: gray;
     text-transform: uppercase;
   }
+  @include tablet-down{
+    height: 30px;
+  }
 }
 &-filter{
   border-top: 0;
@@ -515,14 +529,28 @@ $monthsRemaining: 17;
     display: flex;
     width: 30%;
     justify-content: space-between;
+    @include tablet-down{
+      width: 35%;
+    }
     &_select{
       width: 11vw;
+      @include tablet-down{
+        width: auto;
+      }
       &_button{
         display: flex;
         justify-content: space-between;
         align-items: center;
         @include fontSize($sm);
         color: gray;
+        @include tablet-down{
+          .mat-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+          }
+        }
         &:hover{
           cursor: pointer;
         }
@@ -537,9 +565,18 @@ $monthsRemaining: 17;
     height: auto;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    z-index: 1;
+    z-index: 2;
     margin-top: 20px;
     border: 1px solid gray;
+    @include tablet-down{
+      width: 15vw;
+    }
+    &:nth-child(2){
+      @include tablet-down{
+        margin-left: -18vw;
+        width: 30vw;
+      }
+    }
     div{
       height: 50px;
       width: 100%;
@@ -564,7 +601,7 @@ $monthsRemaining: 17;
 }
 .sticky {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   backdrop-filter: blur(10px);
   margin-top: 0;
   margin-bottom: 0;
@@ -574,123 +611,27 @@ $monthsRemaining: 17;
     @include fontSize($md);
   }
 }
-.education {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  height: 80vh;
-  .eyebrow {
-    width: 80%;
-    color: white;
-    display: flex;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10%;
-    .mat-icon{
-      @include fontSize($md);
-      height: 25px;
-      width: 25px;
-      margin:  0 10px;
-    }
-    span{
-      @include fontSize($sm);
-    }
-    div{
-      width: 20px;
-    }
-  }
-  h2 {
-    @include fontSize($xlg);
-    text-align: center;
-    // padding: 50px;
-  }
-  &_slider_container {
-    width: inherit;
-    height: 10vh;
-    margin: 70px 0;
-    display: flex;
-    align-items: center;
-    span {
-      @include fontSize($sm);
-      margin: 0 15px;
-    }
-    &_slider {
-      width: 100%;
-      height: inherit;
-      display: flex;
-      align-items: center;
-      &_line {
-        height: 2px;
-        background: white;
-        width: inherit;
-      }
-      &_pointer {
-        height: 35px;
-        width: 35px;
-        @include fontSize($md);
-        margin-top: 45px;
-        position: absolute;
-        margin-left: calc(($monthsRemaining * 100%) / $months);
-      }
-    }
-  }
-  &_information {
-    display: grid;
-    grid-template-columns: 20% 75%;
-    grid-column-gap: 5%;
-    height: max-content;
-    &_container {
-      border-bottom: 1px solid white;
-      div {
-        @include fontSize($sm);
 
-        &:first-child {
-          // @include fontSize($sm);
-          height: 45px;
-          border-top: 1px solid white;
-          border-bottom: 1px solid white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-transform: uppercase;
-        }
-        &:nth-child(2) {
-          padding: 50px 0;
-          text-align: center;
-        }
-      }
-      &_cocurricular {
-        div {
-          &:first-child {
-            justify-content: space-between;
-            span {
-              width: 25%;
-            }
-          }
-          &:nth-child(2) {
-            width: 100%;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            ol {
-              width: 25%;
-              list-style: none;
-              li {
-                margin-top: 15px;
-                margin-bottom: 15px;
-              }
-              // background: beige;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .projects{
   grid-template-columns: auto auto auto;
   grid-column-gap: 3vh;
   row-gap: 3vh;
   min-height: 66vh;
   margin-bottom: 6%;
+  @include tablet-down{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  @include phone-only{
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+.contact{
+  padding-top: 0;
+}
+.who{
+  @include tablet-down{
+    padding-top: 50px;
+  }
 }
