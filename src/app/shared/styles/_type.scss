@@ -14,6 +14,7 @@ $text-fluidity-end: 2500px;
 
 // strip unit value (px, vh, %, etc.)
 @function strip-unit($value) {
+  
   @return $value / ($value * 0 + 1);
 }
 
@@ -71,7 +72,16 @@ $text-fluidity-end: 2500px;
   word-spacing: 0.8px;
 }
 @mixin body-small() {
-  @include text-size(16px, 19px);
+  @include text-size(12px, 19px);
+  font-family: $whyte-book;
+  // alternate 'g' for legibility
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.4px;
+  line-height: 1.65;
+  word-spacing: 0.8px;
+}
+@mixin body-extra-small() {
+  @include text-size(10px, 14px);
   font-family: $whyte-book;
   // alternate 'g' for legibility
   font-feature-settings: 'ss02';

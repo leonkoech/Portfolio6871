@@ -7,13 +7,15 @@ $large: 1200px;
 $extra_large: 1800px;
 
 $xsm: "extra_small";
-$sm:"small";
-$md:"med";
+$sm: "small";
+$md: "med";
 $lg: "large";
 $xlg: "extra_large";
 
-$primary: white;
+$primary: #ffffff;
 $secondary: rgb(8 12 31);
+// $tetiary: 
+$line: #2D3142;
 
 @mixin phone-only {
   @media (max-width: $phone) {
@@ -46,13 +48,13 @@ $secondary: rgb(8 12 31);
   }
 }
 @mixin fontSize($size: $sm) {
-    color: $primary;
-    @if $size== $xsm{
-      @include body-small();
-    }
-    @if $size == $sm {
-      @include body-small();
-    }
+  color: $primary;
+  @if $size== $xsm {
+    @include body-small();
+  }
+  @if $size == $sm {
+    @include body-small();
+  }
   @if $size == $md {
     @include body-regular();
   }
@@ -63,22 +65,52 @@ $secondary: rgb(8 12 31);
     @include headline-bold();
   }
 }
-@mixin centerFlex{
+@mixin centerFlex {
   text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@mixin two_grid{
+@mixin two_grid {
   display: grid;
   grid-template-columns: 30% 70%;
 }
 @mixin no_select {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+@mixin small_icon {
+  height: 25px;
+  width: 25px;
+  font-size: 25px;
+  @include tablet-down {
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+  }
+  @include phone-only {
+    height: 15px;
+    width: 15px;
+    font-size: 15px;
+  }
+}
+@mixin medium_icon {
+  height: 25px;
+  width: 25px;
+  font-size: 25px;
+  @include tablet-down {
+    height: 23px;
+    width: 23px;
+    font-size: 23px;
+  }
+  @include phone-only {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+  }
 }

@@ -1,7 +1,7 @@
 @import "./shared/styles/globals.scss";
 @import "./shared/styles/type";
 
-$selected: #ff8484;
+$selected: #EF8354;
 $months: 44; // from august 2020 to april 2024
 $monthsRemaining: 17;
 
@@ -13,8 +13,8 @@ $monthsRemaining: 17;
 .side_nav {
   position: fixed;
   width: 10vw;
-  height: 93vh;
-  padding-top: 80px;
+  height: 88.89vh;
+  padding-top: 11.11vh;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,8 @@ $monthsRemaining: 17;
     // width: 20vw;
     // height: 89.9vh;
     // padding-top: 10vh;
-    padding-top: 60px;
+    padding-top: 8.33vh;
+    height: 91.67vh;
   }
   div {
     height: inherit;
@@ -45,7 +46,7 @@ $monthsRemaining: 17;
       // text-transform: uppercase;
       @include fontSize($sm);
       @include tablet-down {
-        @include fontSize($sm);
+        @include fontSize($xsm);
       }
       transition: background-color 1s;
       transition: font-size 0.5s;
@@ -70,7 +71,7 @@ $monthsRemaining: 17;
       color: $selected;
       @include fontSize($md);
       @include tablet-down {
-        transform: rotate(0deg);
+        transform: rotate(-90deg);
         @include fontSize($sm);
       }
     }
@@ -100,6 +101,7 @@ $monthsRemaining: 17;
       border-color: transparent;
       border-bottom: 0.5px solid $selected;
       span {
+        transform: unset;
         color: $selected;
         @include fontSize($lg);
       }
@@ -121,7 +123,7 @@ $monthsRemaining: 17;
     height: 60px;
   }
   .mat-icon {
-    @include fontSize($md);
+    @include medium_icon();
     color: rgb(255, 255, 255);
     @include tablet-down{
       display: flex;
@@ -141,7 +143,8 @@ $monthsRemaining: 17;
   @include tablet-up {
     width: 10vw;
     .mat-icon {
-      @include fontSize($md);
+      // @include fontSize($md);
+      @include medium_icon();
     }
     &_clicked {
       width: 50vw;
@@ -242,7 +245,7 @@ $monthsRemaining: 17;
     }
     div {
       height: inherit;
-      margin-left: -90%;
+      margin-left: -25%;
       background-size: cover;
       @include tablet-down {
         height: inherit;
@@ -386,13 +389,21 @@ $monthsRemaining: 17;
       // @include fontSize($sm);
       // color: $selected;
       // font-size: 25px;
+     
       .mat-icon {
-        height: 25px;
-        width: 25px;
-        font-size: 25px;
+        @include small_icon();
       }
       &:hover {
         cursor: pointer;
+      }
+      @include phone-only{
+
+        padding: unset;
+        .mat-icon{
+          height: 15px;
+          width: 15px;
+          font-size: 15px;
+        }
       }
     }
     &_inactive {
@@ -480,7 +491,7 @@ $monthsRemaining: 17;
     height: 100px;
     width: 100px;
     transform: rotate(-90deg);
-    color: white;
+    color: $primary;
   }
 }
 .section{
@@ -491,7 +502,7 @@ $monthsRemaining: 17;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 13vw;
-  color: white;
+  color: $primary;
   @include fontSize($sm);
   // position: relative;
   display: flex;
@@ -499,15 +510,25 @@ $monthsRemaining: 17;
   overflow: hidden;
   top: 15px;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
+  border-bottom: 1px solid $line;
+  border-top: 1px solid $line;
   p {
     @include fontSize($md);
-    color: gray;
+    color: $line;
     text-transform: uppercase;
   }
   @include tablet-down{
     height: 30px;
+    p{
+      @include fontSize($xsm);
+    }
+  }
+  @include phone-only{
+    p:nth-child(n+4){
+      // font-size: 10px;
+        display: none;
+      }
+    
   }
 }
 &-filter{
@@ -515,10 +536,10 @@ $monthsRemaining: 17;
   height: auto;
   margin-top: 6%;
   .selected{
-    color: white;
+    color: $primary;
   }
   .unselected{
-    color: gray;
+    color: $line;
   }
   .title{
     display: flex;
@@ -527,15 +548,28 @@ $monthsRemaining: 17;
     }
   }
   h2{
-    @include fontSize($xlg)
+    @include fontSize($xlg);
+    @include tablet-down{
+      @include fontSize($lg)
+    }
+  }
+  @include phone-only{
+    flex-direction: column;
+    align-items: flex-start;
   }
   .filter{
     display: flex;
     width: 30%;
     justify-content: space-between;
     @include tablet-down{
-      width: 35%;
+      width: 35%;}
+      @include phone-only{
+      justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px 0;
     }
+   
     &_select{
       width: 11vw;
       @include tablet-down{
@@ -546,7 +580,7 @@ $monthsRemaining: 17;
         justify-content: space-between;
         align-items: center;
         @include fontSize($sm);
-        color: gray;
+        color: $line;
         @include tablet-down{
           .mat-icon{
             display: flex;
@@ -571,7 +605,7 @@ $monthsRemaining: 17;
     backdrop-filter: blur(10px);
     z-index: 2;
     margin-top: 20px;
-    border: 1px solid gray;
+    border: 1px solid $line;
     @include tablet-down{
       width: 15vw;
     }
@@ -579,6 +613,9 @@ $monthsRemaining: 17;
       @include tablet-down{
         margin-left: -18vw;
         width: 30vw;
+      }
+      @include phone-only{
+        margin-left: unset;
       }
     }
     div{
@@ -609,11 +646,12 @@ $monthsRemaining: 17;
   backdrop-filter: blur(10px);
   margin-top: 0;
   margin-bottom: 0;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  p {
-    @include fontSize($md);
+  border-bottom: 1px solid $primary;
+  border-top: 1px solid $primary;
+  p{
+    color: $primary;
   }
+  
 }
 
 .projects{
@@ -639,3 +677,8 @@ $monthsRemaining: 17;
     padding-top: 50px;
   }
 }
+.invisible{
+  visibility: hidden;
+}
+
+
