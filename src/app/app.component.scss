@@ -239,6 +239,7 @@ $monthsRemaining: 17;
     width: 100%;
     border-radius: 3vw 0vw 0 3vw;
     overflow: hidden;
+    background-color: $line;
     @include desktop-down {
       height: 25vh;
       border-radius: 25vh;
