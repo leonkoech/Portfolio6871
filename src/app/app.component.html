@@ -1,4 +1,4 @@
-<div class="parent">
+<div class="parent" #main_body>
   <div
     (click)="expandSideNav()"
     [ngClass]="!expanded ? 'menu-button' : 'menu-button menu-button_clicked'"
@@ -16,12 +16,14 @@
     <div (click)="scrollTo('awards')"><span>Awards</span></div>
     
   </div>
-  <div class="section-header sticky">
+
+  <div  #header [ngClass]="'section-header sticky'">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
-        WHO   
+        {{selected.toUpperCase()}}
     </p>
   </div>
-  <div id="who" class="main_content main_content_left who">
+
+  <div #who class="main_content main_content_left who" >
     <!-- right side of the page -->
     <div class="image_component">
       <div class="image">
@@ -52,44 +54,56 @@
         <span>Full Stack Engineer | VR Enthusiast</span>
         <div [ngClass]="!summary ? 'hidden_text' : 'visible_text'">
           <p>
-            I am a very passionate software engineer currently
-            interning at <a href="https://sustainible.io/">Sustainible</a> as a Full Stack Software Developer.
-            <br />Previously, I interned at
-            <a href="https://www.instrument.com/">Instrument(Stagwell)</a>. I am
+            I am a very passionate software engineer currently pursuing my undergrad at Florida National University while
+            interning at <a target="_blank" rel="noopener noreferrer" href="https://sustainible.io/">Sustainible</a> as a Full Stack Software Developer.
+            <br> <br>Previously, I interned at
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instrument.com/">Instrument(Stagwell)</a>. I am
             enthusiastic about the developer community having founded, and
             currently the president of, the
-            <a href="https://fnutech.org/">FNU tech club</a>. I am also a
-            <a href="https://githubcampus.expert/leonkoech/">Github Campus Expert</a> and I absolutely love Hackathons, inclusivity and trying to get my hands dirty with accessibility
+            <a target="_blank" rel="noopener noreferrer" href="https://fnutech.org/">FNU tech club</a> and a
+            <a target="_blank" rel="noopener noreferrer" href="https://githubcampus.expert/leonkoech/">Github Campus Expert</a>.
+            I absolutely love Hackathons, inclusivity and trying to get my hands dirty with accessibility. 
           </p>
+          <p>
+            <br> 
+            Outside the tech space; I like competitive running, anime, hiking, art museums, traveling and 
+            interacting with people from different cultures (and not in that order).<br>
+            </p>
+            <p><br>Also, I'm open to internship / co-op opportunities for the year 2023 :)</p>
+            <!-- <p><br> <br><i>"Seek freedom, and it will lie stretched out before your eyes."</i></p> -->
+          <moving-text [words]="gratitude"></moving-text>
+          <!-- with themes of social resistance, adventure and sacred quests.  -->
+          
         </div>
+        <div [ngClass]="summary ? 'hidden_text' : 'visible_text'">
 
-        <p [ngClass]="summary ? 'hidden_text' : 'visible_text'">
+       
+        <p >
           Hello, my name is Leon Kipkoech. I am originally from Nairobi, Kenya
-          but currently studying in Miami, Florida. <br />
-          I believe in community, especially regarding inclusion, because the
-          more the merrier, right? I have participated in various hackathons
-          ever since I started my studies and I fell in love with them. I even
-          traveled to France for Laval Virtual student hackathon in 2021. <br />
-          Currently I'm interning at a small startup in Pittsburgh (remote)
+          but currently a junior undergrad at FLorida national University in Miami, Florida. <br>
+          I believe in community, especially in regards to inclusion, because the
+          more the merrier, right?<br>
+          Because of this, I have participated in various hackathons
+          ever since I started my studies and immediately  fell in love with them. I even
+          traveled to France for Laval Virtual student hackathon in 2021. <br>
+          I'm currently interning at a small startup (<a target="_blank" rel="noopener noreferrer" href="https://sustainible.io/">Sustainible</a>) in Pittsburgh (remote)
           where I fell in love with full stack web development, I also ventured
           into front-end development for Stagwell's
-          <a href="https://www.instrument.com/">Instrument</a>. While at
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instrument.com/">Instrument</a>. While at
           instrument I worked on a project for Microsoft
-          <a href="https://unlocked.microsoft.com">(unlocked.microsoft.com)</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://unlocked.microsoft.com">(unlocked.microsoft.com)</a>
           and Google
-          <a href="https://design.google.com">(design.google.com)</a>. The
-          google one will be made open source, so I count it as one of the open
-          source projects I’ve done, yatta!<br />
-          Also, I am the tech club president(<a href="https://fnutech.org/"
-            >FNU tech club</a
-          >) at my school and since taking that chair, we’ve seen an increase of
-          members by a substantial amount. Stack I use? I do/have done a lot (i
-          think) Flask, Django, Flutter, Android Java, Angular, Vue, Next, Unity
-          C#(VR dev scripting), LUA, etc haha I am a Junior set to graduate in
-          2024.
+          <a target="_blank" rel="noopener noreferrer" href="https://design.google.com">(design.google.com)</a>. Design.google was made open source yatta!<br>
+          Also, I am the tech club president at <a target="_blank" rel="noopener noreferrer" href="https://fnutech.org/">FNU tech club where I teach Intro to CS concepts</a> and a
+          <a target="_blank" rel="noopener noreferrer" href="https://githubcampus.expert/leonkoech/">Github Campus Expert</a>.
+          
         </p>
-        <p>Also, I am actively looking for internships for 2023 :)</p>
-       
+        <p>
+          Outside the tech space; I like competitive running, anime, hiking, art museums, traveling and 
+          interacting with people from different cultures (and not in that order).
+          </p>
+          <p>Also, I'm open to internship / co-op opportunities for the year 2023 :)</p>
+        </div>
       </div>
       
       <div class="right_component_buttons">
@@ -118,36 +132,39 @@
       
     </div>
   </div>
-  <div id="contact" class="main_content one_col contact">
+  <div #contact class="main_content one_col contact">
     <contact></contact>
   </div>
   
-  <div id="education" class="section-header ">
+  <div  [ngClass]="'section-header'">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Education   
     </p>
   </div>
-   <education></education>
+  <div #education>
+    <education ></education>
+  </div>
+   
 
 
-  <div id="experience" class="section-header ">
+  <div   #normalHeader [ngClass]="'section-header'">
   
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Experience   
     </p>
   </div>
-  <div class="main_content one_col main_content_left_mini">
+  <div #experience class="main_content one_col main_content_left_mini">
     <experience-card *ngFor="let experience of experiences; let index = index" [index]="index" [experience]="experience"></experience-card>
   </div>
 
-  <div id="projects" class="section-header ">
+  <div  [ngClass]="'section-header'">
   
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Projects   
     </p>
   </div>
 
-  <div class="section-header section-filter">
+  <div #filter class="section-header section-filter">
     <div class="title"><h2 (click)="team=false; selectTeam()" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true; selectTeam()"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
     <div class="filter">
       <div class="filter_select">
@@ -170,10 +187,10 @@
       </div>
     </div>
   </div>
-  <div class="main_content one_col projects main_content_right_mini">
+  <div  #projectElement class="main_content one_col  main_content_right_mini projects">
     <project-card *ngFor="let project of projects" [project]="project"></project-card>
   </div>
-  <div id="awards" class="section-header">
+  <div #awards  [ngClass]="'section-header'">
     <p *ngFor="let i of  [0,1,2,3,4,5,6]">
         Awards   
     </p>
