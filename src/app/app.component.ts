@@ -21,7 +21,7 @@ export class AppComponent {
   langSelect: any = false;
   languages = ["Any Language",...Object.values(languages).map((x)=>{return x.name})];
   selectedLanguage: string = this.languages[0];
-
+  tabs: string[] = ["who","education", "experience", "projects", "awards"]
   catSelect: any = false;
   categories = [...Object.values(categories)];
   selectedCategory: string = this.categories[0];

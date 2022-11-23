@@ -9,11 +9,11 @@
   </div>
 
   <div [ngClass]="!expanded ? 'side_nav' : 'side_nav side_nav_expanded'">
-    <div class="active"><span>Who?</span></div>
-    <div (click)="scrollTo('education')"><span>Education</span></div>
+    <div *ngFor="let tab of tabs" (click)="scrollTo(tab)" [ngClass]="selected==tab?'active':''"><span>{{tab}}</span></div>
+    <!-- <div (click)="scrollTo('education')"><span>Education</span></div>
     <div (click)="scrollTo('experience')"><span>Experience</span></div>
     <div (click)="scrollTo('projects')"><span>Projects</span></div>
-    <div (click)="scrollTo('awards')"><span>Awards</span></div>
+    <div (click)="scrollTo('awards')"><span>Awards</span></div> -->
     
   </div>
 
@@ -23,7 +23,7 @@
     </p>
   </div>
 
-  <div #who class="main_content main_content_left who" >
+  <div #who id="who" class="main_content main_content_left who" >
     <!-- right side of the page -->
     <div class="image_component">
       <div class="image">
@@ -141,7 +141,7 @@
         Education   
     </p>
   </div>
-  <div #education>
+  <div #education id="education">
     <education ></education>
   </div>
    
@@ -153,7 +153,7 @@
         Experience   
     </p>
   </div>
-  <div #experience class="main_content one_col main_content_left_mini">
+  <div #experience id="experience" class="main_content one_col main_content_left_mini">
     <experience-card *ngFor="let experience of experiences; let index = index" [index]="index" [experience]="experience"></experience-card>
   </div>
 
@@ -164,7 +164,7 @@
     </p>
   </div>
 
-  <div #filter class="section-header section-filter">
+  <div #filter id="projects" class="section-header section-filter">
     <div class="title"><h2 (click)="team=false; selectTeam()" [ngClass]="!team?'selected':'unselected'">Solo Projects</h2> <h2>&nbsp;/&nbsp;</h2> <h2 (click)="team=true; selectTeam()"  [ngClass]="team?'selected':'unselected'">Team Projects</h2></div>
     <div class="filter">
       <div class="filter_select">
@@ -195,7 +195,7 @@
         Awards   
     </p>
   </div>
-  <div  class="main_content one_col projects main_content_left_mini awards">
+  <div  id="awards" class="main_content one_col projects main_content_left_mini awards">
     <awards-card *ngFor="let i of [].constructor(3); let idx=index" [year]="2022-idx"></awards-card>
   </div>
 
