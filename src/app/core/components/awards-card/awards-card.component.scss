@@ -18,9 +18,8 @@
       margin-top: 5%;
       margin-bottom: 50px;
       &_number{
-          
-          @include fontSize($lg);
-          color: $line;
+          color: $primary;
+          @include fontSize($lg)
       }
       &_text{
           color: $primary;
@@ -38,11 +37,8 @@
       }
     }
     &_link{
-      @include button($sm);
+      @include button($xsm);
       width: 55%;
       padding: 0;
-      .mat-icon{
-        @include small_icon();
-      }
     }
   }

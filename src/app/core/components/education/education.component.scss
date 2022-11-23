@@ -11,25 +11,22 @@
     }
     .eyebrow {
       width: 80%;
-      color: $primary;
+      color: white;
       display: flex;
       height: auto;
       align-items: center;
       justify-content: center;
       padding: 0 10%;
-      @include phone-only{
-        flex-direction: column;
-        margin: 20px 0;
-      }
       .mat-icon{
-        display: flex;
+        @include fontSize($md);
+        height: 25px;
+        width: 25px;
+        margin:  0 10px;
+        @include tablet-down{
+          display: flex;
           justify-content: center;
           align-items: center;
-        margin:  0 10px;
-        @include medium_icon();  
-        color: $line;
-        @include phone-only{
-          margin: 10px 0;
+          font-size: 15px;
         }
       }
       span{
@@ -62,25 +59,30 @@
         height: inherit;
         display: flex;
         align-items: center;
-        position: relative;
         &_line {
-          height: 1.5px;
-          background: $line;
+          height: 2px;
+          background: white;
           width: inherit;
         }
         &_pointer {
-          // @include medium_icon(); 
+          height: 35px;
+          width: 35px;
+          @include fontSize($md);
           margin-top: 45px;
           position: absolute;
           margin-left: calc(($monthsRemaining * 100%) / $months);
-          color: $line;
-          .mat-icon{
-            @include small_icon(); 
-          }
-          @include phone-only{
-            margin-top: 30px;
-          }
-            
+          
+            @include tablet-down{
+              height: 20px;
+              width: 20px;
+              
+              .mat-icon{
+                height: 20px;
+                font-size: 15px;
+              width: 20px;
+              }
+              
+            }
           
         }
       }
@@ -97,19 +99,19 @@
         grid-column-gap: 5%;
       }
       &_container {
-        border-bottom: 1px solid $line;
+        border-bottom: 1px solid white;
         div {
           @include fontSize($sm);
-          
+  
           &:first-child {
             // @include fontSize($sm);
             height: 45px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
             display: flex;
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            backdrop-filter: invert(1);
-          color: $secondary;
             @include tablet-down{
               height: 30px;
             }
@@ -126,7 +128,6 @@
           div {
             &:first-child {
               justify-content: space-between;
-              padding-left: 5px;
               span {
                 width: 25%;
               }
@@ -136,7 +137,6 @@
               text-align: left;
               display: flex;
               justify-content: space-between;
-              padding-left: 5px;
               ol {
                 width: 25%;
                 list-style: none;

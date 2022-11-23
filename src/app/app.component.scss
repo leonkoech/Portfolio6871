@@ -1,10 +1,7 @@
 @import "./shared/styles/globals.scss";
-@import "./shared/styles/type";
-
-// $selected: #EF8354;
+$selected: #ff8484;
 $months: 44; // from august 2020 to april 2024
 $monthsRemaining: 17;
-
 // $percentage: calc(($monthsRemaining * 100%)/$months);
 ::ng-deep * {
   margin: 0;
@@ -13,8 +10,8 @@ $monthsRemaining: 17;
 .side_nav {
   position: fixed;
   width: 10vw;
-  height: 88.89vh;
-  padding-top: 11.11vh;
+  height: 93vh;
+  padding-top: 80px;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -28,8 +25,7 @@ $monthsRemaining: 17;
     // width: 20vw;
     // height: 89.9vh;
     // padding-top: 10vh;
-    padding-top: 8.33vh;
-    height: 91.67vh;
+    padding-top: 60px;
   }
   div {
     height: inherit;
@@ -46,7 +42,7 @@ $monthsRemaining: 17;
       // text-transform: uppercase;
       @include fontSize($sm);
       @include tablet-down {
-        @include fontSize($xsm);
+        @include fontSize($sm);
       }
       transition: background-color 1s;
       transition: font-size 0.5s;
@@ -71,7 +67,7 @@ $monthsRemaining: 17;
       color: $selected;
       @include fontSize($md);
       @include tablet-down {
-        transform: rotate(-90deg);
+        transform: rotate(0deg);
         @include fontSize($sm);
       }
     }
@@ -101,7 +97,6 @@ $monthsRemaining: 17;
       border-color: transparent;
       border-bottom: 0.5px solid $selected;
       span {
-        transform: unset;
         color: $selected;
         @include fontSize($lg);
       }
@@ -123,7 +118,7 @@ $monthsRemaining: 17;
     height: 60px;
   }
   .mat-icon {
-    @include medium_icon();
+    @include fontSize($md);
     color: rgb(255, 255, 255);
     @include tablet-down{
       display: flex;
@@ -143,8 +138,7 @@ $monthsRemaining: 17;
   @include tablet-up {
     width: 10vw;
     .mat-icon {
-      // @include fontSize($md);
-      @include medium_icon();
+      @include fontSize($md);
     }
     &_clicked {
       width: 50vw;
@@ -159,7 +153,7 @@ $monthsRemaining: 17;
   padding-left: 13vw;
   padding-right: 3vw;
   padding-top: 5%;
-  @include desktop-down {
+  @include tablet-down {
     // width: 80vw;
     // display: initial;
     display: block;
@@ -225,7 +219,7 @@ $monthsRemaining: 17;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include desktop-down {
+  @include tablet-down {
     height: auto;
     width: 90%;
     align-items: center;
@@ -238,16 +232,16 @@ $monthsRemaining: 17;
     width: 100%;
     border-radius: 3vw 0vw 0 3vw;
     overflow: hidden;
-    @include desktop-down {
+    @include tablet-down {
       height: 25vh;
       border-radius: 25vh;
       width: 65vw;
     }
     div {
       height: inherit;
-      margin-left: -25%;
+      margin-left: -90%;
       background-size: cover;
-      @include desktop-down {
+      @include tablet-down {
         height: inherit;
         width: inherit;
         margin-left: 0%;
@@ -263,7 +257,7 @@ $monthsRemaining: 17;
   justify-content: space-around;
   align-items: center;
   padding: 20%;
-  @include desktop-down {
+  @include tablet-down {
     padding: 10px;
   }
 
@@ -272,15 +266,10 @@ $monthsRemaining: 17;
     height: 15px;
     width: 15px;
     border-radius: 15px;
-    @include desktop-down{
-      height: 10px;
-      width: 10px;
-    }
     @include tablet-down {
       height: 5px;
       width: 5px;
     }
-   
   }
   .active {
     background-color: $selected;
@@ -391,24 +380,15 @@ $monthsRemaining: 17;
       padding: 0 10%;
       align-items: center;
       background: transparent;
-      // @include fontSize($sm);
-      // color: $selected;
-      // font-size: 25px;
-     
+      // @include fontSize($md);
+      font-size: 25px;
       .mat-icon {
-        @include small_icon();
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
       }
       &:hover {
         cursor: pointer;
-      }
-      @include phone-only{
-
-        padding: unset;
-        .mat-icon{
-          height: 15px;
-          width: 15px;
-          font-size: 15px;
-        }
       }
     }
     &_inactive {
@@ -496,7 +476,7 @@ $monthsRemaining: 17;
     height: 100px;
     width: 100px;
     transform: rotate(-90deg);
-    color: $primary;
+    color: white;
   }
 }
 .section{
@@ -507,7 +487,7 @@ $monthsRemaining: 17;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 13vw;
-  color: $primary;
+  color: white;
   @include fontSize($sm);
   // position: relative;
   display: flex;
@@ -515,31 +495,15 @@ $monthsRemaining: 17;
   overflow: hidden;
   top: 15px;
   justify-content: space-between;
-  border-bottom: 1px solid $line;
-  border-top: 1px solid $line;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
   p {
     @include fontSize($md);
-    color: $line;
+    color: gray;
     text-transform: uppercase;
   }
   @include tablet-down{
     height: 30px;
-    p{
-      @include fontSize($xsm);
-    }
-  }
-  @include desktop-down{
-    p:nth-child(n+5){
-      // font-size: 10px;
-        display: none;
-      }
-  }
-  @include phone-only{
-    p:nth-child(n+4){
-      // font-size: 10px;
-        display: none;
-      }
-    
   }
 }
 &-filter{
@@ -547,41 +511,27 @@ $monthsRemaining: 17;
   height: auto;
   margin-top: 6%;
   .selected{
-    color: $primary;
+    color: white;
   }
   .unselected{
-    color: $line;
+    color: gray;
   }
   .title{
     display: flex;
-    align-items: center;
     &:hover{
       cursor: pointer;
     }
   }
   h2{
-    @include fontSize($xlg);
-    @include tablet-down{
-      @include fontSize($lg)
-    }
-  }
-  @include phone-only{
-    flex-direction: column;
-    align-items: flex-start;
+    @include fontSize($xlg)
   }
   .filter{
     display: flex;
     width: 30%;
     justify-content: space-between;
     @include tablet-down{
-      width: 35%;}
-      @include phone-only{
-      justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    margin: 20px 0;
+      width: 35%;
     }
-   
     &_select{
       width: 11vw;
       @include tablet-down{
@@ -592,7 +542,7 @@ $monthsRemaining: 17;
         justify-content: space-between;
         align-items: center;
         @include fontSize($sm);
-        color: $line;
+        color: gray;
         @include tablet-down{
           .mat-icon{
             display: flex;
@@ -617,7 +567,7 @@ $monthsRemaining: 17;
     backdrop-filter: blur(10px);
     z-index: 2;
     margin-top: 20px;
-    border: 1px solid $line;
+    border: 1px solid gray;
     @include tablet-down{
       width: 15vw;
     }
@@ -625,9 +575,6 @@ $monthsRemaining: 17;
       @include tablet-down{
         margin-left: -18vw;
         width: 30vw;
-      }
-      @include phone-only{
-        margin-left: unset;
       }
     }
     div{
@@ -658,12 +605,11 @@ $monthsRemaining: 17;
   backdrop-filter: blur(10px);
   margin-top: 0;
   margin-bottom: 0;
-  border-bottom: 1px solid $primary;
-  border-top: 1px solid $primary;
-  p{
-    color: $primary;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  p {
+    @include fontSize($md);
   }
-  
 }
 
 .projects{
@@ -672,10 +618,6 @@ $monthsRemaining: 17;
   row-gap: 3vh;
   min-height: 66vh;
   margin-bottom: 6%;
-  @include desktop-down{
-    display: grid;
-    grid-template-columns: auto auto;
-  }
   @include tablet-down{
     display: grid;
     grid-template-columns: auto auto;
@@ -689,12 +631,7 @@ $monthsRemaining: 17;
   padding-top: 0;
 }
 .who{
-  @include desktop-down{
+  @include tablet-down{
     padding-top: 50px;
   }
 }
-.invisible{
-  visibility: hidden;
-}
-
-

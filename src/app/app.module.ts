@@ -9,7 +9,6 @@ import { AwardsCardComponent } from './core/components/awards-card/awards-card.c
 import { ProjectsCardComponent } from './core/components/projects-card/projects-card.component';
 import { EducationComponent } from './core/components/education/education.component';
 import { ContactComponent } from './core/components/contact/contact.component';
-import { MovingTextComponent } from './core/components/moving-text/moving-text.component';
 
 let components=[
   AppComponent,
@@ -22,8 +21,7 @@ let components=[
   declarations: [
     ...components,
     EducationComponent,
-    ContactComponent,
-    MovingTextComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,

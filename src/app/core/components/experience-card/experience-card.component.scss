@@ -1,167 +1,149 @@
 @import "../../../shared/styles/globals.scss";
-@import "../../../app.component.scss";
+@import '../../../app.component.scss';
 
 .experience_card {
-  height: 55vh;
-  display: grid;
-  padding-left: 0;
-  @include tablet-down {
-    height: auto;
-    grid-template-columns: 100%;
-  }
-  &_image_container {
-    position: relative;
-    height: inherit;
-    width: 20vw;
-    border-top: 1px solid $line;
-    @include centerFlex;
-    flex-direction: column;
-
-    padding: 20px 0;
-    @include tablet-down {
-      width: inherit;
+    height: 55vh;
+    display: grid;
+    padding-left: 0;
+    @include tablet-down{
+      height: auto;
+      grid-template-columns: 100%;
     }
-    &_title {
-      position: absolute;
-      top: 20px;
-      width: inherit;
-      display: flex;
-      justify-content: space-between;
-      text-decoration: none;
-      @include tablet-down {
-        top: unset;
+    &_image_container {
+      position: relative;
+      height: inherit;
+      width: 20vw;
+      border-top: 1px solid $primary;
+      @include centerFlex;
+      flex-direction: column;
+  
+      padding: 20px 0;
+      @include tablet-down{
+        width: inherit;
       }
-      @include phone-only {
+      &_title {
+        position: absolute;
+        top: 20px;
+        width: inherit;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        width: 50%;
-      }
-      h2 {
-        @include fontSize($lg);
-        text-align: center;
-        @include phone-only {
-          @include fontSize($lg);
+        text-decoration: none;
+        @include tablet-down{
+          top: unset
         }
-      }
-      .mat-icon {
-        @include medium_icon();
-        color: $primary;
-      }
-      &:hover {
-        cursor: pointer;
         h2 {
-          color: $selected;
+          @include fontSize($lg);
+          text-align: center;
         }
         .mat-icon {
-          color: $selected;
+          @include fontSize($lg);
+          height: 2.1vw;
+          width: 2.1vw;
+          color: $primary;
         }
-      }
-    }
-    img {
-      position: absolute;
-      width: 16vw;
-    }
-
-    &_text {
-      position: relative;
-      height: 100%;
-      pointer-events: none;
-      width: 100%;
-      justify-content: flex-start;
-      display: flex;
-  
-      @include phone-up {
-        width: 20vw;
-        aspect-ratio: 1/1;
-        @include centerFlex;
-      }
-      &_h2 {
-        @include fontSize($xlg);
-        color: $line;
-      }
-    }
-  }
-  &_text_container {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top: 1px solid $line;
-    padding-top: 20px;
-    @include tablet-down {
-      align-items: center;
-    }
-    span {
-      @include fontSize($sm);
-    }
-    // padding: 5% 0;
-    h2 {
-      @include fontSize($xlg);
-      text-align: left;
-      @include tablet-down {
-        @include body-large-bold();
-        margin-bottom: 20px;
-      }
-    }
-    p {
-      @include fontSize($md);
-    }
-    div {
-      display: flex;
-      width: 60%;
-      padding: 10px 20%;
-      justify-content: space-evenly;
-      p {
-        @include fontSize($sm);
-      }
-      span {
-        @include fontSize($sm);
-      }
-    }
-    .justify_start {
-
-      padding: 0;
-      @include phone-only{
-        flex-direction: column;
-        width: 100%;
-      }
-      .eyebrow {
-        padding: 0;
-        width: 100%;
-        justify-content: flex-start;
-        height: 45px;
-        align-items: flex-end;
-        .mat-icon {
-          color: $line;
-          margin-right: 20px;
-        }
-        @include tablet-down {
-          height: auto;
-          align-items: center;
-          
+        &:hover {
+          cursor: pointer;
+          h2 {
+            color: $selected;
+          }
           .mat-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
+            color: $selected;
           }
         }
       }
+      img {
+        position: absolute;
+        width: 16vw;
+      }
+  
+      &_text {
+        position: relative;
+        width: 20vw;
+        height: 100%;
+        pointer-events: none;
+        aspect-ratio: 1/1;
+        @include centerFlex;
+        &_h2 {
+          @include fontSize($xlg);
+          color: #15151f;
+        }
+      }
     }
-    .text_with_title {
-      padding: 10% 0;
-      width: inherit;
+    &_text_container {
       height: inherit;
-      justify-content: space-around;
       display: flex;
       flex-direction: column;
-      p {
-        @include fontSize($sm);
+      justify-content: space-between;
+      border-top: 1px solid $primary;
+      padding-top: 20px;
+      @include tablet-down{
+        align-items: center
       }
       span {
         @include fontSize($sm);
       }
+      // padding: 5% 0;
+      h2 {
+        @include fontSize($xlg);
+        text-align: left;
+        @include tablet-down{
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        @include fontSize($md);
+      }
+      div {
+        display: flex;
+        width: 60%;
+        padding: 10px 20%;
+        justify-content: space-evenly;
+        p {
+          @include fontSize($sm);
+        }
+        span {
+          @include fontSize($sm);
+        }
+      }
+      .justify_start {
+        padding: 0;
+        .eyebrow {
+          padding: 0;
+          width: 100%;
+          justify-content: flex-start;
+          height: 45px;
+          align-items: flex-end;
+          .mat-icon {
+            color: $primary;
+            margin-right: 20px;
+           
+          }
+          @include tablet-down{
+            height: auto;
+            align-items: center;
+            .mat-icon{
+              display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            }
+            
+          }
+        }
+      }
+      .text_with_title {
+        padding: 10% 0;
+        width: inherit;
+        height: inherit;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        p {
+          @include fontSize($sm);
+        }
+        span {
+          @include fontSize($sm);
+        }
+      }
     }
   }
-}

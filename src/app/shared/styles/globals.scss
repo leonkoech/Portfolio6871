@@ -1,5 +1,4 @@
 // @import '../../app.component.scss';
-@import "../styles/type";
 
 $phone: 600px;
 $tablet: 900px;
@@ -7,16 +6,13 @@ $large: 1200px;
 $extra_large: 1800px;
 
 $xsm: "extra_small";
-$sm: "small";
-$md: "med";
+$sm:"small";
+$md:"med";
 $lg: "large";
 $xlg: "extra_large";
 
-$primary: #ffffff;
+$primary: white;
 $secondary: rgb(8 12 31);
-// $tetiary: 
-$line: #8C9A9E;
-$selected: #9ED0E6;
 
 @mixin phone-only {
   @media (max-width: $phone) {
@@ -38,11 +34,6 @@ $selected: #9ED0E6;
     @content;
   }
 }
-@mixin desktop-down {
-  @media (max-width: $large) {
-    @content;
-  }
-}
 @mixin desktop-up {
   @media (min-width: $large) {
     @content;
@@ -54,69 +45,39 @@ $selected: #9ED0E6;
   }
 }
 @mixin fontSize($size: $sm) {
-  color: $primary;
-  @if $size== $xsm {
-    @include body-small();
-  }
-  @if $size == $sm {
-    @include body-small();
-  }
+    color: $primary;
+    @if $size== $xsm{
+      font-size: 1vw;
+    }
+    @if $size == $sm {
+      font-size: 1.2vw;
+    }
   @if $size == $md {
-    @include body-regular();
+    font-size: 1.4vw;
   }
   @if $size == $lg {
-    @include body-large-bold();
+    font-size: 1.8vw;
   }
   @if $size == $xlg {
-    @include headline-bold();
+    font-size: 3.1vw;
   }
 }
-@mixin centerFlex {
+@mixin centerFlex{
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
-@mixin two_grid {
+@mixin two_grid{
   display: grid;
   grid-template-columns: 30% 70%;
 }
 @mixin no_select {
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
-}
-@mixin small_icon {
-  height: 25px;
-  width: 25px;
-  font-size: 25px;
-  @include tablet-down {
-    height: 18px;
-    width: 18px;
-    font-size: 18px;
-  }
-  @include phone-only {
-    height: 15px;
-    width: 15px;
-    font-size: 15px;
-  }
-}
-@mixin medium_icon {
-  height: 25px;
-  width: 25px;
-  font-size: 25px;
-  @include tablet-down {
-    height: 23px;
-    width: 23px;
-    font-size: 23px;
-  }
-  @include phone-only {
-    height: 20px;
-    width: 20px;
-    font-size: 20px;
-  }
 }

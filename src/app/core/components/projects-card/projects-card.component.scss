@@ -23,16 +23,11 @@ $gold: #c9c9c9f3;
   height: 100%;
 }
   &__top {
-    text-decoration: none;
-    @include button($md);
-    font-weight: bold;
-    @include phone-only{
-      padding: 10px 0;
-    }
+    @include button($xsm)
   }
   &__parent {
     aspect-ratio: 7.7/8;
-    border: 1px solid $line;
+    border: 1px solid gray;
     transform: background-color 1s;
     border-left: 1px transparent;
     border-right: 1px transparent;
@@ -40,23 +35,13 @@ $gold: #c9c9c9f3;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    @include desktop-down{
-      aspect-ratio: 3/3.5;
-    }
-    @include tablet-down{
-      aspect-ratio: 3/4;
-    }
-    @include phone-only{
-      aspect-ratio: 3/2.5;
-      // height: 30vh;
-    }
     &:hover{
-      // border: 1px solid $line;
+      // border: 1px solid gray;
       // cursor:;
       .card{
-        &__top{
-          color: $selected;
-        }
+        // &__top{
+        //   color: $secondary;
+        // }
         &_category{
           backdrop-filter: invert(0%);
           // color: $secondary;
@@ -72,33 +57,27 @@ $gold: #c9c9c9f3;
     }
   }
   &__details {
-    @include fontSize($sm);
+    @include fontSize($md);
     padding: 30px;
     transition: color 2s;
-    @include phone-only{
-      padding: 10px 5px;
-    }
     &_langs{
       padding: 30px;
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
       grid-row-gap: 10px;
-      @include phone-only{
-        padding: 10px 5px;
-      }
       // justify-content: space-between;
       &_container{
         display: grid;
         grid-template-columns: 25px auto;
         align-items: center;
         .circle{
-          height: 10px;
-          width: 10px;
+          height: 15px;
+          width: 15px;
           border-radius: 10px;
         }
         p{
-          @include body-extra-small();
-          color: $line;
+          @include fontSize($sm);
+          color: gray;
         }
       }
     }
@@ -113,9 +92,6 @@ $gold: #c9c9c9f3;
     color: $secondary;
     text-transform: uppercase;
     transition: backdrop-filter 2s;
-    @include tablet-down{
-      height: 10vw
-    }
   }
 }
 // child one 
@@ -123,10 +99,3 @@ $gold: #c9c9c9f3;
 // /* height: 98vh; */
 // right: 0;
 // top: 10%;
-.members{
-  padding: 0  30px; 
-  text-decoration: none;
-  a{
-    text-decoration: none;
-  }
-}
