@@ -1,10 +1,6 @@
-// @font-face {
-//   font-family: myFirstFont;
-//   src: url('../sansation_light.woff');
-// }
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-$whyte-book: 'Montserrat', sans-serif;
-// $whyte-book: ;
+$monsterrat: 'Montserrat', sans-serif;
 
 
 $text-fluidity-start: 320px;
@@ -15,7 +11,7 @@ $text-fluidity-end: 2500px;
 // strip unit value (px, vh, %, etc.)
 @function strip-unit($value) {
   
-  @return $value / ($value * 0 + 1);
+  @return math.div($value , ($value * 0 + 1));
 }
 
 // interpolates type size between min and max
@@ -37,7 +33,7 @@ $text-fluidity-end: 2500px;
 
 @mixin headline-bold() {
   @include text-size(28px, 72px);
-  font-family:  $whyte-book;
+  font-family:  $monsterrat;
   letter-spacing: -0.1vw;
   line-height: 1.1;
   word-spacing: 0.1vw;
@@ -46,7 +42,7 @@ $text-fluidity-end: 2500px;
 
 @mixin header-display() {
   @include text-size(64px, 190px);
-  font-family:  $whyte-book;
+  font-family:  $monsterrat;
   letter-spacing: -0.5vw;
   line-height: 1.05;
   word-spacing: 0.1vw;
@@ -54,7 +50,7 @@ $text-fluidity-end: 2500px;
 
 @mixin body-large-bold() {
   @include text-size(19px, 32px);
-  font-family:  $whyte-book;
+  font-family:  $monsterrat;
   // alternate 'g' for legibility
   font-feature-settings: 'ss02';
   letter-spacing: 0.1px;
@@ -64,7 +60,7 @@ $text-fluidity-end: 2500px;
 
 @mixin body-regular() {
   @include text-size(16px, 21px);
-  font-family: $whyte-book;
+  font-family: $monsterrat;
   // alternate 'g' for legibility
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;
@@ -73,7 +69,7 @@ $text-fluidity-end: 2500px;
 }
 @mixin body-small() {
   @include text-size(12px, 19px);
-  font-family: $whyte-book;
+  font-family: $monsterrat;
   // alternate 'g' for legibility
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;
@@ -82,7 +78,7 @@ $text-fluidity-end: 2500px;
 }
 @mixin body-extra-small() {
   @include text-size(10px, 14px);
-  font-family: $whyte-book;
+  font-family: $monsterrat;
   // alternate 'g' for legibility
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;

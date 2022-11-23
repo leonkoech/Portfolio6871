@@ -70,6 +70,7 @@ $monthsRemaining: 17;
     span {
       color: $selected;
       @include fontSize($md);
+      transform: rotate(0deg);
       @include tablet-down {
         transform: rotate(-90deg);
         @include fontSize($sm);
