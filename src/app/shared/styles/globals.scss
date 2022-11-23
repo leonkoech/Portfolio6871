@@ -15,7 +15,8 @@ $xlg: "extra_large";
 $primary: #ffffff;
 $secondary: rgb(8 12 31);
 // $tetiary: 
-$line: #2D3142;
+$line: #8C9A9E;
+$selected: #9ED0E6;
 
 @mixin phone-only {
   @media (max-width: $phone) {
@@ -34,6 +35,11 @@ $line: #2D3142;
 }
 @mixin tablet-down {
   @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop-down {
+  @media (max-width: $large) {
     @content;
   }
 }

@@ -78,7 +78,7 @@
       }
       &_h2 {
         @include fontSize($xlg);
-        color: #15151f;
+        color: $line;
       }
     }
   }

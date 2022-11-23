@@ -64,7 +64,7 @@
         align-items: center;
         position: relative;
         &_line {
-          height: 2px;
+          height: 1.5px;
           background: $line;
           width: inherit;
         }
@@ -73,7 +73,7 @@
           margin-top: 45px;
           position: absolute;
           margin-left: calc(($monthsRemaining * 100%) / $months);
-          color: $selected;
+          color: $line;
           .mat-icon{
             @include small_icon(); 
           }

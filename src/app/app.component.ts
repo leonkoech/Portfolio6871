@@ -168,7 +168,9 @@ export class AppComponent {
   }
 
   selectTeam(){
-    this.projects =  projects.filter((val)=>{
+    this.filter()
+    let temp = this.projects
+    this.projects =  temp.filter((val)=>{
       return val.team == this.team
     })
     

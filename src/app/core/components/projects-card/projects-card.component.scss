@@ -23,9 +23,9 @@ $gold: #c9c9c9f3;
   height: 100%;
 }
   &__top {
-    @include button($lg);
+    text-decoration: none;
+    @include button($md);
     font-weight: bold;
-    // @include  body-large-bold();
     @include phone-only{
       padding: 10px 0;
     }
@@ -40,17 +40,23 @@ $gold: #c9c9c9f3;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    @include desktop-down{
+      aspect-ratio: 3/3.5;
+    }
+    @include tablet-down{
+      aspect-ratio: 3/4;
+    }
     @include phone-only{
-      aspect-ratio: unset;
-      height: 30vh;
+      aspect-ratio: 3/2.5;
+      // height: 30vh;
     }
     &:hover{
       // border: 1px solid $line;
       // cursor:;
       .card{
-        // &__top{
-        //   color: $secondary;
-        // }
+        &__top{
+          color: $selected;
+        }
         &_category{
           backdrop-filter: invert(0%);
           // color: $secondary;
@@ -107,6 +113,9 @@ $gold: #c9c9c9f3;
     color: $secondary;
     text-transform: uppercase;
     transition: backdrop-filter 2s;
+    @include tablet-down{
+      height: 10vw
+    }
   }
 }
 // child one 

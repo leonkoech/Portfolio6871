@@ -1,7 +1,7 @@
 @import "./shared/styles/globals.scss";
 @import "./shared/styles/type";
 
-$selected: #EF8354;
+// $selected: #EF8354;
 $months: 44; // from august 2020 to april 2024
 $monthsRemaining: 17;
 
@@ -159,7 +159,7 @@ $monthsRemaining: 17;
   padding-left: 13vw;
   padding-right: 3vw;
   padding-top: 5%;
-  @include tablet-down {
+  @include desktop-down {
     // width: 80vw;
     // display: initial;
     display: block;
@@ -225,7 +225,7 @@ $monthsRemaining: 17;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include tablet-down {
+  @include desktop-down {
     height: auto;
     width: 90%;
     align-items: center;
@@ -238,7 +238,7 @@ $monthsRemaining: 17;
     width: 100%;
     border-radius: 3vw 0vw 0 3vw;
     overflow: hidden;
-    @include tablet-down {
+    @include desktop-down {
       height: 25vh;
       border-radius: 25vh;
       width: 65vw;
@@ -247,7 +247,7 @@ $monthsRemaining: 17;
       height: inherit;
       margin-left: -25%;
       background-size: cover;
-      @include tablet-down {
+      @include desktop-down {
         height: inherit;
         width: inherit;
         margin-left: 0%;
@@ -263,7 +263,7 @@ $monthsRemaining: 17;
   justify-content: space-around;
   align-items: center;
   padding: 20%;
-  @include tablet-down {
+  @include desktop-down {
     padding: 10px;
   }
 
@@ -272,10 +272,15 @@ $monthsRemaining: 17;
     height: 15px;
     width: 15px;
     border-radius: 15px;
+    @include desktop-down{
+      height: 10px;
+      width: 10px;
+    }
     @include tablet-down {
       height: 5px;
       width: 5px;
     }
+   
   }
   .active {
     background-color: $selected;
@@ -523,6 +528,12 @@ $monthsRemaining: 17;
       @include fontSize($xsm);
     }
   }
+  @include desktop-down{
+    p:nth-child(n+5){
+      // font-size: 10px;
+        display: none;
+      }
+  }
   @include phone-only{
     p:nth-child(n+4){
       // font-size: 10px;
@@ -543,6 +554,7 @@ $monthsRemaining: 17;
   }
   .title{
     display: flex;
+    align-items: center;
     &:hover{
       cursor: pointer;
     }
@@ -660,6 +672,10 @@ $monthsRemaining: 17;
   row-gap: 3vh;
   min-height: 66vh;
   margin-bottom: 6%;
+  @include desktop-down{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
   @include tablet-down{
     display: grid;
     grid-template-columns: auto auto;
@@ -673,7 +689,7 @@ $monthsRemaining: 17;
   padding-top: 0;
 }
 .who{
-  @include tablet-down{
+  @include desktop-down{
     padding-top: 50px;
   }
 }
