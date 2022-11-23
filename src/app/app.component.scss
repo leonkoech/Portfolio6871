@@ -61,6 +61,10 @@ $monthsRemaining: 17;
         transform: rotate(0deg);
         color: $selected;
         @include fontSize($md);
+        @include tablet-down {
+          transform: rotate(-90deg);
+          @include fontSize($sm);
+        }
       }
     }
   }

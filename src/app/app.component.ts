@@ -86,11 +86,6 @@ export class AppComponent {
      console.log(`scrollTop: ${window.scrollY}`)
      if(window.scrollY< whoHeight){
       // 26.84%
-      console.log(offset)
-      console.log(document.body.scrollHeight)
-      console.log(this.body?.nativeElement.scrollHeight)
-      console.log(window.scrollY)
-      console.log((1525/5681)*100);
       this.selected = "who"
      }
      if(window.scrollY > whoHeight && window.scrollY< educationHeight ){
@@ -124,7 +119,7 @@ export class AppComponent {
       if(this.currentImage==this.images.length){
         this.currentImage=0
       }
-      await new Promise(resolve => setTimeout(resolve, 3000)); 
+      await new Promise(resolve => setTimeout(resolve, 4000)); 
       
     }
   }
