@@ -7,7 +7,7 @@ export const experiences=[
         location: "Remote",
         title: "Software Development Intern",
         imageUrl: "../assets/images/instrument.svg",
-        details: "I got to experience the full development cycle all the way from conceptualization,\
+        details: "I got to experience the full development cycle from conceptualization,\
         to design, to development. I got introduced to web accessibility and the parallel development model which emphasizes inclusivity and diversity.\
          During my time at instrument, I worked on unlocked.microsoft.com and design.google.com under the guidance of geniuses in their crafts. \
          I also worked on an internship project which is yet to be released.\
