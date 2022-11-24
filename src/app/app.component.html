@@ -10,11 +10,6 @@
 
   <div [ngClass]="!expanded ? 'side_nav' : 'side_nav side_nav_expanded'">
     <div *ngFor="let tab of tabs" (click)="scrollTo(tab)" [ngClass]="selected==tab?'active':''"><span>{{tab}}</span></div>
-    <!-- <div (click)="scrollTo('education')"><span>Education</span></div>
-    <div (click)="scrollTo('experience')"><span>Experience</span></div>
-    <div (click)="scrollTo('projects')"><span>Projects</span></div>
-    <div (click)="scrollTo('awards')"><span>Awards</span></div> -->
-    
   </div>
 
   <div  #header [ngClass]="'section-header sticky'">
@@ -45,13 +40,8 @@
         <h2>Hi there, I'm Leon :)</h2>
         <div></div>
       </div>
-      <!-- <div class="first_header_spinner spin_image">
-        <img src="../assets/images/fullStack.svg" />
-        <img src="../assets/images/githubCampusExpert.svg" />
-        <img src="../assets/images/techClubPresident.svg" />
-      </div> -->
       <div class="right_component_content right_component_content_intro">
-        <span>Full Stack Engineer | VR Enthusiast</span>
+        <span>Full Stack Engineer | XR Enthusiast</span>
         <div [ngClass]="!summary ? 'hidden_text' : 'visible_text'">
           <p>
             I am a very passionate software engineer currently pursuing my undergrad at Florida National University while

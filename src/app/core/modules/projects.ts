@@ -51,7 +51,7 @@ export const projects = [
     {
         name: "LunchBox.io",
         repoUrl: "https://github.com/leonkoech/Lunchbox.io",
-        details: "PHP | similar to medium .\
+        details: "PHP | like medium it offers \
          claps,membership payment,public articles,private articles &\
          verification.",
         languages: [languages.php],
