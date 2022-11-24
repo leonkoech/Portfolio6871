@@ -32,12 +32,12 @@ export const awards:award[] = [
     year: 2022
   },
   {
-    name: "USCAA Natioanal All-Academic",
+    name: "USCAA National All-Academic",
     details: "For being an exceptional student athlete both in class merit an in the field",
     year: 2022
   },
   {
-    name: "USCAA Natioanal All-Academic",
+    name: "USCAA National All-Academic",
     details: "For being an exceptional student athlete both in class merit an in the field",
     year: 2021
   },

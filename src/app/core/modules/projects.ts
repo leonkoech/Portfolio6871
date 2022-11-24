@@ -63,7 +63,7 @@ export const projects = [
     {
         name: "EasyDjango",
         repoUrl: "https://github.com/leonkoech/Easydjango",
-        details: "An script for creating and running django webapps\
+        details: "A script for creating and running django webapps\
          (both projects and apps) with one command",
         languages: [ languages.python],
         category: categories.scripting,
@@ -99,8 +99,8 @@ export const projects = [
         name: "Cat App",
         repoUrl: "https://github.com/leonkoech/CatApp",
         details: " Flutter | An encyclopedia \
-        for cats, a community Q&A's about your cat, \
-        where you can add your cat and track it's health.",
+        for cats, a community for Q&A's about your cat, \
+        posts about your cat and tracking your cat's health.",
         languages: [ languages.dart],
         category: categories.android,
         demoUrl: "",
