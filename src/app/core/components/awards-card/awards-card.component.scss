@@ -41,8 +41,16 @@
       @include button($sm);
       width: 55%;
       padding: 0;
+       text-decoration: none;
       .mat-icon{
         @include small_icon();
+      }
+      &:hover{
+        color: $selected;
+       
+        p{
+          color: $selected;
+        }
       }
     }
   }

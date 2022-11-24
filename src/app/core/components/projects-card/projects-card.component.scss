@@ -70,6 +70,15 @@ $gold: #c9c9c9f3;
               color: $secondary;
             }
           }
+          
+        }
+        &__foreground .members{
+          a{
+            p{
+              text-decoration: underline;
+            }
+            
+          }
         }
         &__background{
         height: 82%;
@@ -137,4 +146,5 @@ $gold: #c9c9c9f3;
   a{
     text-decoration: none;
   }
+ 
 }

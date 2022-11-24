@@ -1,38 +1,43 @@
 <div class="card__parent">
-    <div class="card__background"></div>
-    <div class="card__foreground">
-        <a class="card__top" target="_blank" rel="noopener noreferrer" href="{{project.repoUrl}}">
-          <p>{{ project.name }}</p>
-          <mat-icon class="mat-icon">arrow_outward</mat-icon>
+  <div class="card__background"></div>
+  <div class="card__foreground">
+    <a
+      class="card__top"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="{{ project.repoUrl }}"
+    >
+      <p>{{ project.name }}</p>
+      <mat-icon class="mat-icon">arrow_outward</mat-icon>
+    </a>
+    <div>
+      <div class="card__details">
+        <p>{{ project.details }}</p>
+      </div>
+      <div *ngIf="project.team" class="card__details_langs members">
+        <a
+          class="card__details_langs_container"
+          *ngFor="let member of project.members"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="{{ member.url }}"
+        >
+          <!-- <div class="circle" [style]="'background:' + item.color + ';'"></div> -->
+          <p>{{ member.name }}</p>
         </a>
-      <div>
-          <div class="card__details">
-              <p>{{ project.details }}</p>
-            </div>
-            <div *ngIf="project.team" class="card__details_langs members">
-              <a
-                class="card__details_langs_container "
-                *ngFor="let member of project.members"
-                target="_blank" rel="noopener noreferrer"
-                href="{{member.url}}"
-              >
-                <!-- <div class="circle" [style]="'background:' + item.color + ';'"></div> -->
-                <p>{{ member.name }}</p>
-            </a>
-            </div>
-        <div class="card__details_langs">
-          <div
-            class="card__details_langs_container"
-            *ngFor="let item of project.languages"
-          >
-            <div class="circle" [style]="'background:' + item.color + ';'"></div>
-            <p>{{ item.name }}</p>
-          </div>
+      </div>
+      <div class="card__details_langs">
+        <div
+          class="card__details_langs_container"
+          *ngFor="let item of project.languages"
+        >
+          <div class="circle" [style]="'background:' + item.color + ';'"></div>
+          <p>{{ item.name }}</p>
         </div>
-        <div class="card_category">
-          <p>{{ project.category }}</p>
-        </div>
+      </div>
+      <div class="card_category">
+        <p>{{ project.category }}</p>
       </div>
     </div>
   </div>
-  
+</div>
