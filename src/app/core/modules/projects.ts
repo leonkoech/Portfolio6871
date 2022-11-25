@@ -24,6 +24,16 @@ export const projects = [
 
     },
     {
+        name: "Personal Portfolio",
+        repoUrl: "https://leonkoech.com",
+        details: "AngularJs | Personal portfolio",
+        languages: [languages.javascript, languages.typescript],
+        category: categories.frontEnd,
+        demoUrl: "https://leonkoech.com",
+        team: false,
+        members: []
+    },
+    {
         name: "Umoja",
         repoUrl: "https://github.com/leonkoech/umoja",
         details: "Flutter | provide free therapy through crowd funding",
