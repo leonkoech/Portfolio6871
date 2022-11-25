@@ -34,11 +34,19 @@ export const awards:award[] = [
   {
     name: "USCAA National All-Academic",
     details: "For being an exceptional student athlete both in class merit an in the field",
+    url: "https://uscaafallchampionships.com/2022_Championships/National_All_Academic_Team#:~:text=Leon%20Kipkoech,So.",
     year: 2022
   },
   {
     name: "USCAA National All-Academic",
     details: "For being an exceptional student athlete both in class merit an in the field",
+    url: "https://uscaafallchampionships.com/2021_Championships/2021_Cross_Country_Championships#:~:text=Leon%20Kipkoech,Florida%20National%20University",
     year: 2021
+  },
+  {
+    name: "CAC National All-Academic",
+    details: "For dedication to success in the classroom and in the field",
+    url: "https://continentalathletics.com/general/2021-22/releases/20220714eos431#:~:text=Leon%20Kipkoech%2C%20Men%27s%20Cross%20Country",
+    year: 2022
   },
 ];
