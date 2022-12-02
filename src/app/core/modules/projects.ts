@@ -44,6 +44,24 @@ export const projects = [
         members: []
 
     },
+    
+    {
+        name: "Google Design",
+        repoUrl: "https://github.com/Instrument/google-design-client",
+        details: "NextJS | Google client project",
+        languages: [languages.typescript, languages.javascript],
+        category: categories.frontEnd,
+        demoUrl: "https://design.google.com",
+        team: true,
+        members: [
+            {name: "Michelle", url:"https://github.com/michellecruz"},
+            {name: "John", url:"https://github.com/jhnbkr"},
+            {name: "Aman", url:"https://github.com/amans330"},
+            {name: "Antonella", url:"https://github.com/asolomon412"},
+            {name: "Dan", url:"https://github.com/daschechter"},
+            {name: "Jared", url:"https://github.com/jaredmoran"},
+        ]
+    },
     {
         name: "Life Scale",
         repoUrl: "https://github.com/leonkoech/BalancedLife",
