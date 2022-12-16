@@ -9,6 +9,12 @@ export const awards:award[] = [
     year: 2020
   },
   {
+    name: "Opportunity Hack 22",
+    details: "Second Place winning team",
+    url: "https://devpost.com/software/ffgf",
+    year: 2022
+  },
+  {
     name: "MIT reality hack 22",
     details: "Semi Finalist Team",
     url: "https://devpost.com/software/expressive-emotion-vr",

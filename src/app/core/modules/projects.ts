@@ -47,7 +47,7 @@ export const projects = [
     
     {
         name: "Google Design",
-        repoUrl: "https://github.com/Instrument/google-design-client",
+        repoUrl: "https://design.google.com",
         details: "NextJS | Google client project",
         languages: [languages.typescript, languages.javascript],
         category: categories.frontEnd,
@@ -60,6 +60,21 @@ export const projects = [
             {name: "Antonella", url:"https://github.com/asolomon412"},
             {name: "Dan", url:"https://github.com/daschechter"},
             {name: "Jared", url:"https://github.com/jaredmoran"},
+        ]
+    },
+    {
+        name: "Newsletter For Change",
+        repoUrl: "https://design.google.com",
+        details: "ReactJS, Flask API | Newsletters for Nonprofits",
+        languages: [languages.typescript, languages.javascript, languages.python],
+        category: categories.fullStack,
+        demoUrl: "https://devpost.com/software/ffgf",
+        team: true,
+        members: [
+            {name: "Kaustubh Negi", url:"https://devpost.com/knegi2"},
+            {name: "nonsoxoo Okonkwo", url:"https://devpost.com/nonsoxoo"},
+            {name: "Annish Lukkireddy", url:"https://devpost.com/anishlukkireddy"},
+
         ]
     },
     {

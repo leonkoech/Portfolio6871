@@ -12,7 +12,6 @@ export const categories={
 export const languages={
     python: {name:"python", color:"#CAE7B9"},
     javascript: {name: "javascript", color: "#F3DE8A"},
-    
     typescript: {name: "typescript", color: "#85C7F2"},
     "C#":{name: "C#", color: "#7E7F9A"},
     "C++":{name: "C++", color: "#E9BCB7"},
