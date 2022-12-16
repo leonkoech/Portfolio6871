@@ -74,7 +74,6 @@ export const projects = [
             {name: "Kaustubh Negi", url:"https://devpost.com/knegi2"},
             {name: "nonsoxoo Okonkwo", url:"https://devpost.com/nonsoxoo"},
             {name: "Annish Lukkireddy", url:"https://devpost.com/anishlukkireddy"},
-
         ]
     },
     {
