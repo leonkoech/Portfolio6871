@@ -9,9 +9,21 @@ export const awards:award[] = [
     year: 2020
   },
   {
+    name: "Dean's list Fall 22",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
+    year: 2022
+  },
+  {
     name: "Opportunity Hack 22",
     details: "Second Place winning team",
     url: "https://devpost.com/software/ffgf",
+    year: 2022
+  },
+  {
+    name: "Dean's list Spring 22",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
     year: 2022
   },
   {
@@ -19,6 +31,12 @@ export const awards:award[] = [
     details: "Semi Finalist Team",
     url: "https://devpost.com/software/expressive-emotion-vr",
     year: 2022
+  },
+  {
+    name: "Dean's list Fall 21",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
+    year: 2021
   },
   {
     name: "BostonHacks 21",
