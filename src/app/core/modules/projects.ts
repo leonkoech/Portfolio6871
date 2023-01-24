@@ -47,7 +47,7 @@ export const projects = [
     {
         name: "Haptic Vision",
         repoUrl: "https://github.com/leonkoech/HapticVision",
-        details: "Unity | HaptxSDK | Htc Vive | SRWorks",
+        details: "Unity, HaptxSDK, Htc Vive, SRWorks | Enable the blind to feel items without coming into contact with them using haptics and Depth perception in VR",
         languages: [languages["C#"]],
         category: categories.vrar,
         demoUrl: "https://github.com/leonkoech/HapticVision",
@@ -80,7 +80,7 @@ export const projects = [
     {
         name: "Newsletter For Change",
         repoUrl: "https://design.google.com",
-        details: "ReactJS, Flask API | Newsletters for Nonprofits",
+        details: "ReactJS, Flask API | Sending Newsletters for Nonprofits",
         languages: [languages.typescript, languages.javascript, languages.python],
         category: categories.fullStack,
         demoUrl: "https://devpost.com/software/ffgf",
