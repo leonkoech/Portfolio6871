@@ -44,6 +44,21 @@ export const projects = [
         members: []
 
     },
+    {
+        name: "Haptic Vision",
+        repoUrl: "https://github.com/leonkoech/HapticVision",
+        details: "Unity | HaptxSDK | Htc Vive | SRWorks",
+        languages: [languages["C#"]],
+        category: categories.vrar,
+        demoUrl: "https://github.com/leonkoech/HapticVision",
+        team: true,
+        members: [
+            {name: "Kyle", url:"https://devpost.com/kdiaz3451"},
+            {name: "Christine", url:"https://devpost.com/christineksader"},
+            {name: "Winny", url:"https://devpost.com/winnyw12138"},
+            {name: "Michael", url:""},
+        ]
+    },
     
     {
         name: "Google Design",

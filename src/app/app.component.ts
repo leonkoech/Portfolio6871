@@ -16,7 +16,7 @@ export class AppComponent {
   projects: project[] = projects
   focus = "who"
   experiences: experience[] = experiences
-  team: boolean = false;
+  team: boolean = true;
   title = 'portfolio';
   langSelect: any = false;
   languages = ["Any Language",...Object.values(languages).map((x)=>{return x.name})];
@@ -50,7 +50,7 @@ export class AppComponent {
       src: '../assets/images/3.jpg',
     },
     {
-      src: '../assets/images/4.png',
+      src: '../assets/images/4.jpg',
     },
   ]
 

@@ -9,6 +9,12 @@ export const awards:award[] = [
     year: 2020
   },
   {
+    name: "MIT reality hack 23",
+    details: "Semi Finalist Team",
+    url: "https://devpost.com/software/haptic-vision-es2o5i",
+    year: 2023
+  },
+  {
     name: "Dean's list Fall 22",
     details: "Academic achievement of a 3.5 GPA",
     url: "",

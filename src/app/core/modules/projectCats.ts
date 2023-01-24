@@ -6,7 +6,7 @@ export const categories={
     vrar: "VR/AR",
     android: "Android",
     scripting: "Scripting",
-    networking: "Scripting",
+    networking: "Networking",
 }
 
 export const languages={
