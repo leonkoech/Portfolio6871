@@ -33,3 +33,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 </details>
 
+# Details
+
+The project uses;
+
+1. `github actions` for the CI/CD pipeline.
+
+2. `google cloud` for hosting. 
+
+3. `google domains` for domains. Visit the website [here](https://leonkoech.com)
+
+4. `Angular` for the front end and backend 
+
+5. `Typescript`, 'html, and 'SCSS'
