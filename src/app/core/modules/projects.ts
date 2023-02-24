@@ -56,7 +56,7 @@ export const projects = [
             {name: "Kyle", url:"https://devpost.com/kdiaz3451"},
             {name: "Christine", url:"https://devpost.com/christineksader"},
             {name: "Winny", url:"https://devpost.com/winnyw12138"},
-            {name: "Michael", url:""},
+            {name: "Malcom", url:""},
         ]
     },
     
@@ -239,7 +239,7 @@ export const projects = [
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Cami", url:"https://github.com/catastrxphicr"},
+            {name: "Camilla", url:"https://github.com/catastrxphicr"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
         ]
     },
@@ -285,7 +285,7 @@ export const projects = [
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Cami", url:"https://github.com/catastrxphicr"},
+            {name: "Camilla", url:"https://github.com/catastrxphicr"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
                ]
     },
