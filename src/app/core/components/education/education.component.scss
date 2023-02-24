@@ -72,7 +72,7 @@
           // @include medium_icon(); 
           margin-top: 45px;
           position: absolute;
-          margin-left: calc(($monthsRemaining * 100)/$months)*100%;
+          margin-left: calc(($months  - $monthsRemaining)/$months*100%);
           color: $line;
           .mat-icon{
             @include small_icon(); 
