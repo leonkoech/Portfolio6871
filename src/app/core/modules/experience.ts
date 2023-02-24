@@ -6,14 +6,19 @@ export const experiences=[
         end: "August 2022",
         location: "Remote",
         title: "Software Development Intern",
+        type: "Frontend Engineering || Technical Direction",
         imageUrl: "../assets/images/instrument.svg",
-        details: "I got to experience the full development cycle from the problem statement to conceptualization,\
-        to prototyping, to design, to development. This was thanks to the parallel development model which emphasizes inclusivity, diversity and the embracing-ignorance mentality.\
-         During my time at instrument, I worked on unlocked.microsoft.com and design.google.com under the guidance of geniuses in their crafts and got an introduction to accessibility. \
-         I also worked on an internship project, with other interns using these skills, which is yet to be released.\
-        For unlocked.microsoft.com, I built a component for the front-end to meet some specific specs while maintaining some other components for the CMS. \
-        For design.google.com, I built an automation script with python to minimize the time used in component creation (more so because the project used NextJs/ReactJs) \
-        and an interface for developers to handle project specific types and prevent errors in their code",
+        details: ["Developing, maintaining, and ensuring the quality of reusable, responsive, and accessible home page components \
+        for fortune 500 clients, which were accessed by hundreds of thousands of users during multiple client campaigns eg. Microsoft Unlocked",
+        "Constructed, maintained, and implemented automation scripts to create components and services with easy-to-use boilerplates, resulting \
+        in the component creation process hence seeing a 10% reduction in the development initialization phase and a 4% reduction in the overall \
+        development time frame for the Google Design Content Management System. ",
+        "Creating, maintaining, and validating TypeScript interfaces and \
+        classes to handle client project-specific data types and custom objects, resulting in a 12% increase in team-wide developer productivity.",
+        "Technical Direction within the intern team where I led the team to an improved organizational, expressive, and communicative procedure through \
+        GitHub projects resulting in a 30% contraction in the product-to-pitch time frame, particularly for the design-to-development hand-off based on \
+        the parallel development methodology."
+    ],
     },
     {
         company: "Sustainible",
@@ -22,10 +27,15 @@ export const experiences=[
         end: "December 2022",
         location: "Remote",
         title: "Software Development Intern",
+        type: "Fullstack Development",
         imageUrl: "../assets/images/sustainible.svg",
-        details: "In terms of gaining skills and wearing multiple hats, Sustainible takes the cake. From front-end development to technical direction to back-end development, I have done them all.\
-        While at Sustainible, I integrated some API's (stripe,firebase) and helped with others (facebook), created some structure for the project for scalability, core engineering on the structure of data\
-        to minimize resources used to read and write data to the backend, created templates for GitHub while reporting directly to the founders\
-        ",
+        details: ["Implementing system design principles to minimize CRUD operations, resulting in a 40% reduction in cloud operations for\
+        multiple instances resulting in a 12% operational cost reduction on the company.",
+         "Utilizing new ES6 javascript features and concepts to maintain pre-existing models, components, and services, leading to a 4% overall\
+        improvement in webpage loading speed and a 10% reduction in the fast-paced startup-developer onboarding process.",
+        "Directing a team of developers leading to the creation of highly responsive, accessible, and reusable Angular components.",
+        "Creating Issues, and Pull Request templates while maintaining their respective GitHub routes enabling better documentation of\
+        bugs, enhancements, solutions, and versions thereby seeing a 16% increase in development productivity more so issue tracking.\
+        "],
     }
 ]

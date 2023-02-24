@@ -2,7 +2,6 @@
 @import "../../../app.component.scss";
 
 .experience_card {
-  height: 55vh;
   display: grid;
   padding-left: 0;
   @include tablet-down {
@@ -11,7 +10,6 @@
   }
   &_image_container {
     position: relative;
-    height: inherit;
     width: 20vw;
     border-top: 1px solid $line;
     @include centerFlex;
@@ -161,6 +159,7 @@
       }
       span {
         @include fontSize($sm);
+        color: $line;
       }
     }
   }
