@@ -45,6 +45,20 @@ export const projects = [
 
     },
     {
+        name: "ChatGPT for AR",
+        repoUrl: "https://github.com/leonkoech/flaskGPTVR",
+        details: "ChatGPT for AR whereby you can issue commands to ChatGPT with your voice and receive both Textual and Audio feedback. For STT and TTS we leveraged Wit.ai and created our own server for ChatGPT hosted on Google Cloud.",
+        languages: [languages["C#"], languages["C++"]],
+        category: categories.vrar,
+        demoUrl: "https://devpost.com/software/team16",
+        team: true,
+        members: [
+            {name: "Carlos", url:"https://www.linkedin.com/in/carlosjrequena"},
+            {name: "Jason", url:"https://www.linkedin.com/in/jason-lee-b473711b6"},
+            {name: "Maryam", url:""},
+        ]
+    },
+    {
         name: "Haptic Vision",
         repoUrl: "https://github.com/leonkoech/HapticVision",
         details: "Unity, HaptxSDK, Htc Vive, SRWorks | Enable the blind to feel items without coming into contact with them using haptics and Depth perception in VR",
@@ -59,6 +73,7 @@ export const projects = [
             {name: "Malcom", url:""},
         ]
     },
+  
     
     {
         name: "Google Design",
