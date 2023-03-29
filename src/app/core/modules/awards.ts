@@ -15,6 +15,11 @@ export const awards:award[] = [
     year: 2023
   },
   {
+    name: "USCAA Student Athlete of the year",
+    details: "For being an exceptional student athlete serving in class, in the community and in the field",
+    year: 2022
+  },
+  {
     name: "Dean's list Fall 22",
     details: "Academic achievement of a 3.5 GPA",
     url: "",
@@ -54,11 +59,6 @@ export const awards:award[] = [
     name: "hack@Campus Miami 22",
     details: "Third Place Winning Team",
     url: "https://refreshmiami.com/hackcampus-takeaways-meet-the-winners-future-of-miamitech/#:~:text=Team%20Members%3A%20Cecilia,to%20the%20art.",
-    year: 2022
-  },
-  {
-    name: "USCAA Student Athlete of the year",
-    details: "For being an exceptional student athlete serving in class, in the community and in the field",
     year: 2022
   },
   {
