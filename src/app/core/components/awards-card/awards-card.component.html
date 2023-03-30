@@ -8,10 +8,12 @@
       <div class="awards_details_text">
         <h2>{{i.name}}</h2>
         <p>{{i.details}}</p>
-        <div *ngIf="i.url" class="awards_link">
-          <h2>Read More</h2>
+        <a *ngIf="i.url" class="awards_link" target="_blank"
+        rel="noopener noreferrer"
+        href="{{ i.url }}" >
+          <p>Read More</p>
           <mat-icon class="mat-icon">arrow_outward</mat-icon>
-        </div>
+        </a>
         <div *ngIf="!i.url"> </div>
       </div>
     </div>

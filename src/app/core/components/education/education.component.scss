@@ -5,19 +5,32 @@
     padding-top: 50px;
     padding-bottom: 50px;
     height: 80vh;
+    @include tablet-down{
+      padding-top: 0;
+      height: auto;
+    }
     .eyebrow {
       width: 80%;
-      color: white;
+      color: $primary;
       display: flex;
       height: auto;
       align-items: center;
       justify-content: center;
       padding: 0 10%;
+      @include phone-only{
+        flex-direction: column;
+        margin: 20px 0;
+      }
       .mat-icon{
-        @include fontSize($md);
-        height: 25px;
-        width: 25px;
+        display: flex;
+          justify-content: center;
+          align-items: center;
         margin:  0 10px;
+        @include medium_icon();  
+        color: $line;
+        @include phone-only{
+          margin: 10px 0;
+        }
       }
       span{
         @include fontSize($sm);
@@ -37,6 +50,9 @@
       margin: 70px 0;
       display: flex;
       align-items: center;
+      @include tablet-down{
+        margin: 30px 0;
+      }
       span {
         @include fontSize($sm);
         margin: 0 15px;
@@ -46,18 +62,26 @@
         height: inherit;
         display: flex;
         align-items: center;
+        position: relative;
         &_line {
-          height: 2px;
-          background: white;
+          height: 1.5px;
+          background: $line;
           width: inherit;
         }
         &_pointer {
-          height: 35px;
-          width: 35px;
-          @include fontSize($md);
+          // @include medium_icon(); 
           margin-top: 45px;
           position: absolute;
-          margin-left: calc(($monthsRemaining * 100%) / $months);
+          margin-left: calc(($months  - $monthsRemaining)/$months*100%);
+          color: $line;
+          .mat-icon{
+            @include small_icon(); 
+          }
+          @include phone-only{
+            margin-top: 30px;
+          }
+            
+          
         }
       }
     }
@@ -66,30 +90,43 @@
       grid-template-columns: 20% 75%;
       grid-column-gap: 5%;
       height: max-content;
+      @include tablet-down{
+        display: grid;
+        grid-template-columns: unset;
+        grid-row-gap: 40px;
+        grid-column-gap: 5%;
+      }
       &_container {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $line;
         div {
           @include fontSize($sm);
-  
+          
           &:first-child {
             // @include fontSize($sm);
             height: 45px;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
             display: flex;
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
+            backdrop-filter: invert(1);
+          color: $secondary;
+            @include tablet-down{
+              height: 30px;
+            }
           }
           &:nth-child(2) {
             padding: 50px 0;
             text-align: center;
+            @include tablet-down{
+              padding: 25px 0 ;
+            }
           }
         }
         &_cocurricular {
           div {
             &:first-child {
               justify-content: space-between;
+              padding-left: 5px;
               span {
                 width: 25%;
               }
@@ -99,6 +136,7 @@
               text-align: left;
               display: flex;
               justify-content: space-between;
+              padding-left: 5px;
               ol {
                 width: 25%;
                 list-style: none;

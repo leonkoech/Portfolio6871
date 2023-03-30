@@ -14,12 +14,12 @@
       grid-template-columns: 20% 70%;
       min-height: 10vh;
       height: auto;
-      margin-bottom: 5%;
       margin-top: 5%;
       margin-bottom: 50px;
       &_number{
-          color: $primary;
-          @include fontSize($lg)
+          
+          @include fontSize($lg);
+          color: $line;
       }
       &_text{
           color: $primary;
@@ -37,8 +37,19 @@
       }
     }
     &_link{
-      @include button($xsm);
+      @include button($sm);
       width: 55%;
       padding: 0;
+       text-decoration: none;
+      .mat-icon{
+        @include small_icon();
+      }
+      &:hover{
+        color: $selected;
+       
+        p{
+          color: $selected;
+        }
+      }
     }
   }

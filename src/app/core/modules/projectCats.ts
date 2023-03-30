@@ -4,16 +4,20 @@ export const categories={
     frontEnd: "Front End",
     compilers: "Compilers",
     vrar: "VR/AR",
+    api: "API",
     android: "Android",
-    
+    scripting: "Scripting",
+    networking: "Networking",
 }
 
 export const languages={
-    python: {name:"python", color:"red"},
-    javascript: {name: "javascript", color: "blue"},
-    typescript: {name: "typescript", color: "orange"},
-    "C#":{name: "C#", color: "green"},
-    "C++":{name: "C++", color: "white"},
-    java: {name: "java", color: "yellow"},
-    dart: {name:"dart",color: "brown"},
+    python: {name:"python", color:"#CAE7B9"},
+    javascript: {name: "javascript", color: "#F3DE8A"},
+    typescript: {name: "typescript", color: "#85C7F2"},
+    "C#":{name: "C#", color: "#7E7F9A"},
+    "C++":{name: "C++", color: "#E9BCB7"},
+    java: {name: "java", color: "#EB9486"},
+    dart: {name:"dart",color: "#993955"},
+    php: {name:"php",color: "#7C7C7C"},
+    lua: {name:"lua", color:"#FFA62B"}
 }

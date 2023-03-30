@@ -1,0 +1,103 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+$monsterrat: 'Montserrat', sans-serif;
+
+
+$text-fluidity-start: 320px;
+// end fluid type
+$text-fluidity-end: 2500px;
+
+
+// strip unit value (px, vh, %, etc.)
+@function strip-unit($value) {
+  
+  @return math.div($value , ($value * 0 + 1));
+}
+
+// interpolates type size between min and max
+@mixin text-size($min-font-size, $max-font-size) {
+  font-size: $min-font-size;
+
+  @media screen and (min-width: $text-fluidity-start) {
+    font-size: calc(#{$min-font-size}
+                + #{strip-unit($max-font-size - $min-font-size)}
+                * ((100vw - #{$text-fluidity-start})
+                / #{strip-unit($text-fluidity-end - $text-fluidity-start)}));
+  }
+
+  @media screen and (min-width: $text-fluidity-end) {
+    font-size: $max-font-size;
+  }
+}
+
+
+@mixin headline-bold() {
+  @include text-size(28px, 72px);
+  font-family:  $monsterrat;
+  letter-spacing: -0.1vw;
+  line-height: 1.1;
+  word-spacing: 0.1vw;
+}
+
+
+@mixin header-display() {
+  @include text-size(64px, 190px);
+  font-family:  $monsterrat;
+  letter-spacing: -0.5vw;
+  line-height: 1.05;
+  word-spacing: 0.1vw;
+}
+
+@mixin body-large-bold() {
+  @include text-size(19px, 32px);
+  font-family:  $monsterrat;
+  // alternate 'g' for legibility
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  word-spacing: 0.4px;
+}
+
+@mixin body-regular() {
+  @include text-size(16px, 21px);
+  font-family: $monsterrat;
+  // alternate 'g' for legibility
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.4px;
+  line-height: 1.85;
+  word-spacing: 0.8px;
+}
+@mixin body-small() {
+  @include text-size(12px, 19px);
+  font-family: $monsterrat;
+  // alternate 'g' for legibility
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.4px;
+  line-height: 1.65;
+  word-spacing: 0.8px;
+}
+@mixin body-extra-small() {
+  @include text-size(10px, 14px);
+  font-family: $monsterrat;
+  // alternate 'g' for legibility
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.4px;
+  line-height: 1.65;
+  word-spacing: 0.8px;
+}
+
+.header-display{
+  @include header-display();
+}
+.headline-bold{
+  @include headline-bold();
+}
+.body-large-bold{
+  @include body-large-bold();
+}
+.body-regular{
+  @include body-regular();
+}
+.body-small{
+  @include body-small();
+}
