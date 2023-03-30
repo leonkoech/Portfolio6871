@@ -10,7 +10,7 @@ export const awards:award[] = [
   },
   {
     name: "MIT reality hack 23",
-    details: "Semi Finalist Team",
+    details: "Semi Finalist Team, honorable mention",
     url: "https://devpost.com/software/haptic-vision-es2o5i",
     year: 2023
   },

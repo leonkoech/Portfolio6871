@@ -74,7 +74,20 @@ export const projects = [
         ]
     },
   
-    
+    {
+        name: "ChatGPT server",
+        repoUrl: "https://github.com/leonkoech/flaskGPT",
+        details: "Server for the chatGPT 4 AR project",
+        languages: [languages.python],
+        category: categories.api,
+        demoUrl: "https://devpost.com/software/team16",
+        team: true,
+        members: [
+            {name: "Carlos", url:"https://www.linkedin.com/in/carlosjrequena"},
+            {name: "Jason", url:"https://www.linkedin.com/in/jason-lee-b473711b6"},
+            {name: "Maryam", url:""},
+        ]
+    },
     {
         name: "Google Design",
         repoUrl: "https://design.google.com",
