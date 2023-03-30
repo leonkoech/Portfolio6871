@@ -4,7 +4,7 @@ export const projects = [
     {
         name: "Zux Burgers",
         repoUrl: "https://github.com/leonkoech/Zux-Burgers-App",
-        details: "A burger shop website with vanilla js and firebase for Mwania and Zuki (Zux)",
+        details: "VanillaJS, firebase | A burger shop website for Mwania and Zuki (Zux)",
         languages: [languages.javascript],
         category: categories.fullStack,
         demoUrl: "https://zux-burgers.web.app/",
@@ -14,7 +14,7 @@ export const projects = [
     {
         name: "Color QR generator",
         repoUrl: "https://github.com/leonkoech/Color-QR-Generator",
-        details: "Generate \
+        details: " Flask | Generate \
         colorful QR codes based on the text input and the colors selected",
         languages: [languages.python, languages.javascript],
         category: categories.fullStack,
@@ -24,9 +24,19 @@ export const projects = [
 
     },
     {
+        name: "Personal Portfolio",
+        repoUrl: "https://leonkoech.com",
+        details: "AngularJs | Personal portfolio",
+        languages: [languages.javascript, languages.typescript],
+        category: categories.frontEnd,
+        demoUrl: "https://leonkoech.com",
+        team: false,
+        members: []
+    },
+    {
         name: "Umoja",
         repoUrl: "https://github.com/leonkoech/umoja",
-        details: "An application that provides free therapy through crowd funding",
+        details: "Flutter | provide free therapy through crowd funding",
         languages: [languages.dart],
         category: categories.fullStack,
         demoUrl: "https://devpost.com/software/umoja",
@@ -35,10 +45,84 @@ export const projects = [
 
     },
     {
+        name: "ChatGPT for AR",
+        repoUrl: "https://github.com/leonkoech/flaskGPTVR",
+        details: "ChatGPT for AR whereby you can issue commands to ChatGPT with your voice and receive both Textual and Audio feedback. For STT and TTS we leveraged Wit.ai and created our own server for ChatGPT hosted on Google Cloud.",
+        languages: [languages["C#"], languages["C++"]],
+        category: categories.vrar,
+        demoUrl: "https://devpost.com/software/team16",
+        team: true,
+        members: [
+            {name: "Carlos", url:"https://www.linkedin.com/in/carlosjrequena"},
+            {name: "Jason", url:"https://www.linkedin.com/in/jason-lee-b473711b6"},
+            {name: "Maryam", url:""},
+        ]
+    },
+    {
+        name: "Haptic Vision",
+        repoUrl: "https://github.com/leonkoech/HapticVision",
+        details: "Unity, HaptxSDK, Htc Vive, SRWorks | Enable the blind to feel items without coming into contact with them using haptics and Depth perception in VR",
+        languages: [languages["C#"]],
+        category: categories.vrar,
+        demoUrl: "https://github.com/leonkoech/HapticVision",
+        team: true,
+        members: [
+            {name: "Kyle", url:"https://devpost.com/kdiaz3451"},
+            {name: "Christine", url:"https://devpost.com/christineksader"},
+            {name: "Winny", url:"https://devpost.com/winnyw12138"},
+            {name: "Malcom", url:""},
+        ]
+    },
+  
+    {
+        name: "ChatGPT server",
+        repoUrl: "https://github.com/leonkoech/flaskGPT",
+        details: "Server for the chatGPT 4 AR project",
+        languages: [languages.python],
+        category: categories.api,
+        demoUrl: "https://devpost.com/software/team16",
+        team: true,
+        members: [
+            {name: "Carlos", url:"https://www.linkedin.com/in/carlosjrequena"},
+            {name: "Jason", url:"https://www.linkedin.com/in/jason-lee-b473711b6"},
+            {name: "Maryam", url:""},
+        ]
+    },
+    {
+        name: "Google Design",
+        repoUrl: "https://design.google.com",
+        details: "NextJS | Google client project",
+        languages: [languages.typescript, languages.javascript],
+        category: categories.frontEnd,
+        demoUrl: "https://design.google.com",
+        team: true,
+        members: [
+            {name: "Michelle", url:"https://github.com/michellecruz"},
+            {name: "John", url:"https://github.com/jhnbkr"},
+            {name: "Aman", url:"https://github.com/amans330"},
+            {name: "Antonella", url:"https://github.com/asolomon412"},
+            {name: "Dan", url:"https://github.com/daschechter"},
+            {name: "Jared", url:"https://github.com/jaredmoran"},
+        ]
+    },
+    {
+        name: "Newsletter For Change",
+        repoUrl: "https://design.google.com",
+        details: "ReactJS, Flask API | Sending Newsletters for Nonprofits",
+        languages: [languages.typescript, languages.javascript, languages.python],
+        category: categories.fullStack,
+        demoUrl: "https://devpost.com/software/ffgf",
+        team: true,
+        members: [
+            {name: "Kaustubh Negi", url:"https://devpost.com/knegi2"},
+            {name: "nonsoxoo Okonkwo", url:"https://devpost.com/nonsoxoo"},
+            {name: "Annish Lukkireddy", url:"https://devpost.com/anishlukkireddy"},
+        ]
+    },
+    {
         name: "Life Scale",
         repoUrl: "https://github.com/leonkoech/BalancedLife",
-        details: "Helping people live more balanced and meaningful lives.helping \
-        our users live more balanced and meaningful lives.",
+        details: "AngularJS | help people live more balanced and meaningful lives.",
         languages: [languages.typescript, languages.javascript],
         category: categories.fullStack,
         demoUrl: "https://balancedlife-a993e.web.app/",
@@ -52,7 +136,7 @@ export const projects = [
     {
         name: "LunchBox.io",
         repoUrl: "https://github.com/leonkoech/Lunchbox.io",
-        details: "A webapp  similar to medium .\
+        details: "PHP | like medium it offers \
          claps,membership payment,public articles,private articles &\
          verification.",
         languages: [languages.php],
@@ -64,7 +148,7 @@ export const projects = [
     {
         name: "EasyDjango",
         repoUrl: "https://github.com/leonkoech/Easydjango",
-        details: "An automation script for creating and running django webapps\
+        details: "A script for creating and running django webapps\
          (both projects and apps) with one command",
         languages: [ languages.python],
         category: categories.scripting,
@@ -76,7 +160,7 @@ export const projects = [
         name: "Websockets Chat App",
         repoUrl: "https://github.com/leonkoech/Websockets-Chat-App",
         details: "A simple RealTime TCP chat app for humans\
-        (robots and cats also included) made with tornado webwocket\
+        made with tornado websocket\
          framework.",
         languages: [ languages.python],
         category: categories.networking,
@@ -99,9 +183,9 @@ export const projects = [
     {
         name: "Cat App",
         repoUrl: "https://github.com/leonkoech/CatApp",
-        details: "An encyclopedia \
-        for cats, a community Q&A's about your cat, \
-        where you can add your cat and track it's health.",
+        details: " Flutter | An encyclopedia \
+        for cats, a community for Q&A's about your cat, \
+        posts about your cat and tracking your cat's health.",
         languages: [ languages.dart],
         category: categories.android,
         demoUrl: "",
@@ -111,7 +195,7 @@ export const projects = [
     {
         name: "Battery Level",
         repoUrl: "https://github.com/leonkoech/Battery-Level",
-        details: "A flutter app that gets the battery level of an \
+        details: "Flutter | get the battery level of an \
         android device using platform specific code ie. java",
         languages: [ languages.dart, languages.java],
         category: categories.android,
@@ -175,22 +259,22 @@ export const projects = [
     {
         name: "Map Me",
         repoUrl: "https://github.com/Ceaseless04/MapModel",
-        details: "A website that connects students from all over the \
-        world based on places of origin with some Google Maps APIs",
+        details: "NextJs | Connect students from all over the \
+        world based on places of origin with Google Maps Platform APIs",
         languages: [ languages.typescript,languages.javascript],
         category: categories.fullStack,
         demoUrl: "https://mapme-66db2.web.app/",
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Cami", url:"https://github.com/catastrxphicr"},
+            {name: "Camilla", url:"https://github.com/catastrxphicr"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
         ]
     },
     {
         name: "Mi Art",
         repoUrl: "https://github.com/leonkoech/mhw",
-        details: "platform that creates a marketplace for artists and creators to \
+        details: "Flutter |  marketplace for artists and creators to \
         tokenize both 2D and 3D art (murals, graffiti, installations, sculptures,\
          and other forms of art).",
         languages: [ languages.dart],
@@ -222,14 +306,14 @@ export const projects = [
     {
         name: "Focus Buddy",
         repoUrl: "https://github.com/leonkoech/focusBuddy",
-        details: "Improving productivity through focus tracking using the Neuos headband",
+        details: "NextJs | Improving productivity through focus tracking using the Neuos headband",
         languages: [ languages.javascript,languages.java],
         category: categories.fullStack,
         demoUrl: "https://devpost.com/software/focus-buddy-8fwa9g",
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Cami", url:"https://github.com/catastrxphicr"},
+            {name: "Camilla", url:"https://github.com/catastrxphicr"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
                ]
     },

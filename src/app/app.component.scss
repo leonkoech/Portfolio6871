@@ -3,7 +3,7 @@
 
 // $selected: #EF8354;
 $months: 44; // from august 2020 to april 2024
-$monthsRemaining: 17;
+$monthsRemaining: 12;
 
 // $percentage: calc(($monthsRemaining * 100%)/$months);
 ::ng-deep * {
@@ -29,7 +29,7 @@ $monthsRemaining: 17;
     // height: 89.9vh;
     // padding-top: 10vh;
     padding-top: 8.33vh;
-    height: 91.67vh;
+    height: 91.67%;
   }
   div {
     height: inherit;
@@ -61,6 +61,10 @@ $monthsRemaining: 17;
         transform: rotate(0deg);
         color: $selected;
         @include fontSize($md);
+        @include tablet-down {
+          transform: rotate(-90deg);
+          @include fontSize($sm);
+        }
       }
     }
   }
@@ -239,6 +243,7 @@ $monthsRemaining: 17;
     width: 100%;
     border-radius: 3vw 0vw 0 3vw;
     overflow: hidden;
+    background-color: $line;
     @include desktop-down {
       height: 25vh;
       border-radius: 25vh;

@@ -8,7 +8,7 @@ $gold: #c9c9c9f3;
   height: 0%;
   width: 100%;
   z-index: 0;
-  backdrop-filter: invert(100%);
+  background-color: $line;
   transition: height 1.2s;
   bottom: 0;
  }
@@ -58,12 +58,27 @@ $gold: #c9c9c9f3;
           color: $selected;
         }
         &_category{
-          backdrop-filter: invert(0%);
+          // backdrop-filter: invert(0%);
+          background-color: $line;
           // color: $secondary;
           border: 1px solid transparent;
         }
         &__details{
           color: $secondary;
+          &_langs_container{
+            p{
+              color: $secondary;
+            }
+          }
+          
+        }
+        &__foreground .members{
+          a{
+            p{
+              text-decoration: underline;
+            }
+            
+          }
         }
         &__background{
         height: 82%;
@@ -99,6 +114,7 @@ $gold: #c9c9c9f3;
         p{
           @include body-extra-small();
           color: $line;
+          transition: color 2s;
         }
       }
     }
@@ -108,11 +124,12 @@ $gold: #c9c9c9f3;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: invert(100%);
+    // backdrop-filter: invert(100%);
+    background-color: $line;
     @include fontSize($sm);
     color: $secondary;
     text-transform: uppercase;
-    transition: backdrop-filter 2s;
+    transition: background-color 2s;
     @include tablet-down{
       height: 10vw
     }
@@ -129,4 +146,5 @@ $gold: #c9c9c9f3;
   a{
     text-decoration: none;
   }
+ 
 }

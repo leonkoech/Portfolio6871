@@ -4,9 +4,10 @@ export const categories={
     frontEnd: "Front End",
     compilers: "Compilers",
     vrar: "VR/AR",
+    api: "API",
     android: "Android",
     scripting: "Scripting",
-    networking: "Scripting",
+    networking: "Networking",
 }
 
 export const languages={
