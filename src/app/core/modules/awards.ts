@@ -3,6 +3,12 @@ import { award } from "../models/awardModel";
 
 export const awards:award[] = [
   {
+    name: "Harvard dreamhack XR 2023",
+    details: "1st Place winner",
+    url: "https://github.com/leonkoech/AutismDetector",
+    year: 2023
+  },
+  {
     name: "AR/VR Africa 20",
     details: "Continental Student in Africa for VR/AR",
     url: "https://arvrafrica.com/arvr-africa-2020-post-hackathon-press-release#:~:text=Team%20Hewa%2C%20the%201st%20place%20winner%20in%20Kenya%2C%20won%20the%20hackathon%E2%80%99s%20Best%20Student%20Team%20prize.%20Their%20AR%20solution%20visualizes%20the%20amount%20of%20air%20pollution%20at%20the%20user%E2%80%99s%20location%20and%20provides%20health%20recommendations.",
