@@ -24,7 +24,7 @@ export const experiences=[
         company: "Sustainible",
         website: "https://sustaininble.io",
         start: "January",
-        end: "December 2022",
+        end: "May 2023",
         location: "Remote",
         title: "Software Development Intern",
         type: "Fullstack Development",
@@ -37,5 +37,5 @@ export const experiences=[
         "Creating Issues, and Pull Request templates while maintaining their respective GitHub routes enabling better documentation of\
         bugs, enhancements, solutions, and versions thereby seeing a 16% increase in development productivity more so issue tracking.\
         "],
-    }
+    },
 ]

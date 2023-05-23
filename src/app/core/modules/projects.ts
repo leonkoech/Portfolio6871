@@ -45,6 +45,35 @@ export const projects = [
 
     },
     {
+        name: "Autism Detector",
+        repoUrl: "https://github.com/leonkoech/AutismDetector",
+        details: "Unity, Eye Tracking API, Magic Leap | Unity SDK to enable developers detect and act upon sensory overload in autistic individuals during XR experiences.",
+        languages: [languages["C#"]],
+        category: categories.vrar,
+        demoUrl: "https://github.com/leonkoech/AutismDetector",
+        team: true,
+        members: [
+            {name: "Rukhshan", url:"https://github.com/rukhshan23"},
+            {name: "Darius", url:"https://github.com/Dariushuangg"},
+            {name: "Alex", url:"https://github.com/InquilineKea"},
+        ]
+    },
+    {
+        name: "Haptic Vision",
+        repoUrl: "https://github.com/leonkoech/HapticVision",
+        details: "Unity, HaptxSDK, Htc Vive, SRWorks | Enable the visually impaired to feel objects without coming into contact with them using haptic feedback and Depth perception in VR",
+        languages: [languages["C#"]],
+        category: categories.vrar,
+        demoUrl: "https://github.com/leonkoech/HapticVision",
+        team: true,
+        members: [
+            {name: "Kyle", url:"https://devpost.com/kdiaz3451"},
+            {name: "Christine", url:"https://devpost.com/christineksader"},
+            {name: "Winny", url:"https://devpost.com/winnyw12138"},
+            {name: "Malcom", url:""},
+        ]
+    },
+    {
         name: "ChatGPT for AR",
         repoUrl: "https://github.com/leonkoech/flaskGPTVR",
         details: "ChatGPT for AR whereby you can issue commands to ChatGPT with your voice and receive both Textual and Audio feedback. For STT and TTS we leveraged Wit.ai and created our own server for ChatGPT hosted on Google Cloud.",
@@ -58,21 +87,7 @@ export const projects = [
             {name: "Maryam", url:""},
         ]
     },
-    {
-        name: "Haptic Vision",
-        repoUrl: "https://github.com/leonkoech/HapticVision",
-        details: "Unity, HaptxSDK, Htc Vive, SRWorks | Enable the blind to feel items without coming into contact with them using haptics and Depth perception in VR",
-        languages: [languages["C#"]],
-        category: categories.vrar,
-        demoUrl: "https://github.com/leonkoech/HapticVision",
-        team: true,
-        members: [
-            {name: "Kyle", url:"https://devpost.com/kdiaz3451"},
-            {name: "Christine", url:"https://devpost.com/christineksader"},
-            {name: "Winny", url:"https://devpost.com/winnyw12138"},
-            {name: "Malcom", url:""},
-        ]
-    },
+    
   
     {
         name: "ChatGPT server",
