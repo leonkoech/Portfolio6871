@@ -282,7 +282,7 @@ export const projects = [
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Camilla", url:"https://github.com/catastrxphicr"},
+            {name: "Camila", url:"https://github.com/catastrxphic"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
         ]
     },
@@ -328,7 +328,7 @@ export const projects = [
         team: true,
         members: [
             {name: "Coral", url:"https://github.com/cmini004"},
-            {name: "Camilla", url:"https://github.com/catastrxphicr"},
+            {name: "Camila", url:"https://github.com/catastrxphic"},
             {name: "Kristian", url:"https://github.com/Ceaseless04"},
                ]
     },
