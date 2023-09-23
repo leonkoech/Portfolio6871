@@ -10,6 +10,7 @@ import { ProjectsCardComponent } from './core/components/projects-card/projects-
 import { EducationComponent } from './core/components/education/education.component';
 import { ContactComponent } from './core/components/contact/contact.component';
 import { MovingTextComponent } from './core/components/moving-text/moving-text.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 let components=[
   AppComponent,
@@ -23,7 +24,8 @@ let components=[
     ...components,
     EducationComponent,
     ContactComponent,
-    MovingTextComponent
+    MovingTextComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

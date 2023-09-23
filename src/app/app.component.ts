@@ -14,19 +14,19 @@ import { windowWhen } from 'rxjs';
 })
 export class AppComponent {
   projects: project[] = projects
-  focus = "who"
+  focus = "about"
   experiences: experience[] = experiences
   team: boolean = true;
   title = 'portfolio';
   langSelect: any = false;
   languages = ["Any Language",...Object.values(languages).map((x)=>{return x.name})];
   selectedLanguage: string = this.languages[0];
-  tabs: string[] = ["who","education", "experience", "projects", "awards"]
+  tabs: string[] = ["about","education", "experience", "projects", "awards"]
   catSelect: any = false;
   categories = [...Object.values(categories)];
   selectedCategory: string = this.categories[0];
   @ViewChild('main_body') body: ElementRef | undefined;
-  @ViewChild('who') who: ElementRef | undefined;
+  @ViewChild('about') about: ElementRef | undefined;
   @ViewChild("contact") contact: ElementRef | undefined;
   @ViewChild("experience") experience: ElementRef | undefined;
   @ViewChild("education") education: ElementRef | undefined;
@@ -35,7 +35,8 @@ export class AppComponent {
 
   @ViewChild("filter") filterEl: ElementRef | undefined;
   @ViewChild("normalHeader") header: ElementRef | undefined;
-  @ViewChild("header") whoHeader: ElementRef | undefined;
+  @ViewChild("header") aboutHeader: ElementRef | undefined;
+  @ViewChild("customCursor", { static: true }) customCursor: ElementRef<any> | undefined;
   bodyRect = document.body.getBoundingClientRect();
 
   //  @ViewChild('side_nav', { static: true }) sideNav:any;
@@ -60,35 +61,47 @@ export class AppComponent {
   currentImage = 0;
   summary = true;
   expanded: boolean = false;
-  selected:string="who"
-
+  selected:string="about"
+  
+  updateCursorPosition = (event: any) => {
+    if (this.customCursor) {
+      this.customCursor.nativeElement.style.top = `${event.clientY}px`;
+      this.customCursor.nativeElement.style.left = `${event.clientX}px`;
+    }
+ }
    ngOnInit(): void{
     this.changeImage();
     this.selectTeam()
     // this.scrollListener();
    }
    ngAfterViewInit(): void{
-    console.log(this.body)
     this.scrollListener();
+    this.cursorListener();
    }
+
+   cursorListener(){
+    window.addEventListener('mousemove', (event) => {
+      this.updateCursorPosition(event);
+    })
+   }
+
    scrollListener(){
     
-  let elemRect = this.who?.nativeElement.getBoundingClientRect(),
+  let elemRect = this.about?.nativeElement.getBoundingClientRect(),
   offset   = elemRect.top - this.bodyRect.top;
     window.addEventListener("scroll", (event:any) => {
       let headerHeight = this.header?.nativeElement.scrollHeight
-      let headerHeightWho = this.whoHeader?.nativeElement.scrollHeight
-     let whoHeight = (this.who?.nativeElement.scrollHeight + headerHeightWho + this.contact?.nativeElement.scrollHeight + (headerHeight))
-     let educationHeight = whoHeight +  (headerHeight*2) +  this.education?.nativeElement.scrollHeight 
+      let headerHeightabout = this.aboutHeader?.nativeElement.scrollHeight
+     let aboutHeight = (this.about?.nativeElement.scrollHeight + headerHeightabout + this.contact?.nativeElement.scrollHeight + (headerHeight))
+     let educationHeight = aboutHeight +  (headerHeight*2) +  this.education?.nativeElement.scrollHeight 
      let experienceHeight = educationHeight + headerHeight + this.experience?.nativeElement.scrollHeight
      let projectsHeight = experienceHeight + headerHeight + this.filterEl?.nativeElement.scrollHeight +this.projectsElement?.nativeElement.scrollHeight
      let awardsHeight = projectsHeight +  headerHeight + this.awards?.nativeElement.scrollHeight
-     console.log(`scrollTop: ${window.scrollY}`)
-     if(window.scrollY< whoHeight){
+     if(window.scrollY< aboutHeight){
       // 26.84%
-      this.selected = "who"
+      this.selected = "about"
      }
-     if(window.scrollY > whoHeight && window.scrollY< educationHeight ){
+     if(window.scrollY > aboutHeight && window.scrollY< educationHeight ){
       // 2419
       // console.log("education")
       this.selected = "education"
@@ -175,5 +188,5 @@ export class AppComponent {
       this.focus = location  
   }
   
-
+ 
 }

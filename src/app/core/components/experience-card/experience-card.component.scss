@@ -10,7 +10,7 @@
   }
   &_image_container {
     position: relative;
-    width: 20vw;
+    width: inherit;
     border-top: 1px solid $line;
     @include centerFlex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     &_title {
       position: absolute;
       top: 20px;
-      width: inherit;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       text-decoration: none;
@@ -47,7 +47,7 @@
         color: $primary;
       }
       &:hover {
-        cursor: pointer;
+        cursor: none;
         h2 {
           color: $selected;
         }
@@ -107,9 +107,8 @@
     }
     div {
       display: flex;
-      width: 60%;
       padding: 10px 20%;
-      justify-content: space-evenly;
+      justify-content: space-between;
       p {
         @include fontSize($sm);
       }
@@ -126,7 +125,6 @@
       }
       .eyebrow {
         padding: 0;
-        width: 100%;
         justify-content: flex-start;
         height: 45px;
         align-items: flex-end;
@@ -148,7 +146,7 @@
       }
     }
     .text_with_title {
-      padding: 10% 0;
+      padding: 10%;
       width: inherit;
       height: inherit;
       justify-content: space-around;
@@ -159,7 +157,8 @@
       }
       span {
         @include fontSize($sm);
-        color: $line;
+        opacity: 0.7;
+        color: $primary;
       }
     }
   }

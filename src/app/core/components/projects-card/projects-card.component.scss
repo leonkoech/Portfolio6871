@@ -8,7 +8,7 @@ $gold: #c9c9c9f3;
   height: 0%;
   width: 100%;
   z-index: 0;
-  background-color: $line;
+  background-color: $hover;
   transition: height 1.2s;
   bottom: 0;
  }
@@ -52,14 +52,14 @@ $gold: #c9c9c9f3;
     }
     &:hover{
       // border: 1px solid $line;
-      // cursor:;
+      cursor:pointer;
       .card{
         &__top{
           color: $selected;
         }
         &_category{
           // backdrop-filter: invert(0%);
-          background-color: $line;
+          background-color: $hover;
           // color: $secondary;
           border: 1px solid transparent;
         }
@@ -113,7 +113,7 @@ $gold: #c9c9c9f3;
         }
         p{
           @include body-extra-small();
-          color: $line;
+          color: $primary;
           transition: color 2s;
         }
       }
@@ -125,7 +125,7 @@ $gold: #c9c9c9f3;
     justify-content: center;
     align-items: center;
     // backdrop-filter: invert(100%);
-    background-color: $line;
+    background-color: $hover;
     @include fontSize($sm);
     color: $secondary;
     text-transform: uppercase;
