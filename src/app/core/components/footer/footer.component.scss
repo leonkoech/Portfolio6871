@@ -1,0 +1,21 @@
+@import "../../../shared/styles/globals.scss";
+@import '../../../app.component.scss';
+
+.section{
+    &-footer{
+        height: 60px;
+        margin-left: 5vw;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        align-items: center;
+        background-color: $primary;
+        span{
+            @include fontSize($sm);
+            color: $secondary;
+        }
+        @include tablet-down{
+            margin-left: 10vw;
+        }
+    }
+}

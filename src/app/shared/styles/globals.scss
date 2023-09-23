@@ -12,10 +12,11 @@ $md: "med";
 $lg: "large";
 $xlg: "extra_large";
 
-$primary: #ffffff;
-$secondary: rgb(8 12 31);
-$line: #8C9A9E;
+$primary: #fff9eb;
+$secondary: #12110c;
+$line: #32302a;
 $selected: #9ED0E6;
+$hover: $primary;
 
 @mixin phone-only {
   @media (max-width: $phone) {

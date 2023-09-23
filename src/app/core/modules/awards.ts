@@ -9,8 +9,20 @@ export const awards:award[] = [
     year: 2023
   },
   {
+    name: "Dean's list Spring 23",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
+    year: 2023
+  },
+  {
+    name: "Laval Virtual 21",
+    details: "Invited by L'Institut français in partnership with Alliance français to Laval and Paris as part of the first ever African Delegation at an international XR event.",
+    url: "https://blog.laval-virtual.com/en/the-first-african-delegation-at-a-global-xr-event/",
+    year: 2021
+  },
+  {
     name: "AR/VR Africa 20",
-    details: "Continental Student in Africa for VR/AR",
+    details: "1st place Student team in Continental Africa for VR/AR. (Team Hewa)",
     url: "https://arvrafrica.com/arvr-africa-2020-post-hackathon-press-release#:~:text=Team%20Hewa%2C%20the%201st%20place%20winner%20in%20Kenya%2C%20won%20the%20hackathon%E2%80%99s%20Best%20Student%20Team%20prize.%20Their%20AR%20solution%20visualizes%20the%20amount%20of%20air%20pollution%20at%20the%20user%E2%80%99s%20location%20and%20provides%20health%20recommendations.",
     year: 2020
   },

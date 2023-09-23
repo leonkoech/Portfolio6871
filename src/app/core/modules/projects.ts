@@ -1,6 +1,6 @@
 import { categories,languages } from "./projectCats"
-import { member } from "../models/projectModel"
-export const projects = [
+import { member, project } from "../models/projectModel"
+export const projects: project[] = [
     {
         name: "Zux Burgers",
         repoUrl: "https://github.com/leonkoech/Zux-Burgers-App",

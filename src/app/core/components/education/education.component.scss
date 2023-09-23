@@ -87,8 +87,8 @@
     }
     &_information {
       display: grid;
-      grid-template-columns: 20% 75%;
-      grid-column-gap: 5%;
+      grid-template-columns: 30% 60%;
+      grid-column-gap: 9.4%;
       height: max-content;
       @include tablet-down{
         display: grid;
@@ -108,8 +108,8 @@
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            backdrop-filter: invert(1);
-          color: $secondary;
+            background-color: $hover;
+            color: $secondary;
             @include tablet-down{
               height: 30px;
             }

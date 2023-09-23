@@ -14,8 +14,9 @@
       grid-template-columns: 20% 70%;
       min-height: 10vh;
       height: auto;
-      margin-top: 5%;
-      margin-bottom: 50px;
+      padding-bottom: 7vh;
+      margin: 7vh 2.5vw;
+      border-bottom: 1px solid $line;
       &_number{
           
           @include fontSize($lg);

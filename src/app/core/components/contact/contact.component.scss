@@ -3,7 +3,6 @@
 
 .contact {
   &_container {
-    margin: 10vh 0;
     display: flex;
     justify-content: space-between;
 
@@ -19,17 +18,22 @@
       align-items: center;
       transition: color 1s;
       div {
-        color: transparent;
-        transition: color 1s;
+       
+        @include fontSize($xsm);
+        opacity: 0.5;
+        color: $primary;
+        transition: opacity 1s;
         @include tablet-down {
-          color: $primary;
+          opacity: 1;
+          color: $secondary;
         }
       }
       svg {
+        opacity: 0.5;
         fill: $primary;
         height: 45px;
         width: 45px;
-        transition: fill 1s;
+        transition: opacity 1s;
         @include tablet-down{
             height: 30px;
         width: 30px;
@@ -40,14 +44,13 @@
         }
         
       }
-      &:hover {
-        cursor: pointer;
-        color: $selected;
-        div {
-          color: $selected;
+      &:hover { 
+        cursor: none;
+        div{
+          opacity: 1;
         }
         svg {
-          fill: $selected;
+           opacity: 1;
         }
       }
     }

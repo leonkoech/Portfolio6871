@@ -2,17 +2,23 @@
 @import "./shared/styles/type";
 
 // $selected: #EF8354;
-$months: 44; // from august 2020 to april 2024
-$monthsRemaining: 12;
+$months: 52; // from august 2020 to December 2024
+$monthsRemaining: 15;
 
 // $percentage: calc(($monthsRemaining * 100%)/$months);
 ::ng-deep * {
   margin: 0;
   padding: 0;
+  cursor: none;
+}
+a,
+button,
+input {
+  cursor: none;
 }
 .side_nav {
   position: fixed;
-  width: 10vw;
+  width: 5vw;
   height: 88.89vh;
   padding-top: 11.11vh;
   z-index: 4;
@@ -21,7 +27,7 @@ $monthsRemaining: 12;
   justify-content: flex-start;
   border-top: 0px;
   overflow: hidden;
-  backdrop-filter: invert(10%);
+  // backdrop-filter: invert(10%);
   transition: backdrop-filter 2s;
   transition: width 1s;
   @include tablet-down {
@@ -30,6 +36,7 @@ $monthsRemaining: 12;
     // padding-top: 10vh;
     padding-top: 8.33vh;
     height: 91.67%;
+    width: 10vw;
   }
   div {
     height: inherit;
@@ -51,32 +58,26 @@ $monthsRemaining: 12;
       transition: background-color 1s;
       transition: font-size 0.5s;
       transition: transform 1s;
-      
     }
     &:hover {
-      background-color: rgb(165 255 108 / 13%);
-      cursor: pointer;
+      background-color: $line;
+      cursor: none;
       backdrop-filter: invert(10%);
       span {
-        transform: rotate(0deg);
         color: $selected;
         @include fontSize($md);
         @include tablet-down {
-          transform: rotate(-90deg);
           @include fontSize($sm);
         }
       }
     }
   }
   .active {
-    // border: 0.5px solid $selected;
-    background-color: #ff6c6c21;
+    border-right: 1px solid $primary;
     span {
       color: $selected;
       @include fontSize($md);
-      transform: rotate(0deg);
       @include tablet-down {
-        transform: rotate(-90deg);
         @include fontSize($sm);
       }
     }
@@ -123,14 +124,14 @@ $monthsRemaining: 12;
   transition: width 1s;
   position: fixed;
   z-index: 5;
-  @include tablet-down{
+  @include tablet-down {
     width: 10vw;
     height: 60px;
   }
   .mat-icon {
     @include medium_icon();
-    color: rgb(255, 255, 255);
-    @include tablet-down{
+    color: $primary;
+    @include tablet-down {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -139,14 +140,14 @@ $monthsRemaining: 12;
   &_clicked {
     width: 80vw;
   }
-  &:hover{
-    cursor: pointer;
-    mat-icon{
+  &:hover {
+    cursor: none;
+    mat-icon {
       color: $selected;
     }
   }
   @include tablet-up {
-    width: 10vw;
+    width: 5vw;
     .mat-icon {
       // @include fontSize($md);
       @include medium_icon();
@@ -159,79 +160,80 @@ $monthsRemaining: 12;
 }
 .main_content {
   @include two_grid;
-  display: grid;
-  height: 95%;
-  padding-left: 13vw;
+  grid-template-columns: 30% 60%;
+  column-gap: 9.4%;
+  padding-left: 11vw;
   padding-right: 3vw;
-  padding-top: 5%;
   @include desktop-down {
     // width: 80vw;
     // display: initial;
+    padding-left: 15vw;
     display: block;
     // padding: unset;
   }
-  &_left {
-    background: radial-gradient(
-        circle farthest-corner at top left,
-        rgba(207, 18, 18, 0.3019607843) 0,
-        transparent 26%
-      ),
-      radial-gradient(
-        circle farthest-corner at 0 30%,
-        rgba(116, 255, 51, 0.315) 0%,
-        transparent 26%
-      ),
-      radial-gradient(
-        circle at 0% 50%,
-        rgba(25, 255, 232, 0.431372549) 0%,
-        transparent 25%
-      ),
-      rgb(8, 12, 31);
-  }
-  &_left_mini {
-    background: radial-gradient(
-        circle farthest-corner at 20% 50%,
-        rgba(207, 18, 18, 0.3019607843) 0,
-        transparent 23%
-      ),
-      radial-gradient(
-        circle farthest-corner at 17% 61%,
-        rgba(116, 255, 51, 0.315) 0%,
-        transparent 18%
-      ),
-      radial-gradient(
-        circle at 4% 50%,
-        rgba(25, 255, 232, 0.431372549) 0%,
-        transparent 20%
-      ),
-      rgb(8, 12, 31);
-  }
-  &_right_mini {
-    background: radial-gradient(
-        circle farthest-corner at 88% 50%,
-        rgba(207, 18, 18, 0.3019607843) 0,
-        transparent 23%
-      ),
-      radial-gradient(
-        circle farthest-corner at 75% 61%,
-        rgba(116, 255, 51, 0.315) 0%,
-        transparent 18%
-      ),
-      radial-gradient(
-        circle at 97% 50%,
-        rgba(25, 255, 232, 0.431372549) 0%,
-        transparent 20%
-      ),
-      rgb(8, 12, 31);
-  }
+  // &_left {
+  //   // background: radial-gradient(
+  //   //     circle farthest-corner at top left,
+  //   //     rgba(207, 18, 18, 0.3019607843) 0,
+  //   //     transparent 26%
+  //   //   ),
+  //   //   radial-gradient(
+  //   //     circle farthest-corner at 0 30%,
+  //   //     rgba(116, 255, 51, 0.315) 0%,
+  //   //     transparent 26%
+  //   //   ),
+  //   //   radial-gradient(
+  //   //     circle at 0% 50%,
+  //   //     rgba(25, 255, 232, 0.431372549) 0%,
+  //   //     transparent 25%
+  //   //   ),
+  //   //   #12110c;
+  // }
+  // &_left_mini {
+  //   background: radial-gradient(
+  //       circle farthest-corner at 20% 50%,
+  //       rgba(207, 18, 18, 0.3019607843) 0,
+  //       transparent 23%
+  //     ),
+  //     radial-gradient(
+  //       circle farthest-corner at 17% 61%,
+  //       rgba(116, 255, 51, 0.315) 0%,
+  //       transparent 18%
+  //     ),
+  //     radial-gradient(
+  //       circle at 4% 50%,
+  //       rgba(25, 255, 232, 0.431372549) 0%,
+  //       transparent 20%
+  //     ),
+  //     #12110c;
+  // }
+  // &_right_mini {
+  //   background: radial-gradient(
+  //       circle farthest-corner at 88% 50%,
+  //       rgba(207, 18, 18, 0.3019607843) 0,
+  //       transparent 23%
+  //     ),
+  //     radial-gradient(
+  //       circle farthest-corner at 75% 61%,
+  //       rgba(116, 255, 51, 0.315) 0%,
+  //       transparent 18%
+  //     ),
+  //     radial-gradient(
+  //       circle at 97% 50%,
+  //       rgba(25, 255, 232, 0.431372549) 0%,
+  //       transparent 20%
+  //     ),
+  //     #12110c;
+  // }
 }
 .image_component {
   // border-radius: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   @include desktop-down {
-    height: auto;
+    height: 40vh;
     width: 90%;
     align-items: center;
     display: flex;
@@ -239,19 +241,19 @@ $monthsRemaining: 12;
     padding: 5%;
   }
   .image {
-    height: 70vh;
-    width: 100%;
-    border-radius: 3vw 0vw 0 3vw;
+    height: 32vh;
+    width: 32vh;
+    border-radius: 50%;
     overflow: hidden;
     background-color: $line;
-    @include desktop-down {
-      height: 25vh;
-      border-radius: 25vh;
-      width: 65vw;
-    }
+    // @include desktop-down {
+    //   height: 25vh;
+    //   border-radius: 25vh;
+    //   width: 65vw;
+    // }
     div {
       height: inherit;
-      margin-left: -25%;
+      margin-left: 0%;
       background-size: cover;
       @include desktop-down {
         height: inherit;
@@ -278,7 +280,7 @@ $monthsRemaining: 12;
     height: 15px;
     width: 15px;
     border-radius: 15px;
-    @include desktop-down{
+    @include desktop-down {
       height: 10px;
       width: 10px;
     }
@@ -286,7 +288,6 @@ $monthsRemaining: 12;
       height: 5px;
       width: 5px;
     }
-   
   }
   .active {
     background-color: $selected;
@@ -300,12 +301,12 @@ $monthsRemaining: 12;
 }
 .first_header {
   &_container {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
     h2 {
-      @include fontSize($xlg);
+      @include fontSize($lg);
       min-width: fit-content;
       margin-right: 10px;
     }
@@ -347,13 +348,14 @@ $monthsRemaining: 12;
   }
   &_two_col {
     @include two_grid;
+    grid-template-columns: 30% 60%;
+    column-gap: 9.6%;
   }
 
   @include tablet-up {
     padding: unset;
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
     justify-content: space-around;
   }
 
@@ -364,7 +366,7 @@ $monthsRemaining: 12;
       row-gap: 20px;
       flex-direction: column;
       justify-content: flex-start;
-      padding-top: 10%;
+      padding-top: 5%;
     }
 
     span {
@@ -378,7 +380,11 @@ $monthsRemaining: 12;
       transition-delay: 1s;
       a {
         text-decoration: none;
-        color: #c7deed;
+
+        color: $selected;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -386,11 +392,11 @@ $monthsRemaining: 12;
     margin-top: 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     button {
       width: 45%;
-      height: 8vh;
+      height: 4vh;
       background: transparent;
       display: flex;
       justify-content: space-around;
@@ -400,17 +406,16 @@ $monthsRemaining: 12;
       // @include fontSize($sm);
       // color: $selected;
       // font-size: 25px;
-     
+
       .mat-icon {
         @include small_icon();
       }
       &:hover {
-        cursor: pointer;
+        cursor: none;
       }
-      @include phone-only{
-
+      @include phone-only {
         padding: unset;
-        .mat-icon{
+        .mat-icon {
           height: 15px;
           width: 15px;
           font-size: 15px;
@@ -473,8 +478,8 @@ $monthsRemaining: 12;
   visibility: visible;
   // visibility: visible;
   display: block;
-  p{
-    @include fontSize($sm)
+  p {
+    @include fontSize($sm);
   }
 }
 
@@ -488,6 +493,7 @@ $monthsRemaining: 12;
 
 .one_col {
   grid-template-columns: auto;
+  margin-top: 6%;
 }
 
 .page_header {
@@ -505,158 +511,161 @@ $monthsRemaining: 12;
     color: $primary;
   }
 }
-.section{
- 
+.section {
   &-header {
-  width: 83vw;
-  height: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 13vw;
-  color: $primary;
-  @include fontSize($sm);
-  // position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  top: 15px;
-  justify-content: space-between;
-  border-bottom: 1px solid $line;
-  border-top: 1px solid $line;
-  p {
-    @include fontSize($md);
-    color: $line;
-    text-transform: uppercase;
-  }
-  @include tablet-down{
-    height: 30px;
-    p{
-      @include fontSize($xsm);
-    }
-  }
-  @include desktop-down{
-    p:nth-child(n+5){
-      // font-size: 10px;
-        display: none;
-      }
-  }
-  @include phone-only{
-    p:nth-child(n+4){
-      // font-size: 10px;
-        display: none;
-      }
-    
-  }
-}
-&-filter{
-  border-top: 0;
-  height: auto;
-  margin-top: 6%;
-  .selected{
+    width: 85vw;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 11vw;
     color: $primary;
-  }
-  .unselected{
-    color: $line;
-  }
-  .title{
+    @include fontSize($xsm);
+    // position: relative;
     display: flex;
     align-items: center;
-    &:hover{
-      cursor: pointer;
-    }
-  }
-  h2{
-    @include fontSize($xlg);
-    @include tablet-down{
-      @include fontSize($lg)
-    }
-  }
-  @include phone-only{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .filter{
-    display: flex;
-    width: 30%;
+    overflow: hidden;
+    top: 15px;
     justify-content: space-between;
-    @include tablet-down{
-      width: 35%;}
-      @include phone-only{
-      justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    margin: 20px 0;
+    border-bottom: 1px solid $line;
+    border-top: 1px solid $line;
+    p {
+      @include fontSize($xsm);
+      color: $line;
+      text-transform: uppercase;
     }
-   
-    &_select{
-      width: 11vw;
-      @include tablet-down{
-        width: auto;
+    @include tablet-down {
+      width: 82vw;
+      margin-left: 15vw;
+      height: 30px;
+      p {
+        @include fontSize($xsm);
       }
-      &_button{
-        display: flex;
+    }
+    @include desktop-down {
+      p:nth-child(n + 5) {
+        // font-size: 10px;
+        display: none;
+      }
+    }
+    @include phone-only {
+      p:nth-child(n + 4) {
+        // font-size: 10px;
+        display: none;
+      }
+    }
+  }
+  &-filter {
+    border-top: 0;
+    height: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    .selected {
+      color: $primary;
+    }
+    .unselected {
+      color: $line;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: none;
+      }
+    }
+    h2 {
+      @include fontSize($xlg);
+      @include tablet-down {
+        @include fontSize($lg);
+      }
+    }
+    @include phone-only {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .filter {
+      display: flex;
+      width: 30%;
+      justify-content: space-between;
+      @include tablet-down {
+        width: 35%;
+      }
+      @include phone-only {
         justify-content: space-between;
-        align-items: center;
-        @include fontSize($sm);
-        color: $line;
-        @include tablet-down{
-          .mat-icon{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
+        flex-direction: row;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      &_select {
+        width: 11vw;
+        @include tablet-down {
+          width: auto;
+        }
+        &_button {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @include fontSize($sm);
+          opacity: 0.7;
+          color: $primary;
+          @include tablet-down {
+            .mat-icon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 15px;
+            }
+          }
+          &:hover {
+            cursor: none;
           }
         }
-        &:hover{
-          cursor: pointer;
+      }
+
+      &_option {
+        transition: height 2s;
+        position: absolute;
+        width: 11vw;
+        // height: 1px;
+        height: auto;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 2;
+        margin-top: 20px;
+        border: 1px solid $line;
+        @include tablet-down {
+          width: 15vw;
+        }
+        &:nth-child(2) {
+          @include tablet-down {
+            margin-left: -18vw;
+            width: 30vw;
+          }
+          @include phone-only {
+            margin-left: unset;
+          }
+        }
+        div {
+          height: 50px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include fontSize($sm);
+          &:hover {
+            cursor: none;
+            background-color: $line;
+          }
         }
       }
-    }
-    
-    &_option{
-      transition: height 2s;
-    position: absolute;
-    width: 11vw;
-    // height: 1px;
-    height: auto;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    z-index: 2;
-    margin-top: 20px;
-    border: 1px solid $line;
-    @include tablet-down{
-      width: 15vw;
-    }
-    &:nth-child(2){
-      @include tablet-down{
-        margin-left: -18vw;
-        width: 30vw;
-      }
-      @include phone-only{
-        margin-left: unset;
-      }
-    }
-    div{
-      height: 50px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include fontSize($sm);
-      &:hover{
-        cursor: pointer;
-        background-color: #ff848460;
+      &_hidden {
+        overflow: hidden;
+        height: 0px;
+        display: none;
+        transition: height 2s;
       }
     }
   }
-  &_hidden{    
-    overflow: hidden;
-    height: 0px;
-    display: none;
-    transition: height 2s;
-    }
-}
-}
 }
 .sticky {
   position: fixed;
@@ -666,41 +675,68 @@ $monthsRemaining: 12;
   margin-bottom: 0;
   border-bottom: 1px solid $primary;
   border-top: 1px solid $primary;
-  p{
+  p {
     color: $primary;
   }
-  
 }
-
-.projects{
+.projects {
   grid-template-columns: auto auto auto;
-  grid-column-gap: 3vh;
-  row-gap: 3vh;
+  grid-column-gap: 7vw;
+  row-gap: 12vh;
   min-height: 66vh;
-  margin-bottom: 6%;
-  @include desktop-down{
+  margin: 6% 0;
+  @include desktop-down {
     display: grid;
     grid-template-columns: auto auto;
   }
-  @include tablet-down{
+  @include tablet-down {
     display: grid;
     grid-template-columns: auto auto;
   }
-  @include phone-only{
+  @include phone-only {
     display: grid;
     grid-template-columns: auto;
   }
 }
-.contact{
+.contact {
   padding-top: 0;
+  padding-bottom: 10vh;
 }
-.who{
-  @include desktop-down{
-    padding-top: 50px;
+.about {
+  
+  height: 80vh;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include desktop-down {
+    padding: 50px 0;
+    height: auto;
   }
 }
-.invisible{
+.invisible {
   visibility: hidden;
 }
+.padding_width {
+  padding: 0 5%;
+  width: 90%;
+  @include tablet-up{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    column-gap: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-
+.custom-cursor {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: $primary;
+  position: fixed;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 100;
+  top: 0;
+}
