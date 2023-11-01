@@ -3,7 +3,19 @@ import { award } from "../models/awardModel";
 
 export const awards:award[] = [
   {
-    name: "Harvard dreamhack XR 2023",
+    name: "UCF Knight Hacks 2023",
+    details: "1st Place winner",
+    url: "https://devpost.com/software/tacti-sight",
+    year: 2023
+  },
+  {
+    name: "South Florida Tech Hub Hackathon",
+    details: "1st Place winner",
+    url: "https://techhubsouthflorida.org/team-llamaa-wins-tech-hubs-hack-for-humanity-community-hackathon-2023/#:~:text=Dennis%2C%20Asiangel%20Moua%2C-,Leon%20Kipkoech,-%2C%20Aimee%20Gonzalez%2DCameron",
+    year: 2023
+  },
+  {
+    name: "Harvard Dreamhack XR 2023",
     details: "1st Place winner",
     url: "https://github.com/leonkoech/AutismDetector",
     year: 2023
