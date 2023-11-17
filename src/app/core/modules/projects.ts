@@ -45,6 +45,17 @@ export const projects: project[] = [
 
     },
     {
+        name: "Closet Light",
+        repoUrl: "https://github.com/leonkoech/closet_light",
+        details: "An auto-detection system to turn on or off LED lighting based on human presence. With ability to change colors and functionality based on the remote IR sender signal codes",
+        languages: [languages["C/C++"]],
+        category: categories.embedded,
+        demoUrl: "https://twitter.com/Leonkoech_/status/1720908921487884469",
+        team: false,
+        members: []
+
+    },
+    {
         name: "SHIVR - Subtle Haptics In Virtual Reality",
         repoUrl: "https://github.com/leonkoech/SHIVR-hardware",
         details: "Simple unity SDK that brings the power of vibrotactile haptic feedback to developers using ultra-leap hand-tracking for simple and subtle hand interactions in Virtual Reality Environments.",
@@ -59,7 +70,7 @@ export const projects: project[] = [
         ]
     },
     {
-        name: "tacti-sight",
+        name: "Tacti-Sight",
         repoUrl: "https://github.com/leonkoech/tactile-sight",
         details: "A tactile haptic wearable system that uses ultrasonic sensors to provide cutaneous input based on haptic object recognition and spatial object localization via vibration on the fingers of visually impaired individuals.",
         languages: [languages["C#"], languages["C/C++"]],
