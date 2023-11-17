@@ -45,6 +45,34 @@ export const projects: project[] = [
 
     },
     {
+        name: "SHIVR - Subtle Haptics In Virtual Reality",
+        repoUrl: "https://github.com/leonkoech/SHIVR-hardware",
+        details: "Simple unity SDK that brings the power of vibrotactile haptic feedback to developers using ultra-leap hand-tracking for simple and subtle hand interactions in Virtual Reality Environments.",
+        languages: [languages["C#"], languages["C/C++"]],
+        category: categories.vrar,
+        demoUrl: "https://devpost.com/software/shivr-subtle-haptics-in-virtual-environments",
+        team: true,
+        members: [
+            {name: "Mahima", url:"https://www.linkedin.com/in/mahimaadvilkar"},
+            {name: "Aya", url:"https://www.linkedin.com/in/ayaf"},
+            {name: "Jason", url:"https://www.linkedin.com/in/jasonpgilbert"},
+        ]
+    },
+    {
+        name: "tacti-sight",
+        repoUrl: "https://github.com/leonkoech/tactile-sight",
+        details: "A tactile haptic wearable system that uses ultrasonic sensors to provide cutaneous input based on haptic object recognition and spatial object localization via vibration on the fingers of visually impaired individuals.",
+        languages: [languages["C#"], languages["C/C++"]],
+        category: categories.embedded,
+        demoUrl: "https://devpost.com/software/tacti-sight",
+        team: true,
+        members: [
+            {name: "Jake", url:"https://www.linkedin.com/in/jake-tattersall-77930a250/"},
+            {name: "Scott", url:"https://www.linkedin.com/in/valentinescott03"},
+            {name: "Christopher", url:"https://www.linkedin.com/in/chrisalbear"},
+        ]
+    },
+    {
         name: "Autism Detector",
         repoUrl: "https://github.com/leonkoech/AutismDetector",
         details: "Unity, Eye Tracking API, Magic Leap | Unity SDK to enable developers detect and act upon sensory overload in autistic individuals during XR experiences.",
@@ -77,7 +105,7 @@ export const projects: project[] = [
         name: "ChatGPT for AR",
         repoUrl: "https://github.com/leonkoech/flaskGPTVR",
         details: "ChatGPT for AR whereby you can issue commands to ChatGPT with your voice and receive both Textual and Audio feedback. For STT and TTS we leveraged Wit.ai and created our own server for ChatGPT hosted on Google Cloud.",
-        languages: [languages["C#"], languages["C++"]],
+        languages: [languages["C#"], languages["C/C++"]],
         category: categories.vrar,
         demoUrl: "https://devpost.com/software/team16",
         team: true,
