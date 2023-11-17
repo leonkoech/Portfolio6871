@@ -3,6 +3,12 @@ import { award } from "../models/awardModel";
 
 export const awards:award[] = [
   {
+    name: "Stanford XR 2023",
+    details: "Best Hardware Hack",
+    url: "https://devpost.com/software/shivr-subtle-haptics-in-virtual-environments",
+    year: 2023
+  },
+  {
     name: "UCF Knight Hacks 2023",
     details: "1st Place winner",
     url: "https://devpost.com/software/tacti-sight",
