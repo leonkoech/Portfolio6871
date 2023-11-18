@@ -15,14 +15,14 @@
       <span>{{ tab }}</span>
     </div>
   </div>
-
+  
   <div #header [ngClass]="'section-header sticky'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">
       {{ selected.toUpperCase() }}
     </p>
   </div>
 
-  <div #about id="about" class=" main_content_left about">
+  <section #about id="about" class=" main_content_left about">
     <div class="main_content">
       <div class="image_component">
         <div class="image">
@@ -100,7 +100,8 @@
                 rel="noopener noreferrer"
                 href="https://www.tfrrs.org/athletes/7692328/Florida_National/Leon_Kipkoech.html">college
                 student-athlete</a>.</p>
-            <div class="right_component_buttons"><button
+            <div class="right_component_buttons"><button 
+              (click)="openInNewPage('https://docs.google.com/document/d/1Z0HPYQFaZlRLRR2DhwK_3LIPq3ADMjTreZrDpfXoRXI')" 
                 class="right_component_buttons_inactive">View Resume <mat-icon
                   class="mat-icon">open_in_new</mat-icon></button></div>
           </div>
@@ -110,7 +111,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
   <!-- <div #about id="about" class="main_content main_content_left about">
    
     <div class="image_component">
@@ -168,7 +169,7 @@
       </div>
     </div>
   </div> -->
-  <div #contact class="main_content one_col contact">
+  <section #contact class="main_content one_col contact">
     <div class="padding_width">
       <div class="first_header_container">
       <h2>Contact</h2>
@@ -177,19 +178,19 @@
     </div>
     
     
-  </div>
+  </section>
 
   <div [ngClass]="'section-header'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">Education</p>
   </div>
-  <div #education id="education">
+  <section #education id="education">
     <education></education>
-  </div>
+  </section>
 
   <div #normalHeader [ngClass]="'section-header'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">Experience</p>
   </div>
-  <div
+  <section
     #experience
     id="experience"
     class="main_content one_col main_content_left_mini">
@@ -197,7 +198,7 @@
       *ngFor="let experience of experiences; let index = index"
       [index]="index"
       [experience]="experience"></experience-card>
-  </div>
+</section>
 
   <div [ngClass]="'section-header'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">Projects</p>
@@ -256,23 +257,23 @@
       </div>
     </div>
   </div>
-  <div
+  <section
     #projectElement
     class="main_content one_col main_content_right_mini projects">
     <project-card
       *ngFor="let project of projects"
       [project]="project"></project-card>
-  </div>
+</section>
   <div #awards [ngClass]="'section-header'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">Awards</p>
   </div>
-  <div
+  <section
     id="awards"
     class="main_content one_col projects main_content_left_mini awards">
     <awards-card
       *ngFor="let i of [].constructor(4); let idx = index"
       [year]="2023 - idx"></awards-card>
-  </div>
+</section>
   <app-footer></app-footer>
 </div>
 <router-outlet></router-outlet>

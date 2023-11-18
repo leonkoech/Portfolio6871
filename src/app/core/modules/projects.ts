@@ -9,7 +9,7 @@ export const projects: project[] = [
         category: categories.fullStack,
         demoUrl: "https://zux-burgers.web.app/",
         team: false,
-        members: []
+        members: [],
     },
     {
         name: "Color QR generator",
@@ -336,9 +336,9 @@ export const projects: project[] = [
         demoUrl: "https://devpost.com/software/mi-art",
         team: true,
         members: [
-            {name: "Erbol", url:"https://devpost.com/nishanov-erbol"},
-            {name: "Ceci", url:"https://devpost.com/cecigerva"},
-            {name: "Moises", url:"https://devpost.com/moirendiles"},
+            {name: "Erbol", url:"https://www.linkedin.com/in/erbol-nishanov"},
+            {name: "Cecilia", url:"https://www.linkedin.com/in/ceciliagervasonilatorre"},
+            {name: "Moises", url:"https://www.linkedin.com/in/moisesrendiles"},
         ]
     },
     {

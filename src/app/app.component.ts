@@ -79,12 +79,31 @@ export class AppComponent {
     this.cursorListener();
    }
 
+
    cursorListener(){
-    window.addEventListener('mousemove', (event) => {
-      this.updateCursorPosition(event);
-    })
+    // check device type or something similar
+    if(!this.isMobileTablet()){
+      // if(this.customCursor){
+      //    if(this.initialCursorPos(this.customCursor)){
+      //     this.customCursor.nativeElement.style.display = "none";
+      //   }
+      //   else{
+      //     this.customCursor.nativeElement.style.display = "block";
+      //   }
+      // }
+     
+      window.addEventListener('mousemove', (event) => {
+        this.updateCursorPosition(event);
+      })
+    }
    }
 
+   initialCursorPos(customCursor:any){
+    return (customCursor.nativeElement.style.top == 0 &&  customCursor.nativeElement.style.left == 0);
+   }
+  isMobileTablet(){
+     return (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i))
+}
    scrollListener(){
     
   let elemRect = this.about?.nativeElement.getBoundingClientRect(),
@@ -188,5 +207,7 @@ export class AppComponent {
       this.focus = location  
   }
   
- 
+openInNewPage(link: string){
+  window.open(link)
+}
 }
