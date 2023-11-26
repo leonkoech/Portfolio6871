@@ -9,6 +9,12 @@ export const awards:award[] = [
     year: 2023
   },
   {
+    name: "NAIA Scholar Athletes",
+    details: "3.5+ GPA achievement",
+    url: "https://www.fnu.edu/seven-fnu-cross-country-runners-earned-naia-scholar-athlete-award/",
+    year: 2023
+  },
+  {
     name: "UCF Knight Hacks 2023",
     details: "1st Place winner",
     url: "https://devpost.com/software/tacti-sight",
