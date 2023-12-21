@@ -9,6 +9,12 @@ export const awards:award[] = [
     year: 2023
   },
   {
+    name: "FNU top performer 2023",
+    details: "Nominated and won top performer for the Business and IT department at Florida National University for the year 2023",
+    url: "https://www.linkedin.com/posts/floridanationaluniversity_fnucares-fnugraduates-fnusuccessstories-activity-7138915459306778624-JaMZ",
+    year: 2023
+  },
+  {
     name: "NAIA Scholar Athletes",
     details: "3.5+ GPA achievement",
     url: "https://www.fnu.edu/seven-fnu-cross-country-runners-earned-naia-scholar-athlete-award/",
