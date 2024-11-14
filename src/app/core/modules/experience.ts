@@ -7,7 +7,7 @@ export const experiences = [
     location: "Hybrid",
     title: "Research Engineering Intern (MSRP)",
     type: "ML Engineer, Computer Vision",
-    imageUrl: "../assets/images/wimg.svg",
+    imageUrl: "../assets/images/MITmediaLab.svg",
     details: [
       "Conducted research under Dr. Danielle Wood in the Space Enabled group to enhance computer vision (CV) algorithms for the Astrobee robot on the International Space Station (ISS).",
       "Investigated the impact of Human-Robotic Interaction (HRI) related to hand gesture recognition for improving communication support for deaf astronauts aboard the ISS."
@@ -21,7 +21,7 @@ export const experiences = [
     location: "Hybrid",
     title: "Research Engineering Collaborator",
     type: "Embedded Engineering, Virtual Reality",
-    imageUrl: "../assets/images/wimg.svg",
+    imageUrl: "../assets/images/IsueLab.svg",
     details: [
       "Collaborated under Dr. Joseph J. LaViola Jr., focusing on haptics, situational awareness, and immersive experiences in Virtual Reality (VR) devices.",
       "Led a research assistantship project that utilized haptics to enhance user situational awareness in VR.",
@@ -36,7 +36,7 @@ export const experiences = [
     location: "Remote",
     title: "Cloud Engineering Intern",
     type: "Cloud Security Engineering, AI development",
-    imageUrl: "../assets/images/wimg.svg",
+    imageUrl: "../assets/images/Commvault.svg",
     details: [
       "Implemented automated Microsoft Sentinel playbook scripts to streamline incident response and create comprehensive, custom incident reports on Azure, leading to a 7% increase in incident tracking and response efficiency.",
       "Integrated Artificial Intelligence (AI) with a Large Language Model (LLM) to provide detailed, prioritized incident insights and alerts."
