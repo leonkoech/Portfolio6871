@@ -425,11 +425,12 @@ input {
     &_inactive {
       @include fontSize($sm);
       color: $primary;
-      border: 1px solid $secondary;
-      border-bottom: 1px solid $primary;
+      border: 1px solid $primary;
+    //   border-bottom: 1px solid $primary;
       transition: border 0.5s;
       &:hover {
-        border: 1px solid $primary;
+        border: 1px solid $selected;
+        color: $selected;
       }
     }
     &_active {
