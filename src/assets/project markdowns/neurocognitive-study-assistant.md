@@ -1,17 +1,9 @@
 # NeuroCognitive Study Assistant (formerly Focus Buddy)
 
-<table>
 
-  <tr>
-    <td>
-      NeuroCognitive Study Assistant is an innovative web application designed to optimize students' study sessions using Brain-Computer Interface (BCI) technology. By analyzing neural data, our tool provides insights to improve focus and academic performance.
-    </td>
-     <td>
-      <img src="https://github.com/user-attachments/assets/cb1ef702-79ad-49e0-bc37-76cb9066b5fc" alt="BCI headband" width="1200px">
-    </td>
-  </tr>
+NeuroCognitive Study Assistant is an innovative web application designed to optimize students' study sessions using Brain-Computer Interface (BCI) technology. By analyzing neural data, our tool provides insights to improve focus and academic performance.
 
-</table>
+!["BCI headband](https://github.com/user-attachments/assets/cb1ef702-79ad-49e0-bc37-76cb9066b5fc)
 
 ## Table of Contents
 

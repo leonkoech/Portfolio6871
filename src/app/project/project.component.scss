@@ -20,6 +20,9 @@
   }
   img {
     width: 40vw;
+    @include tablet-down{
+        width: 100%;
+    }
   }
   h1 {
     width: 100%;

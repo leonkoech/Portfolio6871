@@ -24,16 +24,9 @@ SHIVR is an innovative SDK that empowers developers to integrate vibrotactile ha
 
 ## Overview
 
-<table>
-  <tr>
-    <td>
-      SHIVR enhances the VR landscape by incorporating subtle haptic feedback into hand-tracking interactions. This innovation enriches the realism of VR environments and boosts user engagement by seamlessly blending tactile sensations with natural hand gestures.
-    </td>
-    <td>
-      <img src="https://github.com/leonkoech/SHIVR-SDK/assets/39020723/e149a019-6ff6-4d39-8f8d-32ad64bebecd" alt="Unity interface" width="500px">
-    </td>
-  </tr>
-</table>
+SHIVR enhances the VR landscape by incorporating subtle haptic feedback into hand-tracking interactions. This innovation enriches the realism of VR environments and boosts user engagement by seamlessly blending tactile sensations with natural hand gestures.
+      
+![unity interface](https://github.com/leonkoech/SHIVR-SDK/assets/39020723/e149a019-6ff6-4d39-8f8d-32ad64bebecd)
 
 ## Features
 
@@ -45,20 +38,12 @@ SHIVR is an innovative SDK that empowers developers to integrate vibrotactile ha
 ## Technology Stack
 
 - **Hardware**:
-<table>
-  <tr>
-    <td>
-    <ul>
-    <li>Ultraleap hand tracking device</li>
-   <li>ESP32 microcontroller</li>
-   <li>Arduino Uno (for specific prototyping purposes)</li>
-    </ul>
-    </td>
-    <td>
-      <img src="https://github.com/leonkoech/SHIVR-Hardware/assets/39020723/e920845b-a6e6-4082-a98e-5a6693d505b5" alt="Unity interface" width="500px">
-    </td>
-  </tr>
-</table>
+
+    - Ultraleap hand tracking device
+    - ESP32 microcontroller
+    - Arduino Uno (for specific prototyping purposes)
+
+    ![Unity interface](https://github.com/leonkoech/SHIVR-Hardware/assets/39020723/e920845b-a6e6-4082-a98e-5a6693d505b5)
 
 - **Software**:
   - Development Platform: Unity
@@ -104,8 +89,8 @@ SHIVR is an innovative SDK that empowers developers to integrate vibrotactile ha
 - Adding customizable user settings for haptic intensity.
 
 ## Team
-<img src="https://github.com/user-attachments/assets/6ddc95b3-94b9-41f6-8e2e-1dd01ef391e9" alt="project overview" width="600px">
 
+![team](https://github.com/user-attachments/assets/6ddc95b3-94b9-41f6-8e2e-1dd01ef391e9)
 
 This project received the 'Best use of hardware' award at [Immerse The Bay](https://immersethebay.stanfordxr.org/) at Stanford University 2023 organized by [Stanford XR Club](https://www.stanfordxr.org/about)
 

@@ -38,10 +38,10 @@ The system reduces manual labor by automating the filtering process, allowing Ha
 
 The platform is built as a web application, with a backend system to handle data processing, filtering, and storing application details. The key technologies and architecture include:
 
-- **Frontend:** Built with modern JavaScript frameworks (e.g., React.js) to provide a seamless user experience.
-- **Backend:** A server-based application (e.g., Node.js or Python Flask) to manage data storage, filtering, and document uploads.
-- **Database:** A relational database (e.g., MySQL, PostgreSQL) to store application data, applicant details, and submitted documents.
-- **File Storage:** Cloud-based storage (e.g., AWS S3) for storing documents submitted by applicants.
+- **Frontend:** Built with modern JavaScript frameworks (Vue.js) to provide a seamless user experience.
+- **Backend:** A server-based application (Node.js) to manage data storage, filtering, and document uploads.
+- **Database:** A non-relational database (Firebase) to store application data, applicant details, and submitted documents.
+- **File Storage:** Cloud-based storage (Firebase FileStorage) for storing documents submitted by applicants.
 
 ## Usage
 

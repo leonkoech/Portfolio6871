@@ -3,19 +3,9 @@
 ## Empowering Every Vehicle with Advanced Safety Features
 
 
-<table>
-  <tr>
-    <td>
-     
 Safe Sense is a revolutionary aftermarket vehicle safety system designed to bring advanced driver assistance capabilities to any car, regardless of its age or model. Our mission is to make roads safer for everyone by democratizing access to cutting-edge safety technology.
-    </td>
-     <td>
-      <img src="https://github.com/leonkoech/SafeSense-AI/assets/39020723/9ed9f175-6d43-44ac-9b08-3c5065da42ce" alt="Safe Sense MVP Design" width="2600px">
-    </td>
-  </tr>
-</table>
 
-
+![Safe Sense MVP Design](https://github.com/leonkoech/SafeSense-AI/assets/39020723/9ed9f175-6d43-44ac-9b08-3c5065da42ce)
 
 
 ## Table of Contents

@@ -1,17 +1,9 @@
 # Expressive Emotion VR
 ## Enhancing Emotional Expression through Personalized Chromotherapy in Virtual Reality
 
-<table>
-  <tr>
-    <td>
-      This project presents an innovative integration of chromotherapy within virtual reality (VR), utilizing brain-computer interfaces (BCIs) to tailor color experiences based on individual brain activity. This project combines the therapeutic principles of chromotherapy with real-time brain signal analysis to enhance emotional well-being.
-    </td>
-     <td>
-       <img src="https://github.com/user-attachments/assets/7bd76e40-80cf-4e93-a292-17c7face4c4e" alt="Expressive Emoetion" width="1500px">
-    </td>
-  </tr>
+ This project presents an innovative integration of chromotherapy within virtual reality (VR), utilizing brain-computer interfaces (BCIs) to tailor color experiences based on individual brain activity. This project combines the therapeutic principles of chromotherapy with real-time brain signal analysis to enhance emotional well-being.
 
-</table>
+![Expressive Emotion](https://github.com/user-attachments/assets/7bd76e40-80cf-4e93-a292-17c7face4c4e)
 
 ## Inspiration
 

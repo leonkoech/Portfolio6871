@@ -2,19 +2,10 @@
 
 ## Enhancing Navigation for the Visually Impaired through Virtual Reality and Haptic Feedback
 
-<table>
-  <tr>
-    <td>
-     Haptic Vision is an innovative assistive technology designed to improve navigation and spatial awareness for individuals with visual impairments. By integrating virtual reality (VR) and haptic feedback, Haptic Vision aims to enhance independence and quality of life for the visually impaired population.
-    </td>
-     <td>
-      <img src="https://user-images.githubusercontent.com/39020723/218214123-f66f583e-3f93-461e-9d06-ebd59a3d3cc9.jpg" alt="project overview" width="2600px">
-    </td>
-  </tr>
-</table>
 
+Haptic Vision is an innovative assistive technology designed to improve navigation and spatial awareness for individuals with visual impairments. By integrating virtual reality (VR) and haptic feedback, Haptic Vision aims to enhance independence and quality of life for the visually impaired population.
 
-
+![project overview](ttps://user-images.githubusercontent.com/39020723/218214123-f66f583e-3f93-461e-9d06-ebd59a3d3cc9.jpg)
 
 ## Table of Contents
 
@@ -31,16 +22,9 @@
 
 ## Overview
 
-<table>
-  <tr>
-    <td>
-     Visual impairment affects approximately 253 million people worldwide (WHO, 2024), presenting significant challenges in daily activities such as navigation and environmental interaction. Haptic Vision addresses these challenges by leveraging cutting-edge technologies to create a more intuitive and informative navigational experience.
-    </td>
-     <td>
-      <img src="https://github.com/user-attachments/assets/6f5de09e-6556-42d0-bec1-71d677a77542" alt="BCI headband" width="1200px">
-    </td>
-  </tr>
-</table>
+Visual impairment affects approximately 253 million people worldwide (WHO, 2024), presenting significant challenges in daily activities such as navigation and environmental interaction. Haptic Vision addresses these challenges by leveraging cutting-edge technologies to create a more intuitive and informative navigational experience.
+
+![BCI headband](https://github.com/user-attachments/assets/6f5de09e-6556-42d0-bec1-71d677a77542)
 
 ## Features
 

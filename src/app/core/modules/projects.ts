@@ -149,9 +149,7 @@ export const projects: project[] = [
     thumbnail:
       "https://github.com/user-attachments/assets/30d5a069-1e9e-4f93-9643-b5afc19f2b22",
     about:
-      "Made at City Hackathon 2023. First Place Winner. The Habitat for Humanity Housing Application Filtering System \
-    is designed to streamline the manual processing of pre-application data, enabling faster and more efficient handling of housing applications. \
-This web-based tool provides Habitat for Humanity employees with a visually-friendly interface to process up to 30,000 pre-applications, ultimately \
+      "Made at City Hackathon 2023. First Place Winner. A tool that provides Habitat for Humanity employees with a visually-friendly interface to process up to 30,000 pre-applications, ultimately \
 narrowing down to the 50 applicants who will receive a home.",
     repoUrl: "https://github.com/leonkoech/city-hackathon-server",
     details:
