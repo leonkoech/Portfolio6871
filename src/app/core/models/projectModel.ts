@@ -8,11 +8,14 @@ export interface member{
 }
 export interface project{
     name: string,
+    id: string,
+    about: string,
     repoUrl: string,
     details: string,
     languages: language[],
     category: string,
-    demoUrl: string | null,
+    demoUrl: string,
     team: boolean,
+    thumbnail: string,
     members: member[] | null,
 }

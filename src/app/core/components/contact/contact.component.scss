@@ -25,7 +25,10 @@
         transition: opacity 1s;
         @include tablet-down {
           opacity: 1;
-          color: $secondary;
+          color: $primary;
+        }
+        @include phone-only {
+          @include fontSize($xsm);
         }
       }
       svg {
@@ -39,8 +42,8 @@
         width: 30px;
         }
         @include phone-only {
-          height: 20px;
-          width: 20px;
+          height: 25px;
+          width: 25px;
         }
         
       }

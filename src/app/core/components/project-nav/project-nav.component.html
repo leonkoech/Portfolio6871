@@ -1,0 +1,11 @@
+<div class="parent">
+    <div class="similar">
+        <h2> Similar Projects </h2>
+        <div class="button_list" *ngFor="let project of similarProjects" (click)="viewProject(project.id)">
+            <p>{{ project.name }}</p>
+            <mat-icon class="mat-icon">arrow_forward_ios</mat-icon>
+          </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+

@@ -3,7 +3,7 @@
 
 // $selected: #EF8354;
 $months: 52; // from august 2020 to December 2024
-$monthsRemaining: 15;
+$monthsRemaining: 2;
 
 // $percentage: calc(($monthsRemaining * 100%)/$months);
 ::ng-deep * {
@@ -12,7 +12,7 @@ $monthsRemaining: 15;
   cursor: none;
 }
 a,
-button,
+button,iframe,
 input {
   cursor: none;
 }

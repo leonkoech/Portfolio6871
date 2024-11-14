@@ -33,18 +33,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
+        width: 70%;
       }
       h2 {
         @include fontSize($lg);
         text-align: center;
         @include phone-only {
-          @include fontSize($lg);
+          @include fontSize($sm);
         }
       }
       .mat-icon {
         @include medium_icon();
         color: $primary;
+        @include phone-only {
+          @include small_icon();
+        }
       }
       &:hover {
         cursor: none;
@@ -73,6 +76,9 @@
         width: 20vw;
         aspect-ratio: 1/1;
         @include centerFlex;
+      }
+      @include phone-only{
+        @include fontSize($sm);
       }
       &_h2 {
         @include fontSize($xlg);
@@ -154,11 +160,22 @@
       flex-direction: column;
       p {
         @include fontSize($sm);
+        @include phone-only{
+          @include fontSize($xsm);
+        }
       }
       span {
         @include fontSize($sm);
         opacity: 0.7;
         color: $primary;
+        @include phone-only{
+          @include fontSize($xsm);
+        }
+      }
+      h2{
+        @include phone-only{
+          @include fontSize($sm);
+        }
       }
     }
   }

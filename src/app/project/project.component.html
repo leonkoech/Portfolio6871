@@ -1,0 +1,12 @@
+
+<div class="section-header sticky">
+    <p *ngFor="let i of [0, 1, 2, 3, 4]">{{id}}</p>
+  </div>
+<div class="markdown" [innerHTML]="markdownContent">
+    
+</div>
+
+<project-details class="project-details" id={{id}}></project-details>
+<project-nav class="project-nav" id={{id}}></project-nav>
+<router-outlet></router-outlet>
+<div #customCursor class="custom-cursor">

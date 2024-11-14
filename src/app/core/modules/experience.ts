@@ -1,12 +1,55 @@
 export const experiences = [
   {
+    company: "Massachusetts Institute of Technology - Media Lab",
+    website: "https://www.media.mit.edu/",
+    start: "Jun 2024",
+    end: "Nov 2024",
+    location: "Hybrid",
+    title: "Research Engineering Intern (MSRP)",
+    type: "ML Engineer, Computer Vision",
+    imageUrl: "../assets/images/wimg.svg",
+    details: [
+      "Conducted research under Dr. Danielle Wood in the Space Enabled group to enhance computer vision (CV) algorithms for the Astrobee robot on the International Space Station (ISS).",
+      "Investigated the impact of Human-Robotic Interaction (HRI) related to hand gesture recognition for improving communication support for deaf astronauts aboard the ISS."
+    ]
+  },
+  {
+    company: "University of Central Florida - ISUE Lab",
+    website: "https://www.eecs.ucf.edu/isuelab/",
+    start: "Oct 2023",
+    end: "Nov 2024",
+    location: "Hybrid",
+    title: "Research Engineering Collaborator",
+    type: "Embedded Engineering, Virtual Reality",
+    imageUrl: "../assets/images/wimg.svg",
+    details: [
+      "Collaborated under Dr. Joseph J. LaViola Jr., focusing on haptics, situational awareness, and immersive experiences in Virtual Reality (VR) devices.",
+      "Led a research assistantship project that utilized haptics to enhance user situational awareness in VR.",
+      "Directed a comparative analysis of a novel situational awareness Head-Mounted Display (HMD) system against the Meta Quest 2."
+    ]
+  },
+  {
+    company: "Commvault",
+    website: "https://commvault.com/",
+    start: "Jun 2024",
+    end: "Aug 2024",
+    location: "Remote",
+    title: "Cloud Engineering Intern",
+    type: "Cloud Security Engineering, AI development",
+    imageUrl: "../assets/images/wimg.svg",
+    details: [
+      "Implemented automated Microsoft Sentinel playbook scripts to streamline incident response and create comprehensive, custom incident reports on Azure, leading to a 7% increase in incident tracking and response efficiency.",
+      "Integrated Artificial Intelligence (AI) with a Large Language Model (LLM) to provide detailed, prioritized incident insights and alerts."
+    ]
+  },
+  {
     company: "What If Media Group",
     website: "https://whatifmediagroup.com/",
     start: "Jun 2023",
     end: "Aug 2023",
     location: "Remote",
     title: "Software Engineering Intern",
-    type: "Fullstack Engineer",
+    type: "Fullstack Engineering",
     imageUrl: "../assets/images/wimg.svg",
     details: [
       "Developing systems to streamline processes that prevent disruptions to critical traffic flow \
@@ -26,7 +69,7 @@ export const experiences = [
     end: "Aug 2022",
     location: "Remote",
     title: "Software Engineering Intern",
-    type: "Frontend Engineering | Technical Direction",
+    type: "Frontend Engineering, Technical Direction",
     imageUrl: "../assets/images/instrument.svg",
     details: [
       "Developed, maintained, and ensured the quality of reusable, \
@@ -49,7 +92,7 @@ implementing parallel development methods."
     end: "Aug 2023",
     location: "Remote",
     title: "Software Engineering Intern",
-    type: "Fullstack Development",
+    type: "Fullstack Development, Technical Direction",
     imageUrl: "../assets/images/sustainible.svg",
     details: [
       "Implemented system design principles to minimize CRUD operations, \

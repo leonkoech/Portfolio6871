@@ -1,0 +1,50 @@
+@import "../../../shared/styles/globals.scss";
+@import "../../../shared/styles/button.scss";
+
+.parent {
+  padding: 2vw;
+
+  .button {
+   
+    &_list {
+      width: inherit;
+      text-decoration: none;
+      border-bottom: 0.5px solid $line;
+      @include button($xsm);
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      font-weight: bold;
+      @include fontSize($sm);
+      @include phone-only {
+        padding: 10px 0;
+      }
+      p {
+        color: $primary;
+        font-weight: normal;
+      }
+      .mat-icon {
+        color: $primary;
+        margin-left: 25px;
+        @include x_small_icon();
+      }
+      &:hover {
+        border-bottom: 0.5px solid $selected;
+        p {
+          color: $selected;
+        }
+        .mat-icon {
+          color: $selected;
+        }
+      }
+    }
+  }
+  .similar {
+    @include fontSize($xsm);
+    h2 {
+      font-weight: bold;
+      @include fontSize($xsm);
+    }
+  }
+}

@@ -21,10 +21,17 @@ $gold: #c9c9c9f3;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  
+}
+&__image{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 2s ease;
 }
   &__top {
     text-decoration: none;
-    @include button($md);
+    @include button($sm);
     font-weight: bold;
     @include phone-only{
       padding: 10px 0;
@@ -57,6 +64,10 @@ $gold: #c9c9c9f3;
         &__top{
           color: $selected;
         }
+        &__image{
+          background-image: none;
+          // transition: background-image 3s;
+        }
         &_category{
           // backdrop-filter: invert(0%);
           background-color: $hover;
@@ -65,6 +76,15 @@ $gold: #c9c9c9f3;
         }
         &__details{
           color: $secondary;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; 
+          line-clamp: 3; /* Limits the text to 3 lines */
+          -webkit-box-orient: vertical;
+          overflow: hidden; /* Ensures that the overflowing text is hidden */
+          text-overflow: ellipsis; 
+          p{
+            color: $secondary;
+          }
           &_langs_container{
             p{
               color: $secondary;
@@ -90,13 +110,23 @@ $gold: #c9c9c9f3;
     @include fontSize($sm);
     padding: 30px;
     transition: color 2s;
+    color: $primary;
+    p{
+      color: transparent;
+    }
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; /* Limits the text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures that the overflowing text is hidden */
+    // text-overflow: ellipsis; 
     @include phone-only{
       padding: 10px 5px;
     }
     &_langs{
       padding: 30px;
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
       grid-row-gap: 10px;
       @include phone-only{
         padding: 10px 5px;
@@ -106,14 +136,17 @@ $gold: #c9c9c9f3;
         display: grid;
         grid-template-columns: 25px auto;
         align-items: center;
+        
         .circle{
           height: 10px;
           width: 10px;
           border-radius: 10px;
         }
         p{
+          
           @include body-extra-small();
           color: $primary;
+          // color: transparent;
           transition: color 2s;
         }
       }
@@ -132,6 +165,9 @@ $gold: #c9c9c9f3;
     transition: background-color 2s;
     @include tablet-down{
       height: 10vw
+    }
+    .mat-icon{
+      margin-left: 20px;
     }
   }
 }

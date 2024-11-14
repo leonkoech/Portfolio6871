@@ -90,6 +90,21 @@ $hover: $primary;
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+@mixin x_small_icon {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  @include tablet-down {
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+  }
+  @include phone-only {
+    height: 13px;
+    width: 13px;
+    font-size: 13px;
+  }
+}
 @mixin small_icon {
   height: 25px;
   width: 25px;

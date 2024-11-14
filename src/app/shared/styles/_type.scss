@@ -13,8 +13,6 @@ $text-fluidity-end: 2500px;
   
   @return math.div($value , ($value * 0 + 1));
 }
-
-// interpolates type size between min and max
 @mixin text-size($min-font-size, $max-font-size) {
   font-size: $min-font-size;
 
@@ -30,60 +28,56 @@ $text-fluidity-end: 2500px;
   }
 }
 
-
 @mixin headline-bold() {
-  @include text-size(28px, 72px);
-  font-family:  $monsterrat;
-  letter-spacing: -0.1vw;
+  @include text-size(20px, 36px); // Smaller scaling for better fit
+  font-family: $monsterrat;
+  letter-spacing: 0px;
+  line-height: 1.2;
+  word-spacing: 0.1vw;
+}
+
+@mixin header-display() {
+  @include text-size(40px, 72px); // Reduced size for headlines
+  font-family: $monsterrat;
+  letter-spacing: -0.1vw; // Lightly reduced for visual appeal
   line-height: 1.1;
   word-spacing: 0.1vw;
 }
 
-
-@mixin header-display() {
-  @include text-size(64px, 190px);
-  font-family:  $monsterrat;
-  letter-spacing: -0.5vw;
-  line-height: 1.05;
-  word-spacing: 0.1vw;
-}
-
 @mixin body-large-bold() {
-  @include text-size(19px, 32px);
-  font-family:  $monsterrat;
-  // alternate 'g' for legibility
+  @include text-size(16px, 20px); // Smaller body large size
+  font-family: $monsterrat;
   font-feature-settings: 'ss02';
-  letter-spacing: 0.1px;
-  line-height: 1.5;
-  word-spacing: 0.4px;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
+  word-spacing: 0.3px;
 }
 
 @mixin body-regular() {
-  @include text-size(16px, 21px);
+  @include text-size(14px, 18px); // Adjusted for general body text
   font-family: $monsterrat;
-  // alternate 'g' for legibility
   font-feature-settings: 'ss02';
-  letter-spacing: 0.4px;
-  line-height: 1.85;
-  word-spacing: 0.8px;
+  letter-spacing: 0.2px;
+  line-height: 1.75;
+  word-spacing: 0.5px;
 }
+
 @mixin body-small() {
-  @include text-size(12px, 19px);
+  @include text-size(12px, 16px); // Reduced for smaller content
   font-family: $monsterrat;
-  // alternate 'g' for legibility
   font-feature-settings: 'ss02';
-  letter-spacing: 0.4px;
-  line-height: 1.65;
-  word-spacing: 0.8px;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  word-spacing: 0.5px;
 }
+
 @mixin body-extra-small() {
-  @include text-size(10px, 14px);
+  @include text-size(10px, 12px); // Kept minimal for auxiliary text
   font-family: $monsterrat;
-  // alternate 'g' for legibility
   font-feature-settings: 'ss02';
-  letter-spacing: 0.4px;
-  line-height: 1.65;
-  word-spacing: 0.8px;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  word-spacing: 0.5px;
 }
 
 .header-display{

@@ -1,0 +1,320 @@
+@import "../shared/styles/globals.scss";
+@import "../shared/styles/type";
+
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+.markdown {
+    // margin-top: 10vh;
+  //   width: 100vw;
+  padding: 5vw 25vw;
+  color: $primary;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 40px;
+  @include tablet-down{
+    padding: 5vw 10vw;
+    margin-top: 12vw;
+  }
+  img {
+    width: 40vw;
+  }
+  h1 {
+    width: 100%;
+    @include fontSize($xlg);
+    @include tablet-down {
+      @include fontSize($lg);
+    }
+  }
+  h2 {
+    width: 100%;
+    border-bottom: 0.5px solid $line;
+    padding-bottom: 5px;
+    @include fontSize($lg);
+    @include tablet-down {
+      @include fontSize($md);
+    }
+  }
+  h3 {
+    width: 100%;
+    border-bottom: 0.5px solid $line;
+    padding-bottom: 5px;
+    @include fontSize($md);
+    @include tablet-down {
+      @include fontSize($sm);
+    }
+  }
+  p {
+    @include fontSize($md);
+    @include tablet-down {
+      @include fontSize($sm);
+    }
+  }
+  ul,
+  ol {
+    padding: 5px 25px;
+    li {
+      @include fontSize($md);
+      @include tablet-down {
+        @include fontSize($sm);
+        a {
+          text-decoration: none !important;
+          color: $selected;
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse; // This ensures borders collapse into a single line
+  
+    thead {
+      tr {
+        @include fontSize($md);
+        @include tablet-down {
+          @include fontSize($sm);
+        }
+  
+        // Border around header cells
+        th {
+          padding: 10px;
+          border: 0.5px solid $line; // Border for each header cell
+          text-align: left; // Optional: You can adjust the text alignment here
+        }
+      }
+    }
+  
+    tbody {
+      tr {
+        @include fontSize($md);
+        @include tablet-down {
+          @include fontSize($sm);
+        }
+  
+        // Border for each row
+        td {
+          padding: 10px;
+          border: 0.5px solid $line; // Border for each table cell
+          img {
+            width: 500px;
+          }
+        }
+      }
+    }
+  
+    // Optional: Adding border to the entire table
+    border: 1px solid $line; // Border around the whole table
+  }
+}
+
+.custom-cursor {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: $primary;
+  position: fixed;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 100;
+  top: 0;
+}
+.section {
+    &-header {
+      width: 50vw;
+      height: 40px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 25vw;
+      color: $primary;
+      @include fontSize($xsm);
+      // position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      top: 15px;
+      justify-content: space-between;
+      border-bottom: 1px solid $line;
+      border-top: 1px solid $line;
+      p {
+        @include fontSize($xsm);
+        color: $line;
+        text-transform: uppercase;
+      }
+      @include tablet-down {
+        width: 80vw;
+        margin-left: 10vw;
+        height: 30px;
+        p {
+          @include fontSize($xsm);
+        }
+      }
+      @include desktop-down {
+        p:nth-child(n + 5) {
+          // font-size: 10px;
+          display: none;
+        }
+      }
+      @include phone-only {
+        p:nth-child(n + 4) {
+          // font-size: 10px;
+          display: none;
+        }
+      }
+    }
+    &-filter {
+      border-top: 0;
+      height: auto;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      .selected {
+        color: $primary;
+      }
+      .unselected {
+        color: $line;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        &:hover {
+          cursor: none;
+        }
+      }
+      h2 {
+        @include fontSize($xlg);
+        @include tablet-down {
+          @include fontSize($lg);
+        }
+      }
+      @include phone-only {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .filter {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        @include tablet-down {
+          width: 35%;
+        }
+        @include phone-only {
+          justify-content: space-between;
+          flex-direction: row;
+          width: 100%;
+          margin: 20px 0;
+        }
+  
+        &_select {
+          width: 11vw;
+          @include tablet-down {
+            width: auto;
+          }
+          &_button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include fontSize($sm);
+            opacity: 0.7;
+            color: $primary;
+            @include tablet-down {
+              .mat-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+              }
+            }
+            &:hover {
+              cursor: none;
+            }
+          }
+        }
+  
+        &_option {
+          transition: height 2s;
+          position: absolute;
+          width: 11vw;
+          // height: 1px;
+          height: auto;
+          overflow: hidden;
+          backdrop-filter: blur(10px);
+          z-index: 2;
+          margin-top: 20px;
+          border: 1px solid $line;
+          @include tablet-down {
+            width: 15vw;
+          }
+          &:nth-child(2) {
+            @include tablet-down {
+              margin-left: -18vw;
+              width: 30vw;
+            }
+            @include phone-only {
+              margin-left: unset;
+            }
+          }
+          div {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include fontSize($sm);
+            &:hover {
+              cursor: none;
+              background-color: $line;
+            }
+          }
+        }
+        &_hidden {
+          overflow: hidden;
+          height: 0px;
+          display: none;
+          transition: height 2s;
+        }
+      }
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid $primary;
+    border-top: 1px solid $primary;
+    p {
+      color: $primary;
+    }
+  }
+
+.project{
+    &-nav{
+        color: $primary;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 19vw;
+        @include tablet-down{
+            position: relative;
+            padding: 5vw 10vw;
+            display: block;
+            width: auto;
+          }
+    }
+    &-details{
+        color: $primary;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 21vw;
+        @include tablet-down{
+            position: relative;
+            padding: 5vw 10vw;
+            display: block;
+            width: auto;
+          }
+    }
+}

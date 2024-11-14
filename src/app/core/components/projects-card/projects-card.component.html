@@ -10,10 +10,14 @@
       <p>{{ project.name }}</p>
       <mat-icon class="mat-icon">arrow_outward</mat-icon>
     </a>
-    <div>
+    <div class="card__image" [ngStyle]="{ 'background-image': isHovered ? 'none' : ' linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + project.thumbnail + ')' }"
+    (mouseover)="isHovered = true" (mouseleave)="isHovered = false">
+      <!-- TODO: Change color -->
+      <p class="card__details">{{project.category  }}</p>
       <div class="card__details">
         <p>{{ project.details }}</p>
       </div>
+      <br>
       <div *ngIf="project.team" class="card__details_langs members">
         <a
           class="card__details_langs_container"
@@ -32,11 +36,15 @@
           *ngFor="let item of project.languages"
         >
           <div class="circle" [style]="'background:' + item.color + ';'"></div>
-          <p>{{ item.name }}</p>
+          <p>{{ item.name }}</p>  
         </div>
+        
       </div>
-      <div class="card_category">
-        <p>{{ project.category }}</p>
+
+      <div class="card_category"  (click)="viewProject('{{project.id}}')">
+        
+        <p>View Project</p>
+        <mat-icon class="mat-icon">chevron_right</mat-icon>
       </div>
     </div>
   </div>

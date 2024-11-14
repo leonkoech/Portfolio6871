@@ -1,0 +1,11 @@
+<div class="presentation-card">
+    <div class="card-header">
+      <span class="institution">{{ presentation?.location }}</span>
+      <span class="date">{{ presentation?.date }}</span>
+    </div>
+    <div class="card-title">{{ presentation?.title }}</div>
+    <ul class="card-details">
+      <li *ngFor="let detail of presentation?.details">{{ detail }}</li>
+    </ul>
+  </div>
+  

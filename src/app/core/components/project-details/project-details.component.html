@@ -1,0 +1,32 @@
+<div class="parent">
+    <div>
+        <h2> About </h2>
+        <p>{{ projectDetails?.about}}</p>
+        <button class="category">
+            {{projectDetails?.category}}
+        </button>
+    </div>
+    <div>
+        <h2> Demo </h2> 
+        <div *ngIf="projectDetails" class="youtube-player-container">
+            <iframe 
+              width="400" 
+              height="225" 
+              [src]="projectDetails.demoUrl| safeUrl" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+    </div>  
+    <div>
+        <h2> Collaborators </h2>
+        <p>Leon Kipkoech - lead</p>
+        <div *ngFor="let member of projectDetails?.members">
+            <a *ngIf="member.url" [href]="member.url" target="_blank">{{ member.name }}</a>
+            <span *ngIf="!member.url">{{ member.name }}</span> <!-- Fallback for members with no URL -->
+        </div>
+    </div>
+  
+ 
+</div>

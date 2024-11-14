@@ -11,6 +11,13 @@ import { EducationComponent } from './core/components/education/education.compon
 import { ContactComponent } from './core/components/contact/contact.component';
 import { MovingTextComponent } from './core/components/moving-text/moving-text.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ProjectComponent } from './project/project.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectNavComponent } from './core/components/project-nav/project-nav.component';
+import { ProjectDetailsComponent } from './core/components/project-details/project-details.component';
+import { SafeUrlPipe } from './safeurlpipe/safeurlpipe.module';
+import { PresentationCardComponent } from './core/components/presentation-card/presentation-card.component';
 
 let components=[
   AppComponent,
@@ -25,12 +32,19 @@ let components=[
     EducationComponent,
     ContactComponent,
     MovingTextComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ProjectComponent,
+    ProjectNavComponent,
+    ProjectDetailsComponent,
+    SafeUrlPipe,
+    PresentationCardComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

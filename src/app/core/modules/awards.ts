@@ -3,9 +3,52 @@ import { award } from "../models/awardModel";
 
 export const awards:award[] = [
   {
+    name: "D3CODE hackathon - Global Winner",
+    details: "1st place winner against 7000 registrations in 5 countries",
+    url: "https://www.ust.com/en/who-we-are/ust-newsroom/ust-announces-the-global-winners-of-d3code-hackathon-2024",
+    year: 2024
+  },
+
+  {
+    name: "MIT Summer Research Program",
+    details: "Voted - Most Likely to become tech tycoon",
+    url: "https://oge.mit.edu/msrp/profiles/leon-kipkoech/",
+    year: 2024
+  },
+  {
+    name: "Dean's list Spring 24",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
+    year: 2024
+  },
+  {
+    name: "NAIA Scholar Athletes - Indoor Track & Field - Men",
+    details: "3.5+ GPA achievement",
+    url: "https://www.fnu.edu/seven-fnu-cross-country-runners-earned-naia-scholar-athlete-award/",
+    year: 2024
+  },
+  {
+    name: "Miami Hack Week 24",
+    details: "Semi Finalist - Top 5",
+    url: "https://devpost.com/software/safe-sense",
+    year: 2024
+  },
+  {
+    name: "MIT reality hack 24",
+    details: "First Place - best use of ultraleap hand tracking",
+    url: "https://devpost.com/software/beesper",
+    year: 2024
+  },
+  {
     name: "Stanford XR 2023",
     details: "Best Hardware Hack",
     url: "https://devpost.com/software/shivr-subtle-haptics-in-virtual-environments",
+    year: 2023
+  },
+  {
+    name: "Dean's list Fall 23",
+    details: "Academic achievement of a 3.5 GPA",
+    url: "",
     year: 2023
   },
   {
