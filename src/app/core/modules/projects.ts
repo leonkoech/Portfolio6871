@@ -1,22 +1,46 @@
 import { categories, languages } from "./projectCats";
 import { member, project } from "../models/projectModel";
 export const projects: project[] = [
-    {
-        name: "Dynamic ASL transcription for Video Platforms",
-        id: "sign-access",
-        thumbnail:
-          "https://github.com/user-attachments/assets/6d0851fe-719f-4aa2-af69-14a77f357d9d",
-        about:
-          "Global Winner of USTs Global D3CODE hackathon. Dynamic generation of ASL videos on Video platforms based on transcription on an extension using Machine learning. ",
-        repoUrl: "https://github.com/leonkoech/SafeSense",
-        details:
-          "Dynamic generation of ASL videos on Video platforms based on transcription on an extension using Machine learning.",
-        languages: [languages.javascript, languages.python],
-        category: categories.fullStack,
-        demoUrl: "https://youtube.com/embed/w1XmSrEq6uA",
-        team: false,
-        members: []
-      },
+  {
+    name: "FloodGuard",
+    id: "flood-guard",
+    thumbnail:
+      "https://github.com/user-attachments/assets/e9c44157-31e3-46b9-9ecd-e699d48f1f21",
+    about:
+      "Winner of Best Community Impact at Vibe Code Climate Hackathon. Solar-powered IoT mesh network that transforms flood monitoring into emergency communication infrastructure.",
+    repoUrl: "https://github.com/leonkoech/FloodGuard-API-Server",
+    details:
+      "ESP32, LoRa Mesh, FastAPI, React | Dual-purpose system providing real-time flood monitoring with Google Maps integration and emergency communication when infrastructure fails.",
+    languages: [
+      languages.python,
+      languages.javascript,
+      languages["C/C++"],
+      languages.typescript
+    ],
+    category: categories.embedded,
+    demoUrl: "https://youtu.be/DNDrZiIaavo", // Replace with actual demo
+    team: true,
+    members: [
+      { name: "Genesis", url: "https://www.linkedin.com/in/genesisguardado/" },
+      { name: "Jude", url: "https://www.linkedin.com/in/judesurin/" }
+    ]
+  },
+  {
+    name: "Dynamic ASL transcription for Video Platforms",
+    id: "sign-access",
+    thumbnail:
+      "https://github.com/user-attachments/assets/6d0851fe-719f-4aa2-af69-14a77f357d9d",
+    about:
+      "Global Winner of USTs Global D3CODE hackathon. Dynamic generation of ASL videos on Video platforms based on transcription on an extension using Machine learning. ",
+    repoUrl: "https://github.com/leonkoech/SafeSense",
+    details:
+      "Dynamic generation of ASL videos on Video platforms based on transcription on an extension using Machine learning.",
+    languages: [languages.javascript, languages.python],
+    category: categories.fullStack,
+    demoUrl: "https://youtube.com/embed/w1XmSrEq6uA",
+    team: false,
+    members: []
+  },
   {
     name: "Safe Sense",
     id: "safe-sense",
@@ -32,9 +56,9 @@ export const projects: project[] = [
     demoUrl: "https://youtube.com/embed/otOr7AKOqLk",
     team: true,
     members: [
-      { name: "Sarah", url: "" },
-      { name: "Genesis", url: "" },
-      { name: "Ishaan", url: "" }
+      { name: "Sarah", url: "https://www.linkedin.com/in/sarahguelzim/" },
+      { name: "Genesis", url: "https://www.linkedin.com/in/genesisguardado/" },
+      { name: "Ishaan", url: "https://www.linkedin.com/in/ishaankalbhor/" }
     ]
   },
   {
@@ -136,13 +160,16 @@ export const projects: project[] = [
     demoUrl: "https://youtube.com/embed/LqD5QoUezJ8",
     team: true,
     members: [
-      { name: "Linet", url: "" },
-      { name: "Kelly", url: "" },
-      { name: "Jingfei", url: "" },
-      { name: "Luis", url: "" }
+      {
+        name: "Linnette",
+        url: "https://www.linkedin.com/in/linnette-martinez/"
+      },
+      { name: "Kelly", url: "https://www.linkedin.com/in/kewangdesigner/" },
+      { name: "Jingfei", url: "https://www.linkedin.com/in/jingfeihuang/" },
+      { name: "John", url: "https://www.linkedin.com/in/estradajl/" }
     ]
   },
-  
+
   {
     name: "City Hackathon",
     id: "city-hackathon",
@@ -160,14 +187,14 @@ narrowing down to the 50 applicants who will receive a home.",
     demoUrl: "https://youtube.com/embed/34k2rnf4mBI",
     team: true,
     members: [
-      { name: "Lia", url: "" },
+      { name: "Lia", url: "https://www.linkedin.com/in/lia-moua/" },
       {
         name: "Ashley",
-        url: ""
+        url: "https://www.linkedin.com/in/ashley-dennis-dev/"
       },
       { name: "Maria", url: "" },
-      { name: "Ashley", url: "" },
-      { name: "Aimee", url: "" }
+      { name: "Ashley", url: "https://www.linkedin.com/in/ashleyclaydenmoss/" },
+      { name: "Aimee", url: "https://www.linkedin.com/in/aimeegonzalez/" }
     ]
   },
   {
@@ -237,7 +264,7 @@ narrowing down to the 50 applicants who will receive a home.",
       { name: "Kristian", url: "https://github.com/Ceaseless04" }
     ]
   },
-      
+
   {
     name: "Closet Light",
     id: "closet-light",
@@ -257,7 +284,8 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "Zux Burgers",
     id: "zux-burgers",
-    thumbnail: "https://github.com/user-attachments/assets/0c9a20fc-b4f9-4091-9d69-c47a21151e3c",
+    thumbnail:
+      "https://github.com/user-attachments/assets/0c9a20fc-b4f9-4091-9d69-c47a21151e3c",
     about: "A burger shop website for Mwania and Zuki (Zux)",
     repoUrl: "https://github.com/leonkoech/Zux-Burgers-App",
     details:
@@ -271,7 +299,8 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "Color QR generator",
     id: "color-qr-generator",
-    thumbnail: "https://user-images.githubusercontent.com/39020723/134251696-6502183a-0016-4a65-acb5-05c234295841.png",
+    thumbnail:
+      "https://user-images.githubusercontent.com/39020723/134251696-6502183a-0016-4a65-acb5-05c234295841.png",
     about: "User-friendly interface to generate QR codes based on input text",
     repoUrl: "https://github.com/leonkoech/Color-QR-Generator",
     details:
@@ -300,7 +329,8 @@ narrowing down to the 50 applicants who will receive a home.",
     name: "Umoja",
     id: "umoja",
     thumbnail: "",
-    about: "Developed for Boston University. A mental health support app designed to provide free talk therapy to individuals who cannot afford it",
+    about:
+      "Developed for Boston University. A mental health support app designed to provide free talk therapy to individuals who cannot afford it",
     repoUrl: "https://github.com/leonkoech/umoja",
     details: "Flutter | provide free therapy through crowd funding",
     languages: [languages.dart],
@@ -312,8 +342,10 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "ChatGPT for AR",
     id: "chatgpt-ar",
-    thumbnail: "https://github.com/user-attachments/assets/0e8155d0-7180-4bc4-85a5-f0d188a1fab1",
-    about: "The project aims to enhance the experience of students and individuals using ChatGPT, particularly focusing on those with disabilities. ",
+    thumbnail:
+      "https://github.com/user-attachments/assets/0e8155d0-7180-4bc4-85a5-f0d188a1fab1",
+    about:
+      "The project aims to enhance the experience of students and individuals using ChatGPT, particularly focusing on those with disabilities. ",
     repoUrl: "https://github.com/leonkoech/flaskGPTVR",
     details:
       "ChatGPT for AR whereby you can issue commands to ChatGPT with your voice and receive both Textual and Audio feedback. For STT and TTS we leveraged Wit.ai and created our own server for ChatGPT hosted on Google Cloud.",
@@ -350,8 +382,10 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "Newsletter For Change",
     id: "newsletters-for-change",
-    thumbnail: "https://github.com/user-attachments/assets/04c4316f-4561-4ad4-9ad9-17680984474e",
-    about: "A system to enable Opportunity Hack to email volunteers and admins easily and for free using a custom, in-house, Content Management System integrated with Ohacks backend+ OAuth",
+    thumbnail:
+      "https://github.com/user-attachments/assets/04c4316f-4561-4ad4-9ad9-17680984474e",
+    about:
+      "A system to enable Opportunity Hack to email volunteers and admins easily and for free using a custom, in-house, Content Management System integrated with Ohacks backend+ OAuth",
     repoUrl: "https://design.google.com",
     details: "ReactJS, Flask API | Sending Newsletters for Nonprofits",
     languages: [languages.typescript, languages.javascript, languages.python],
@@ -367,8 +401,10 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "Life Scale",
     id: "life-scale",
-    thumbnail: "https://github.com/user-attachments/assets/462def24-443b-41e2-a691-71653be19fda",
-    about: "Made at Harvard. LifeScale is your tool to help keep track of different facets of your life. Get disciplined, receive curated recommendations, and take control of your life with LifeScale.",
+    thumbnail:
+      "https://github.com/user-attachments/assets/462def24-443b-41e2-a691-71653be19fda",
+    about:
+      "Made at Harvard. LifeScale is your tool to help keep track of different facets of your life. Get disciplined, receive curated recommendations, and take control of your life with LifeScale.",
     repoUrl: "https://github.com/leonkoech/BalancedLife",
     details: "AngularJS | help people live more balanced and meaningful lives.",
     languages: [languages.typescript, languages.javascript],
@@ -384,8 +420,10 @@ narrowing down to the 50 applicants who will receive a home.",
   {
     name: "LunchBox.io",
     id: "lunchbox-io",
-    thumbnail: "https://user-images.githubusercontent.com/39020723/81902675-34802580-95c9-11ea-9d8d-e1eb4b143afd.png",
-    about: "Provides a platform for content creators to publish articles, with a monetization model driven by user engagement. Similar to Medium",
+    thumbnail:
+      "https://user-images.githubusercontent.com/39020723/81902675-34802580-95c9-11ea-9d8d-e1eb4b143afd.png",
+    about:
+      "Provides a platform for content creators to publish articles, with a monetization model driven by user engagement. Similar to Medium",
     repoUrl: "https://github.com/leonkoech/Lunchbox.io",
     details:
       "PHP | like medium it offers \
@@ -550,7 +588,8 @@ narrowing down to the 50 applicants who will receive a home.",
     name: "Map Me",
     id: "map-me",
     thumbnail: "",
-    about: "A web application that shows a map full of photo markers of students from different countries, where you can filter the map by country and major.",
+    about:
+      "A web application that shows a map full of photo markers of students from different countries, where you can filter the map by country and major.",
     repoUrl: "https://github.com/Ceaseless04/MapModel",
     details:
       "NextJs | Connect students from all over the \
