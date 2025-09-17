@@ -2,6 +2,34 @@ import { categories, languages } from "./projectCats";
 import { member, project } from "../models/projectModel";
 export const projects: project[] = [
   {
+    name: "Breathe AI",
+    id: "breathe-ai",
+    thumbnail:
+      "https://github.com/user-attachments/assets/935abf85-3cfa-4860-ae25-84febea2bf44",
+    about:
+      "AI-powered wearable respiratory health monitoring system combining real-time breathing pattern analysis, environmental air quality monitoring, and machine learning risk assessment.",
+    repoUrl: "https://github.com/leonkoech/breathe-ai",
+    details:
+      "ESP32-S3, MPU6050, PMS5003, Flutter, AI/ML | Wearable device that monitors breathing patterns and air quality to predict respiratory health risks using logistic regression models.",
+    languages: [
+      languages["C/C++"],
+      languages.dart,
+      languages.python,
+      languages.javascript
+    ],
+    category: categories.embedded,
+    demoUrl: "https://youtu.be/JiR_TTRG9VY",
+    team: true,
+    members: [
+      { name: "David", url: "https://www.linkedin.com/in/dbalzora/" },
+      {
+        name: "David",
+        url: "https://www.linkedin.com/in/david-mangru-06b643311/"
+      },
+      { name: "Mathias", url: "https://www.linkedin.com/in/mathias-osiris/" }
+    ]
+  },
+  {
     name: "FloodGuard",
     id: "flood-guard",
     thumbnail:

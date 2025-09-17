@@ -133,7 +133,8 @@ export const experiences = [
       "Constructed, maintained, and implemented automation scripts to create \
 components and services with easy-to-use boilerplates, resulting in the \
 component creation process hence seeing a 10% reduction in the development \
-initialization phase and a 4% reduction in the overall development time frame for the Google Design Content Management System.",
+initialization phase and a 4% reduction in the overall development time frame for the \
+Google Design Content Management System.",
       "Led intern team in enhancing organizational communication through strategic \
 technical direction thus achieving a 30% reduction in product-to-pitch timeline by \
 implementing parallel development methods."
