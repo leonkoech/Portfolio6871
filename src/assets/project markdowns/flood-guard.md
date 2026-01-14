@@ -5,7 +5,7 @@ A solar-powered mesh network system that transforms flood monitoring into emerge
 Winner of Best Community Impact at the Vibe Code Climate Hackathon at The Hub Miami.
 Developed by Leon Kipkoech, Jude Surin and Genesis Guardado as part of a comprehensive IoT flood monitoring solution combining ESP32 sensors, LoRa mesh networking, and real-time web visualization.
 
-![FloodGuard System Architecture](https://github.com/user-attachments/assets/e9c44157-31e3-46b9-9ecd-e699d48f1f21)
+![FloodGuard System Architecture](https://github.com/user-attachments/assets/6064f293-befa-4ed4-ad48-c1865664ac2d)
 
 ## Description
 

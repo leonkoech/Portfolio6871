@@ -1,0 +1,21 @@
+<div class="theme-toggle" (clickOutside)="closeDropdown()">
+  <button class="theme-button" (click)="toggleDropdown()" [attr.aria-expanded]="isOpen">
+    <mat-icon>palette</mat-icon>
+    <span class="theme-name">{{ currentTheme.name }}</span>
+    <mat-icon class="chevron">{{ isOpen ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+  </button>
+
+  <div class="theme-dropdown" [class.open]="isOpen">
+    <button
+      *ngFor="let theme of themes"
+      class="theme-option"
+      [class.active]="theme.name === currentTheme.name"
+      (click)="selectTheme(theme)">
+      <span class="theme-preview" [style.background]="theme.properties['--color-secondary']">
+        <span class="preview-dot" [style.background]="theme.properties['--color-primary']"></span>
+        <span class="preview-accent" [style.background]="theme.properties['--color-selected']"></span>
+      </span>
+      <span class="theme-label">{{ theme.name }}</span>
+    </button>
+  </div>
+</div>

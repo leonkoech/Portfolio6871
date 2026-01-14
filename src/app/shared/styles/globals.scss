@@ -12,11 +12,23 @@ $md: "med";
 $lg: "large";
 $xlg: "extra_large";
 
-$primary: #fff9eb;
-$secondary: #12110c;
-$line: #32302a;
-$selected: #9ED0E6;
-$hover: $primary;
+// CSS Custom Properties for theming (set defaults)
+:root {
+  --color-primary: #fff9eb;
+  --color-secondary: #12110c;
+  --color-line: #32302a;
+  --color-selected: #9ED0E6;
+  --color-hover: #fff9eb;
+  --color-svg-fill: #32302a;
+  --color-svg-stroke: #32302a;
+}
+
+// Legacy SCSS variables (for backwards compatibility in mixins)
+$primary: var(--color-primary);
+$secondary: var(--color-secondary);
+$line: var(--color-line);
+$selected: var(--color-selected);
+$hover: var(--color-hover);
 
 @mixin phone-only {
   @media (max-width: $phone) {
@@ -54,7 +66,7 @@ $hover: $primary;
   }
 }
 @mixin fontSize($size: $sm) {
-  color: $primary;
+  color: var(--color-primary);
   @if $size== $xsm {
     @include body-small();
   }

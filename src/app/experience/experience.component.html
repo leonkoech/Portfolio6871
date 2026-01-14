@@ -1,0 +1,84 @@
+<div class="experience-page">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a routerLink="/" class="back-link">
+        <mat-icon>arrow_back</mat-icon>
+        <span>Back</span>
+      </a>
+      <h2>Experience</h2>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button
+        *ngFor="let exp of experiences; let i = index"
+        class="sidebar-item"
+        [class.active]="activeIndex === i"
+        (click)="scrollToExperience(i)">
+        <span class="sidebar-item-company">{{ exp.company }}</span>
+        <span class="sidebar-item-title">{{ exp.title }}</span>
+        <span class="sidebar-item-dates">{{ exp.start }} - {{ exp.end }}</span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" #mainContent>
+    <div class="experiences-container">
+      <div
+        *ngFor="let exp of experiences; let i = index"
+        #experienceSection
+        class="experience-detail"
+        [attr.data-index]="i">
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+          <div class="spin_image">
+            <img [src]="exp.imageUrl" [alt]="exp.company" />
+          </div>
+          <div class="company-link">
+            <a [href]="exp.website" target="_blank" rel="noopener noreferrer">
+              <span>Visit {{ exp.company }}</span>
+              <mat-icon>arrow_outward</mat-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+          <div class="experience-header">
+            <h1>{{ exp.title }}</h1>
+            <div class="experience-meta">
+              <div class="meta-item">
+                <mat-icon>business</mat-icon>
+                <span>{{ exp.company }}</span>
+              </div>
+              <div class="meta-item">
+                <mat-icon>date_range</mat-icon>
+                <span>{{ exp.start }} - {{ exp.end }}</span>
+              </div>
+              <div class="meta-item">
+                <mat-icon>pin_drop</mat-icon>
+                <span>{{ exp.location }}</span>
+              </div>
+            </div>
+            <span class="experience-type">{{ exp.type }}</span>
+            <p class="experience-summary">{{ exp.summary }}</p>
+          </div>
+
+          <div class="experience-details">
+            <h3>Key Achievements</h3>
+            <ul>
+              <li *ngFor="let detail of exp.details">
+                {{ detail }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<theme-toggle></theme-toggle>
+<div #customCursor class="custom-cursor"></div>

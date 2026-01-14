@@ -1,22 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/shared/styles/globals.scss';
+
 html{
-    background-color: $secondary;  
+    background-color: var(--color-secondary);
+    transition: background-color 0.3s ease;
 }
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
   }
-  
+
   /* Track */
   ::-webkit-scrollbar-track {
-    // box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
     background-color: transparent;
   }
-  
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: var(--color-primary);
     border-radius: 10px;
+    transition: background 0.3s ease;
   }

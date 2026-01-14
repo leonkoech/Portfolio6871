@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.54 405.54">
+  <defs>
+    <style>
+      .cls-1{font-size:39.5px;fill:var(--color-line, #32302a);font-family:Arial, sans-serif;font-weight:400;}
+      .cls-2{fill:none;stroke:var(--color-line, #32302a);stroke-miterlimit:10;stroke-width:3px;}
+    </style>
+  </defs>
+  <title>UBALL</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <text class="cls-1" transform="translate(135.5 68.5) rotate(-22)">U</text>
+      <text class="cls-1" transform="translate(162.5 58) rotate(-12)">B</text>
+      <text class="cls-1" transform="translate(190.5 53) rotate(-2)">A</text>
+      <text class="cls-1" transform="translate(218.5 53) rotate(8)">L</text>
+      <text class="cls-1" transform="translate(244.5 58) rotate(18)">L</text>
+      <text class="cls-1" transform="translate(270.5 68) rotate(30)"> </text>
+      <text class="cls-1" transform="translate(285.5 78) rotate(38)">•</text>
+      <text class="cls-1" transform="translate(302.5 92) rotate(50)"> </text>
+      <text class="cls-1" transform="translate(318.5 110) rotate(60)">U</text>
+      <text class="cls-1" transform="translate(333.5 132) rotate(72)">B</text>
+      <text class="cls-1" transform="translate(345.5 158) rotate(82)">A</text>
+      <text class="cls-1" transform="translate(352.5 188) rotate(92)">L</text>
+      <text class="cls-1" transform="translate(352.5 218) rotate(102)">L</text>
+      <text class="cls-1" transform="translate(348.5 248) rotate(114)"> </text>
+      <text class="cls-1" transform="translate(340.5 268) rotate(122)">•</text>
+      <text class="cls-1" transform="translate(328.5 290) rotate(134)"> </text>
+      <text class="cls-1" transform="translate(310.5 310) rotate(144)">U</text>
+      <text class="cls-1" transform="translate(288.5 328) rotate(156)">B</text>
+      <text class="cls-1" transform="translate(262.5 342) rotate(166)">A</text>
+      <text class="cls-1" transform="translate(235.5 350) rotate(176)">L</text>
+      <text class="cls-1" transform="translate(205.5 352) rotate(186)">L</text>
+      <text class="cls-1" transform="translate(175.5 350) rotate(198)"> </text>
+      <text class="cls-1" transform="translate(155.5 345) rotate(206)">•</text>
+      <text class="cls-1" transform="translate(135.5 335) rotate(218)"> </text>
+      <text class="cls-1" transform="translate(115.5 318) rotate(228)">U</text>
+      <text class="cls-1" transform="translate(95.5 295) rotate(240)">B</text>
+      <text class="cls-1" transform="translate(78.5 268) rotate(250)">A</text>
+      <text class="cls-1" transform="translate(65.5 238) rotate(260)">L</text>
+      <text class="cls-1" transform="translate(55.5 208) rotate(270)">L</text>
+      <text class="cls-1" transform="translate(55.5 178) rotate(282)"> </text>
+      <text class="cls-1" transform="translate(58.5 158) rotate(290)">•</text>
+      <text class="cls-1" transform="translate(68.5 135) rotate(302)"> </text>
+      <text class="cls-1" transform="translate(82.5 112) rotate(312)">U</text>
+      <text class="cls-1" transform="translate(102.5 90) rotate(324)">B</text>
+      <text class="cls-1" transform="translate(125.5 72) rotate(334)">A</text>
+      <text class="cls-1" transform="translate(152.5 60) rotate(344)">L</text>
+      <text class="cls-1" transform="translate(180.5 54) rotate(354)">L</text>
+      <circle class="cls-2" cx="202.77" cy="202.77" r="121.05"/>
+      <circle class="cls-2" cx="202.77" cy="202.77" r="201.27"/>
+    </g>
+  </g>
+</svg>

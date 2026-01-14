@@ -6,6 +6,7 @@ export interface experience{
     location: string;
     title: string;
     type: string;
+    summary: string;
     imageUrl: string;
     details: string[];
 }

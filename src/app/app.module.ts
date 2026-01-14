@@ -18,6 +18,8 @@ import { ProjectNavComponent } from './core/components/project-nav/project-nav.c
 import { ProjectDetailsComponent } from './core/components/project-details/project-details.component';
 import { SafeUrlPipe } from './safeurlpipe/safeurlpipe.module';
 import { PresentationCardComponent } from './core/components/presentation-card/presentation-card.component';
+import { ThemeToggleComponent } from './core/components/theme-toggle/theme-toggle.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 let components=[
   AppComponent,
@@ -38,7 +40,9 @@ let components=[
     ProjectNavComponent,
     ProjectDetailsComponent,
     SafeUrlPipe,
-    PresentationCardComponent
+    PresentationCardComponent,
+    ThemeToggleComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

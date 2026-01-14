@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.54 405.54">
+  <defs>
+    <style>
+      .cls-1{font-size:32px;fill:var(--color-line, #32302a);font-family:Arial, sans-serif;font-weight:400;}
+      .cls-2{fill:none;stroke:var(--color-line, #32302a);stroke-miterlimit:10;stroke-width:3px;}
+    </style>
+  </defs>
+  <title>Paradigm</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <text class="cls-1" transform="translate(118.5 72) rotate(-32)">P</text>
+      <text class="cls-1" transform="translate(138.5 62) rotate(-24)">A</text>
+      <text class="cls-1" transform="translate(160.5 55) rotate(-16)">R</text>
+      <text class="cls-1" transform="translate(182.5 51) rotate(-8)">A</text>
+      <text class="cls-1" transform="translate(206.5 50) rotate(0)">D</text>
+      <text class="cls-1" transform="translate(230.5 52) rotate(8)">I</text>
+      <text class="cls-1" transform="translate(248.5 56) rotate(14)">G</text>
+      <text class="cls-1" transform="translate(272.5 64) rotate(22)">M</text>
+      <text class="cls-1" transform="translate(298.5 78) rotate(32)"> </text>
+      <text class="cls-1" transform="translate(310.5 88) rotate(40)">•</text>
+      <text class="cls-1" transform="translate(325.5 102) rotate(50)"> </text>
+      <text class="cls-1" transform="translate(340.5 122) rotate(60)">P</text>
+      <text class="cls-1" transform="translate(350.5 145) rotate(70)">A</text>
+      <text class="cls-1" transform="translate(355.5 170) rotate(80)">R</text>
+      <text class="cls-1" transform="translate(356.5 195) rotate(90)">A</text>
+      <text class="cls-1" transform="translate(354.5 222) rotate(100)">D</text>
+      <text class="cls-1" transform="translate(348.5 248) rotate(108)">I</text>
+      <text class="cls-1" transform="translate(340.5 268) rotate(116)">G</text>
+      <text class="cls-1" transform="translate(328.5 292) rotate(126)">M</text>
+      <text class="cls-1" transform="translate(310.5 315) rotate(136)"> </text>
+      <text class="cls-1" transform="translate(295.5 328) rotate(144)">•</text>
+      <text class="cls-1" transform="translate(275.5 342) rotate(154)"> </text>
+      <text class="cls-1" transform="translate(252.5 352) rotate(164)">P</text>
+      <text class="cls-1" transform="translate(228.5 358) rotate(174)">A</text>
+      <text class="cls-1" transform="translate(202.5 360) rotate(184)">R</text>
+      <text class="cls-1" transform="translate(176.5 358) rotate(194)">A</text>
+      <text class="cls-1" transform="translate(152.5 352) rotate(204)">D</text>
+      <text class="cls-1" transform="translate(130.5 342) rotate(212)">I</text>
+      <text class="cls-1" transform="translate(112.5 328) rotate(220)">G</text>
+      <text class="cls-1" transform="translate(92.5 308) rotate(230)">M</text>
+      <text class="cls-1" transform="translate(75.5 282) rotate(240)"> </text>
+      <text class="cls-1" transform="translate(65.5 262) rotate(248)">•</text>
+      <text class="cls-1" transform="translate(56.5 238) rotate(258)"> </text>
+      <text class="cls-1" transform="translate(50.5 212) rotate(268)">P</text>
+      <text class="cls-1" transform="translate(50.5 185) rotate(278)">A</text>
+      <text class="cls-1" transform="translate(54.5 158) rotate(288)">R</text>
+      <text class="cls-1" transform="translate(62.5 132) rotate(298)">A</text>
+      <text class="cls-1" transform="translate(75.5 108) rotate(308)">D</text>
+      <text class="cls-1" transform="translate(92.5 88) rotate(316)">I</text>
+      <text class="cls-1" transform="translate(108.5 72) rotate(324)">G</text>
+      <text class="cls-1" transform="translate(130.5 58) rotate(334)">M</text>
+      <circle class="cls-2" cx="202.77" cy="202.77" r="121.05"/>
+      <circle class="cls-2" cx="202.77" cy="202.77" r="201.27"/>
+    </g>
+  </g>
+</svg>

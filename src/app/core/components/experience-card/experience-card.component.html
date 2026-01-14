@@ -1,40 +1,14 @@
-<div  class="right_component right_component_full right_component_two_col experience_card">
-    <div class="spin_image experience_card_image_container">
-      <a target="_blank" rel="noopener noreferrer" href={{experience.website}}  class="experience_card_image_container_title">
-        
-        <h2>{{experience.company}}</h2>
-        <mat-icon class="mat-icon">arrow_outward</mat-icon>
-      
-      </a>
-      <img src={{experience.imageUrl}} />
-      <div class="experience_card_image_container_text">
-        <h2 class="experience_card_image_container_text_h2">0{{index+1}}</h2>
-      </div>
-    </div>
-    <div class="experience_card_text_container">
-      <div class="justify_start">
-        <div class="eyebrow">
-          <mat-icon class="mat-icon">date_range</mat-icon
-          ><span>{{experience.start}} - {{experience.end}} </span>
-        </div>
-        <!-- <span> | </span> -->
-        <div class="eyebrow">
-          <mat-icon class="mat-icon">pin_drop</mat-icon><span>{{experience.location}}</span>
-        </div>
-      </div>
-      <div class="text_with_title">
-        <h2>{{experience.title}}</h2>
-        <br />
-         <span >{{experience.type}}</span>
-         <li>
-            <ol *ngFor="let points of experience.details">
-                <p>• {{ points }}</p><br />
-            </ol>
-         </li>
-        <!-- <p>
-          {{experience.details}}
-        </p> -->
-      </div>
-      
-    </div>
+<div class="experience_card_summary">
+  <div class="experience_card_summary_header">
+    <h2 class="company">{{ experience.company }}</h2>
+    <span class="dates">{{ experience.start }} - {{ experience.end }}</span>
   </div>
+  <div class="experience_card_summary_content">
+    <h3 class="title">{{ experience.title }}</h3>
+    <span class="type">{{ experience.type }}</span>
+    <span class="location">
+      <mat-icon>pin_drop</mat-icon>
+      {{ experience.location }}
+    </span>
+  </div>
+</div>

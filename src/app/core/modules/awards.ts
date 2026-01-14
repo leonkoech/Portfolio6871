@@ -3,6 +3,18 @@ import { award } from "../models/awardModel";
 
 export const awards:award[] = [
   {
+    name: "Valedictorian & Class Speaker",
+    details: "Graduated as Valedictorian and delivered the class speech at graduation ceremony",
+    url: "",
+    year: 2025
+  },
+  {
+    name: "hi loop Hackathon Miami - Most Impactful Community Award",
+    details: "Won with FloodGuardians team for designing a hurricane/flooding safety solution for Miami residents",
+    url: "https://www.linkedin.com/posts/genesis-guardado_thrilled-to-announce-that-our-team-floodguardians-activity-7264703844352000000",
+    year: 2025
+  },
+  {
     name: "D3CODE hackathon - Global Winner",
     details: "1st place winner against 7000 registrations in 5 countries",
     url: "https://www.ust.com/en/who-we-are/ust-newsroom/ust-announces-the-global-winners-of-d3code-hackathon-2024",
