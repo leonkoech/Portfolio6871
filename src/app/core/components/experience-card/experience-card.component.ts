@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { experience } from '../../models/experienceModel';
+
 @Component({
   selector: 'experience-card',
   templateUrl: './experience-card.component.html',
@@ -8,9 +10,13 @@ import { experience } from '../../models/experienceModel';
 export class ExperienceCardComponent implements OnInit {
   @Input() experience = undefined as unknown as experience;
   @Input() index = 0;
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  navigateToExperience(): void {
+    this.router.navigate(['/experience'], { queryParams: { scrollTo: this.index } });
+  }
 }

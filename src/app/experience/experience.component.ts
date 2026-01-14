@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { experiences } from '../core/modules/experience';
 import { experience } from '../core/models/experienceModel';
 
@@ -7,22 +8,36 @@ import { experience } from '../core/models/experienceModel';
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent implements OnInit, AfterViewInit {
   experiences: experience[] = experiences;
   activeIndex: number = 0;
+  private scrollToIndex: number | null = null;
 
   @ViewChild("customCursor", { static: true }) customCursor: ElementRef<any> | undefined;
   @ViewChild("mainContent") mainContent: ElementRef<any> | undefined;
   @ViewChildren("experienceSection") experienceSections!: QueryList<ElementRef>;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      if (params['scrollTo'] !== undefined) {
+        this.scrollToIndex = parseInt(params['scrollTo'], 10);
+      }
+    });
   }
 
   ngAfterViewInit(): void {
     this.cursorListener();
     this.setupScrollSpy();
+
+    // Scroll to experience if coming from home page
+    if (this.scrollToIndex !== null) {
+      setTimeout(() => {
+        this.scrollToExperience(this.scrollToIndex!);
+        this.activeIndex = this.scrollToIndex!;
+      }, 100);
+    }
   }
 
   scrollToExperience(index: number): void {

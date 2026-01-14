@@ -8,6 +8,7 @@
 
   &:hover {
     border-color: var(--color-selected);
+    transform: translateY(-2px);
     cursor: none;
   }
 

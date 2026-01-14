@@ -1,0 +1,39 @@
+[debug] [2026-01-14T19:10:29.463Z] ----------------------------------------------------------------------
+[debug] [2026-01-14T19:10:29.473Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-01-14T19:10:29.473Z] CLI Version:   14.26.0
+[debug] [2026-01-14T19:10:29.473Z] Platform:      win32
+[debug] [2026-01-14T19:10:29.473Z] Node Version:  v20.17.0
+[debug] [2026-01-14T19:10:29.473Z] Time:          Wed Jan 14 2026 14:10:29 GMT-0500 (Eastern Standard Time)
+[debug] [2026-01-14T19:10:29.474Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-14T19:10:29.786Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-14T19:10:29.787Z] > authorizing via signed-in user (leonkipkoech00@gmail.com)
+[debug] [2026-01-14T19:10:29.787Z] [iam] checking project leonkoechportfolio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-14T19:10:29.788Z] Checked if tokens are valid: false, expires at: 1768365936875
+[debug] [2026-01-14T19:10:29.788Z] Checked if tokens are valid: false, expires at: 1768365936875
+[debug] [2026-01-14T19:10:29.789Z] > refreshing access token with scopes: []
+[debug] [2026-01-14T19:10:29.792Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-14T19:10:29.792Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-14T19:10:30.049Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-14T19:10:30.049Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-14T19:10:30.085Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/leonkoechportfolio:testIamPermissions [none]
+[debug] [2026-01-14T19:10:30.085Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/leonkoechportfolio:testIamPermissions x-goog-quota-user=projects/leonkoechportfolio
+[debug] [2026-01-14T19:10:30.085Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/leonkoechportfolio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-14T19:10:30.382Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/leonkoechportfolio:testIamPermissions 200
+[debug] [2026-01-14T19:10:30.383Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/leonkoechportfolio:testIamPermissions {}
+[debug] [2026-01-14T19:10:30.384Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project leonkoechportfolio:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-01-14T19:10:30.386Z] Checked if tokens are valid: true, expires at: 1768421429050
+[debug] [2026-01-14T19:10:30.386Z] Checked if tokens are valid: true, expires at: 1768421429050
+[debug] [2026-01-14T19:10:30.387Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/leonkoechportfolio [none]
+[debug] [2026-01-14T19:10:30.777Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/leonkoechportfolio 403
+[debug] [2026-01-14T19:10:30.778Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/leonkoechportfolio {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-01-14T19:10:30.780Z] Request to https://firebase.googleapis.com/v1beta1/projects/leonkoechportfolio had HTTP Error: 403, The caller does not have permission
+[debug] [2026-01-14T19:10:30.895Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/leonkoechportfolio had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\17866\AppData\Roaming\nvm\v20.17.0\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\17866\AppData\Roaming\nvm\v20.17.0\node_modules\firebase-tools\lib\apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project leonkoechportfolio. Please make sure the project exists and your account has permission to access it.
