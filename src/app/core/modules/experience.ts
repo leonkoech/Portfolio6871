@@ -1,7 +1,7 @@
 export const experiences = [
   {
     company: "Atano",
-    website: "https://atano.io/",
+    website: "https://getatano.com/",
     start: "Nov 2025",
     end: "Present",
     location: "Miami, Florida",
@@ -17,7 +17,7 @@ export const experiences = [
   },
   {
     company: "UBALL",
-    website: "https://uball.com/",
+    website: "https://uai.tech/",
     start: "Oct 2025",
     end: "Dec 2025",
     location: "Remote",
@@ -32,7 +32,7 @@ export const experiences = [
   },
   {
     company: "Penti",
-    website: "https://penti.app/",
+    website: "https://penti.ai/",
     start: "Nov 2025",
     end: "Nov 2025",
     location: "Remote",
@@ -47,7 +47,7 @@ export const experiences = [
   },
   {
     company: "Paradigm Senior Services",
-    website: "https://www.paradigmseniorservices.com/",
+    website: "https://www.paradigmseniors.com/",
     start: "Jun 2025",
     end: "Oct 2025",
     location: "Miami, Florida",
