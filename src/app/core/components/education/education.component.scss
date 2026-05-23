@@ -2,153 +2,135 @@
 @import '../../../app.component.scss';
 
 .education {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    height: 80vh;
-    @include tablet-down{
-      padding-top: 0;
-      height: auto;
+  // Match home's .main_content gutters so this section aligns with About / Contact / Projects.
+  padding: 8vh 3vw 10vh 11vw;
+
+  @include desktop-down {
+    padding: 50px 3vw 60px 15vw;
+  }
+
+  @include tablet-down {
+    padding: 40px 3vw 60px 15vw;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-bottom: 56px;
+
+    @include phone-only {
+      margin-bottom: 40px;
     }
-    .eyebrow {
-      width: 80%;
-      color: $primary;
-      display: flex;
-      height: auto;
-      align-items: center;
-      justify-content: center;
-      padding: 0 10%;
-      @include phone-only{
-        flex-direction: column;
-        margin: 20px 0;
+  }
+
+  h2 {
+    @include header-display();
+    color: var(--color-primary);
+    font-weight: 500;
+    margin: 0 0 14px;
+    text-align: left;
+
+    em.serif-italic {
+      font-size: 1.04em;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--color-primary);
+    opacity: 0.7;
+    letter-spacing: 0.01em;
+
+    .dot {
+      opacity: 0.5;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 26px 0;
+    border-top: 1px solid $line;
+
+    &:last-child {
+      border-bottom: 1px solid $line;
+    }
+
+    @include tablet-down {
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+    }
+
+    @include phone-only {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 20px 0;
+    }
+  }
+
+  &__detail-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0.6;
+    align-self: start;
+    padding-top: 4px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+    }
+  }
+
+  &__detail-content {
+    color: var(--color-primary);
+    font-size: 15px;
+    line-height: 1.55;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 6px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
-      .mat-icon{
-        display: flex;
-          justify-content: center;
-          align-items: center;
-        margin:  0 10px;
-        @include medium_icon();  
-        color: $line;
-        @include phone-only{
-          margin: 10px 0;
-        }
-      }
-      span{
-        @include fontSize($sm);
-      }
-      div{
-        width: 20px;
+
+      &.sub {
+        opacity: 0.65;
+        font-size: 14px;
       }
     }
-    h2 {
-      @include fontSize($xlg);
-      text-align: center;
-      // padding: 50px;
-    }
-    &_slider_container {
-      width: inherit;
-      height: 10vh;
-      margin: 70px 0;
-      display: flex;
-      align-items: center;
-      @include tablet-down{
-        margin: 30px 0;
-      }
-      span {
-        @include fontSize($sm);
-        margin: 0 15px;
-      }
-      &_slider {
-        width: 100%;
-        height: inherit;
-        display: flex;
-        align-items: center;
-        position: relative;
-        &_line {
-          height: 1.5px;
-          background: $line;
-          width: inherit;
-        }
-        &_pointer {
-          // @include medium_icon(); 
-          margin-top: 45px;
-          position: absolute;
-          margin-left: calc(($months  - $monthsRemaining)/$months*100%);
-          color: $line;
-          .mat-icon{
-            @include small_icon(); 
-          }
-          @include phone-only{
-            margin-top: 30px;
-          }
-            
-          
-        }
-      }
-    }
-    &_information {
-      display: grid;
-      grid-template-columns: 30% 60%;
-      grid-column-gap: 9.4%;
-      height: max-content;
-      @include tablet-down{
-        display: grid;
-        grid-template-columns: unset;
-        grid-row-gap: 40px;
-        grid-column-gap: 5%;
-      }
-      &_container {
-        border-bottom: 1px solid $line;
-        div {
-          @include fontSize($sm);
-          
-          &:first-child {
-            // @include fontSize($sm);
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            background-color: $hover;
-            color: $secondary;
-            @include tablet-down{
-              height: 30px;
-            }
-          }
-          &:nth-child(2) {
-            padding: 50px 0;
-            text-align: center;
-            @include tablet-down{
-              padding: 25px 0 ;
-            }
-          }
-        }
-        &_cocurricular {
-          div {
-            &:first-child {
-              justify-content: space-between;
-              padding-left: 5px;
-              span {
-                width: 25%;
-              }
-            }
-            &:nth-child(2) {
-              width: 100%;
-              text-align: left;
-              display: flex;
-              justify-content: space-between;
-              padding-left: 5px;
-              ol {
-                width: 25%;
-                list-style: none;
-                li {
-                  margin-top: 15px;
-                  margin-bottom: 15px;
-                }
-                // background: beige;
-              }
-            }
-          }
-        }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 5px 0;
+        opacity: 0.85;
       }
     }
   }
+}

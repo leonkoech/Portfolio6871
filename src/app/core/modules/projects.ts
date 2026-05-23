@@ -33,7 +33,7 @@ export const projects: project[] = [
     name: "FloodGuard",
     id: "flood-guard",
     thumbnail:
-      "https://github.com/user-attachments/assets/e9c44157-31e3-46b9-9ecd-e699d48f1f21",
+      "https://img.youtube.com/vi/DNDrZiIaavo/maxresdefault.jpg",
     about:
       "Winner of Best Community Impact at Vibe Code Climate Hackathon. Solar-powered IoT mesh network that transforms flood monitoring into emergency communication infrastructure.",
     repoUrl: "https://github.com/leonkoech/FloodGuard-API-Server",

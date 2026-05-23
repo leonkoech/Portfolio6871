@@ -1,51 +1,48 @@
-<div class="card__parent">
-  <div class="card__background"></div>
-  <div class="card__foreground">
+<div class="card" (click)="viewProject(project.id)" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" tabindex="0">
+  <div class="card__media">
+    <div class="card__image" [ngStyle]="{ 'background-image': 'url(' + project.thumbnail + ')' }"></div>
     <a
-      class="card__top"
+      class="card__external"
       target="_blank"
       rel="noopener noreferrer"
-      href="{{ project.repoUrl }}"
+      [href]="project.repoUrl"
+      (click)="$event.stopPropagation()"
+      aria-label="Open repo in new tab"
     >
-      <p>{{ project.name }}</p>
       <mat-icon class="mat-icon">arrow_outward</mat-icon>
     </a>
-    <div class="card__image" [ngStyle]="{ 'background-image': isHovered ? 'none' : ' linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + project.thumbnail + ')' }"
-    (mouseover)="isHovered = true" (mouseleave)="isHovered = false">
-      <!-- TODO: Change color -->
-      <p class="card__details">{{project.category  }}</p>
-      <div class="card__details">
-        <p>{{ project.details }}</p>
-      </div>
-      <br>
-      <div *ngIf="project.team" class="card__details_langs members">
-        <a
-          class="card__details_langs_container"
-          *ngFor="let member of project.members"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="{{ member.url }}"
-        >
-          <!-- <div class="circle" [style]="'background:' + item.color + ';'"></div> -->
-          <p>{{ member.name }}</p>
-        </a>
-      </div>
-      <div class="card__details_langs">
-        <div
-          class="card__details_langs_container"
-          *ngFor="let item of project.languages"
-        >
-          <div class="circle" [style]="'background:' + item.color + ';'"></div>
-          <p>{{ item.name }}</p>  
-        </div>
-        
-      </div>
+  </div>
 
-      <div class="card_category"  (click)="viewProject('{{project.id}}')">
-        
-        <p>View Project</p>
-        <mat-icon class="mat-icon">chevron_right</mat-icon>
-      </div>
+  <div class="card__body">
+    <div class="card__meta">
+      <span class="card__index">{{ paddedIndex }}</span>
+      <span class="card__divider">/</span>
+      <span class="card__category">{{ project.category }}</span>
+    </div>
+
+    <h3 class="card__title">
+      <em class="serif-italic">{{ project.name }}</em>
+    </h3>
+
+    <p class="card__about">{{ project.about }}</p>
+
+    <div class="card__tags">
+      <span class="card__tag" *ngFor="let item of project.languages">
+        <span class="card__tag-dot" [style.background]="item.color"></span>
+        {{ item.name }}
+      </span>
+    </div>
+
+    <div *ngIf="project.team && project.members && project.members.length" class="card__members">
+      <span class="card__members-label">With</span>
+      <a
+        *ngFor="let member of project.members; let last = last"
+        class="card__member"
+        [href]="member.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        (click)="$event.stopPropagation()"
+      >{{ member.name }}<span *ngIf="!last">,&nbsp;</span></a>
     </div>
   </div>
 </div>

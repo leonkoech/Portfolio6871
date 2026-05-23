@@ -6,13 +6,14 @@ export const experiences = [
     end: "Present",
     location: "Miami, Florida",
     title: "Founding Engineer",
-    type: "Cloud Infrastructure, Backend Engineering",
-    summary: "Designing and maintaining cloud infrastructure for distributed healthcare platform with focus on scalability, security, and reliability.",
+    type: "Applied AI, Full Stack",
+    summary: "Building a full-stack AI healthcare platform — LLM document agents, autonomous browser automation, agentic chat, and HIPAA-compliant cloud infrastructure.",
     imageUrl: "../assets/images/atano.svg",
     details: [
-      "Designed and maintained cloud infrastructure and backend systems for a distributed healthcare platform handling sensitive patient data across multiple providers, ensuring scalability, security, and system reliability",
-      "Architected AWS cloud services including RDS, App Runner, SQS, and S3 with load balancing, implementing HIPAA-compliant security measures through Cognito IAM roles and KMS encryption with least-privilege access controls",
-      "Built and maintained CI/CD pipelines with Docker containerization for consistent deployments, while developing Python and Node.js backend services with PostgreSQL databases optimized for high throughput and reliability"
+      "Built a multi-stage document ingestion service (PyMuPDF + Tesseract OCR) with multi-model routing (Claude 3 Haiku default, Sonnet fallback) and a RAG pipeline on pgvector/Bedrock Titan Embed v2, with tenant-scoped semantic search and ephemeral job embeddings for smart-import field matching",
+      "Shipped an agentic chat layer (Bedrock Claude, 10-round reasoning loop) exposing 30+ tools over credentialing data with role-based filtering and per-tool audit logging; architected an LLM-driven browser automation agent (Playwright) for insurance-portal form filling with WebSocket streaming and DynamoDB crash-recovery",
+      "Engineered a serverless license verification pipeline (EventBridge → Lambda → SQS FIFO) processing ~40K checks/run across 16+ state boards with 100 concurrent Lambdas; provisioned HIPAA-compliant AWS infra via CDK/SAM (ECS Fargate, RDS, DynamoDB, S3, API Gateway)",
+      "Built a golden-dataset eval harness with 50+ hand-labeled documents, per-field precision/recall/F1, and CI gates blocking deploys on regression; designed a TypeScript/Node.js backend (32 route modules) with Cognito JWT + RBAC, row-level security, and BullMQ/Redis workers"
     ]
   },
   {
@@ -20,7 +21,7 @@ export const experiences = [
     website: "https://uai.tech/",
     start: "Oct 2025",
     end: "Dec 2025",
-    location: "Remote",
+    location: "Miami, Florida",
     title: "Hardware Integration Engineer",
     type: "Embedded Systems, Computer Vision",
     summary: "Developing embedded Linux systems for real-time data processing and computer vision pipelines.",
@@ -35,7 +36,7 @@ export const experiences = [
     website: "https://penti.ai/",
     start: "Nov 2025",
     end: "Nov 2025",
-    location: "Remote",
+    location: "Boca Raton, Florida",
     title: "Full Stack Developer & Cloud Engineer",
     type: "Cloud Architecture, DevOps",
     summary: "Developed cloud-native applications across AWS and GCP infrastructure.",

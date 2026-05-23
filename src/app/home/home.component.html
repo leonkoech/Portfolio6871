@@ -41,47 +41,48 @@
           </div> -->
       </div>
       <div class="right_component">
-        <div class="first_header_container">
-          <h2>About Leon</h2>
-          <div></div>
+        <div class="about-header">
+          <span class="eyebrow about-eyebrow">Founder &middot; Engineer &middot; Researcher</span>
+          <div class="first_header_container about-title">
+            <h2>About <em class="serif-italic">Leon</em></h2>
+            <div></div>
+          </div>
         </div>
-        <div class="right_component_content right_component_content_intro">
-<span>Founder | Engineer | Researcher</span>
-  <div class="visible_text">
-    <p>
-      I'm a founder and engineer who has worked across research labs, startups, and Fortune 500 clients. I build whatever needs building.
-    </p>
-    <br />
-    <p>
-      At <a href="https://www.media.mit.edu/" target="_blank" rel="noopener noreferrer">MIT Media Lab</a> I developed gesture recognition systems for NASA's Astrobee robot, designing hand gestures to help deaf astronauts communicate in space. I'm currently collaborating with <a href="https://www.eecs.ucf.edu/isuelab/" target="_blank" rel="noopener noreferrer">UCF's ISUE Lab</a> under Dr. Joseph LaViola, leading research on situational awareness for VR displays.
-    </p>
-    <br />
-    <p>
-      I've shipped production code for <a href="https://design.google.com/" target="_blank" rel="noopener noreferrer">Google Design</a> and <a href="https://unlocked.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Unlocked</a> through Instrument, built health tech infrastructure at Mindscape Health, and created <a href="https://github.com/leonkoech/AutismDetector" target="_blank" rel="noopener noreferrer">accessibility tools</a> that actually get used.
-    </p>
-    <br />
-    <p>
-      Currently building at Atano in Miami. Originally from Kenya. 15+ hackathon wins including at MIT, Stanford, and Harvard. <a href="https://githubcampus.expert/leonkoech/" target="_blank" rel="noopener noreferrer">GitHub Campus Expert</a>.
-    </p>
-    <br />
-    <p>
-      I care about technology that works under real constraints and doesn't leave people out.
-    </p>
 
-    <div class="right_component_buttons">
-      <button
-        (click)="
-          openInNewPage(
-            'https://drive.google.com/file/d/1SajK25kciWo0H_TWZD7i4ya41Wn_Aix5/view?usp=sharing'
-          )
-        "
-        class="right_component_buttons_inactive"
-      >
-        View Resume <mat-icon class="mat-icon">open_in_new</mat-icon>
-      </button>
-    </div>
-  </div>
-</div>
+        <div class="right_component_content right_component_content_intro about-body">
+          <p class="lead">
+            I'm a founder and engineer who has worked across research labs, startups, and Fortune 500 clients. I build whatever needs <em class="serif-italic">building</em>.
+          </p>
+
+          <p>
+            At <a href="https://www.media.mit.edu/" target="_blank" rel="noopener noreferrer">MIT Media Lab</a> I developed gesture recognition systems for NASA's Astrobee robot, designing hand gestures to help deaf astronauts communicate in space. Through <a href="https://www.eecs.ucf.edu/isuelab/" target="_blank" rel="noopener noreferrer">UCF's ISUE Lab</a> under Dr. Joseph LaViola, I worked on situational awareness for VR displays.
+          </p>
+
+          <p>
+            I've shipped production code for <a href="https://design.google.com/" target="_blank" rel="noopener noreferrer">Google Design</a> and <a href="https://unlocked.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Unlocked</a> through Instrument, built health tech infrastructure at Mindscape Health, and created <a href="https://github.com/leonkoech/AutismDetector" target="_blank" rel="noopener noreferrer">accessibility tools</a> that actually get used.
+          </p>
+
+          <p>
+            Currently building at Atano in Miami. 15+ hackathon wins including at MIT, Stanford, and Harvard. <a href="https://githubcampus.expert/leonkoech/" target="_blank" rel="noopener noreferrer">GitHub Campus Expert</a>.
+          </p>
+
+          <p class="closer">
+            I care about technology that works under real constraints and doesn't leave people out.
+          </p>
+
+          <div class="about-cta">
+            <button
+              (click)="
+                openInNewPage(
+                  'https://drive.google.com/file/d/1SajK25kciWo0H_TWZD7i4ya41Wn_Aix5/view?usp=sharing'
+                )
+              "
+              class="btn-pill"
+            >
+              View Resume <mat-icon class="mat-icon">open_in_new</mat-icon>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -142,11 +143,14 @@
         </div>
       </div>
     </div> -->
-  <section #contact class="main_content one_col contact">
+  <section #contact id="contact-section" class="main_content one_col contact">
     <div class="padding_width">
-      <div class="first_header_container">
-        <h2>Contact</h2>
-        <div></div>
+      <div class="about-header">
+        <span class="eyebrow">Get in touch</span>
+        <div class="first_header_container">
+          <h2>Let's <em class="serif-italic">talk</em></h2>
+          <div></div>
+        </div>
       </div>
       <contact></contact>
     </div>
@@ -176,7 +180,7 @@
       ></experience-card>
     </div>
     <div class="view-more-experience">
-      <button routerLink="/experience" class="view-more-btn">
+      <button routerLink="/experience" class="btn-pill view-more-btn">
         View All Experience
         <mat-icon>arrow_forward</mat-icon>
       </button>
@@ -194,8 +198,9 @@
     class="main_content one_col main_content_right_mini projects"
   >
     <project-card
-      *ngFor="let project of completeProjects | slice : 0 : 12"
+      *ngFor="let project of completeProjects | slice : 0 : 12; let i = index"
       [project]="project"
+      [index]="i"
     ></project-card>
   </section>
   <div
@@ -205,7 +210,7 @@
   >
     <button
       (click)="viewMoreProjects()"
-      class="right_component_buttons_inactive"
+      class="btn-pill"
     >
       View More Projects
       <mat-icon class="mat-icon">keyboard_arrow_down</mat-icon>
@@ -283,8 +288,9 @@
     class="main_content one_col main_content_right_mini projects"
   >
     <project-card
-      *ngFor="let project of projects"
+      *ngFor="let project of projects; let i = index"
       [project]="project"
+      [index]="i"
     ></project-card>
   </section>
 
@@ -295,7 +301,7 @@
   >
     <button
       (click)="viewMoreProjects()"
-      class="right_component_buttons_inactive"
+      class="btn-pill"
     >
       View Less Projects <mat-icon class="mat-icon">keyboard_arrow_up</mat-icon>
     </button>
@@ -305,7 +311,7 @@
   <div #presentations [ngClass]="'section-header'">
     <p *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">Presentations</p>
   </div>
-  <section class="main_content one_col main_content_left_mini presentations">
+  <section id="presentations-section" class="main_content one_col main_content_left_mini presentations">
     <presentation-card
       id="presentations"
       *ngFor="let pres of presentationsList"

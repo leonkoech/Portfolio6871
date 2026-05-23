@@ -1,20 +1,19 @@
 <div class="awards_container">
-    <div class="first_header_container awards_year">
-      <h2>{{year}}</h2>
-      <div></div>
-    </div>
-    <div class="awards_details" *ngFor="let i of awards; let j = index">
-      <div class="awards_details_number"><h2>0{{j+1}}</h2></div>
-      <div class="awards_details_text">
-        <h2>{{i.name}}</h2>
-        <p>{{i.details}}</p>
-        <a *ngIf="i.url" class="awards_link" target="_blank"
+  <div class="first_header_container awards_year">
+    <h2><em class="serif-italic">{{year}}</em></h2>
+    <div></div>
+  </div>
+  <div class="awards_details" *ngFor="let i of awards; let j = index">
+    <div class="awards_details_number"><span>{{ j < 9 ? '0' + (j + 1) : (j + 1) }}</span></div>
+    <div class="awards_details_text">
+      <h3>{{i.name}}</h3>
+      <p>{{i.details}}</p>
+      <a *ngIf="i.url" class="btn-pill awards_link" target="_blank"
         rel="noopener noreferrer"
-        href="{{ i.url }}" >
-          <p>Read More</p>
-          <mat-icon class="mat-icon">arrow_outward</mat-icon>
-        </a>
-        <div *ngIf="!i.url"> </div>
-      </div>
+        href="{{ i.url }}">
+        <p>Read More</p>
+        <mat-icon class="mat-icon">arrow_outward</mat-icon>
+      </a>
     </div>
   </div>
+</div>

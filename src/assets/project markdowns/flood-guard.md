@@ -5,8 +5,6 @@ A solar-powered mesh network system that transforms flood monitoring into emerge
 Winner of Best Community Impact at the Vibe Code Climate Hackathon at The Hub Miami.
 Developed by Leon Kipkoech, Jude Surin and Genesis Guardado as part of a comprehensive IoT flood monitoring solution combining ESP32 sensors, LoRa mesh networking, and real-time web visualization.
 
-![FloodGuard System Architecture](https://github.com/user-attachments/assets/6064f293-befa-4ed4-ad48-c1865664ac2d)
-
 ## Description
 
 FloodGuard is a dual-purpose IoT system that addresses the accelerating flood crisis in coastal cities through innovative mesh networking technology. The system operates in two modes: everyday flood monitoring with Google Maps integration for route optimization, and emergency communication when traditional infrastructure fails.
@@ -18,9 +16,6 @@ Flooding in Miami Beach has increased 400% since 2006, with sea level rise accel
 ## Solution
 
 FloodGuard deploys a network of solar-powered sensor nodes that create a resilient mesh communication system. Each node continuously monitors water levels while maintaining mesh connectivity for emergency scenarios. The system provides real-time flood data integration with mapping services during normal conditions and transforms into a community-wide emergency communication network when cellular infrastructure fails.
-
-![FloodGuard Network Topology](https://github.com/user-attachments/assets/d16f3937-13f3-4ab9-bf7a-2702e30cc15b)
-
 
 ### System Architecture
 

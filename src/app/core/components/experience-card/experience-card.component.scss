@@ -1,65 +1,79 @@
 @import "../../../shared/styles/globals.scss";
 
 .experience_card_summary {
-  padding: 24px;
+  padding: 28px;
   border: 1px solid var(--color-line);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    border-color: var(--color-selected);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
-    cursor: none;
   }
 
   &_header {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  &_meta {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    gap: 16px;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0.6;
 
-    @include phone-only {
-      flex-direction: column;
-      gap: 8px;
+    @media screen and (min-width: 1200px) {
+      font-size: 11px;
     }
+  }
 
-    .company {
-      @include body-large-bold();
+  .exp-eyebrow {
+    font-weight: 600;
+  }
+
+  .dates {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .company {
+    @include body-large-bold();
+    color: var(--color-primary);
+    margin: 0;
+    font-weight: 500;
+
+    em.serif-italic {
+      font-size: 1.08em;
       color: var(--color-primary);
-      margin: 0;
-    }
-
-    .dates {
-      @include body-small();
-      color: var(--color-line);
-      white-space: nowrap;
     }
   }
 
   &_content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 
     .title {
       @include body-regular();
       color: var(--color-primary);
       margin: 0;
-    }
-
-    .type {
-      @include body-small();
-      color: var(--color-selected);
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     .location {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       @include body-small();
-      color: var(--color-line);
+      color: var(--color-primary);
+      opacity: 0.5;
 
       .mat-icon {
         font-size: 14px;

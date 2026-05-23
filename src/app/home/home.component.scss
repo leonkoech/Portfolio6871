@@ -389,58 +389,13 @@ input {
     }
   }
   &_buttons {
-    margin-top: 20px;
+    margin-top: 32px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
-    button {
-      width: 45%;
-      height: 4vh;
-      background: transparent;
-      display: flex;
-      justify-content: space-around;
-      padding: 0 10%;
-      align-items: center;
-      background: transparent;
-      // @include fontSize($sm);
-      // color: $selected;
-      // font-size: 25px;
-
-      .mat-icon {
-        @include small_icon();
-      }
-      &:hover {
-        cursor: none;
-      }
-      @include phone-only {
-        padding: unset;
-        .mat-icon {
-          height: 15px;
-          width: 15px;
-          font-size: 15px;
-        }
-      }
-    }
-    &_inactive {
-      @include fontSize($sm);
-      color: $primary;
-      border: 1px solid $primary;
-    //   border-bottom: 1px solid $primary;
-      transition: border 0.5s;
-      &:hover {
-        border: 1px solid $selected;
-        color: $selected;
-      }
-    }
-    &_active {
-      @include fontSize($sm);
-      border: 1px solid $secondary;
-      color: $selected;
-      border-bottom: 1px solid $selected;
-      &:hover {
-        border: 1px solid $selected;
-      }
+    @include phone-only {
+      justify-content: center;
     }
   }
 }
@@ -681,23 +636,20 @@ input {
   }
 }
 .projects {
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 5vw;
-  row-gap: 12vh;
-  min-height: 66vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 28px;
+  row-gap: 60px;
+  min-height: 40vh;
   margin: 6% 0;
   @include desktop-down {
-    display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    row-gap: 48px;
   }
-//   @include tablet-down {
-//     display: grid;
-//     grid-template-columns: auto auto;
-//   }
   @include phone-only {
-    display: grid;
-    grid-template-columns: auto;
-    row-gap: 3vh;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
   }
 }
 .contact {
@@ -705,16 +657,123 @@ input {
   padding-bottom: 10vh;
 }
 .about {
-  
-  height: 80vh;
-  padding-top: 10vh;
+  min-height: 90vh;
+  padding: 14vh 0 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
   @include desktop-down {
-    padding: 50px 0;
+    padding: 60px 0 40px;
+    min-height: 0;
     height: auto;
   }
+
+  // Larger portrait at the editorial scale
+  .image {
+    height: 36vh;
+    width: 36vh;
+    @include desktop-down {
+      height: 32vh;
+      width: 32vh;
+    }
+  }
+
+  // Hero heading override - was 16-20px body-large-bold (way too small for a first impression)
+  .first_header_container.about-title {
+    align-items: baseline;
+    margin: 0;
+
+    h2 {
+      @include header-display();
+      color: var(--color-primary);
+      font-weight: 500;
+      margin-right: 28px;
+
+      em.serif-italic {
+        font-size: 1.04em;
+        letter-spacing: -0.01em;
+      }
+    }
+
+    > div {
+      background: $line;
+      height: 1px;
+      flex: 1;
+      align-self: center;
+      margin-top: 6px;
+    }
+  }
+
+  // Override parent row-gap/padding so our margin-driven rhythm reads cleanly
+  .about-body {
+    row-gap: 0;
+    padding-top: 0;
+  }
+
+  // Lead paragraph - the thesis sentence reads larger than the rest
+  .about-body {
+    .lead {
+      @include text-size(17px, 22px);
+      line-height: 1.45;
+      font-weight: 400;
+      color: var(--color-primary);
+      letter-spacing: -0.005em;
+      margin-bottom: 28px;
+      opacity: 1;
+
+      em.serif-italic {
+        font-size: 1.08em;
+      }
+    }
+
+    p {
+      @include body-regular();
+      color: var(--color-primary);
+      opacity: 0.78;
+      margin: 0 0 18px;
+
+      a {
+        color: var(--color-primary);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding-bottom: 1px;
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+          color: var(--color-selected);
+          border-bottom-color: var(--color-selected);
+        }
+      }
+    }
+
+    p.closer {
+      @include text-size(15px, 17px);
+      opacity: 0.92;
+      margin-top: 8px;
+      padding-top: 22px;
+      border-top: 1px solid $line;
+      font-style: normal;
+      color: var(--color-primary);
+    }
+  }
+
+  .about-cta {
+    margin-top: 36px;
+    display: flex;
+    justify-content: flex-start;
+
+    @include phone-only {
+      justify-content: center;
+    }
+  }
+}
+
+.about-header {
+  margin-bottom: 28px;
+}
+.about-eyebrow {
+  margin-bottom: 14px;
 }
 .invisible {
   visibility: hidden;

@@ -2,47 +2,70 @@
 @import "../../../shared/styles/button.scss";
 
 .presentation-card {
-    @include fontSize($sm);
+  margin-bottom: 28px;
+  padding: 26px 0;
+  border-top: 1px solid $line;
+  color: var(--color-primary);
 
-    margin-bottom: 20px;
-    padding: 15px;
-    border-bottom: 0.5px solid $line;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: $primary;
-    // background-color: #fff;
-  
-    .card-header {
-      font-weight: normal;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  
-      .date {
-        font-style: italic;
-       
-        // color: #555;
-      }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.6;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 11px;
     }
-  
-    .card-title {
-      font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      @include fontSize($lg)
+
+    .date {
+      font-style: normal;
+      white-space: nowrap;
     }
-  
-    .card-details {
-      list-style: disc;
-      padding-left: 20px;
-      margin-top: 0;
-      margin-bottom: 0;
-  
-      li {
-        margin-bottom: 5px;
-      }
-    }
-  
-   
   }
-  
+
+  .card-title {
+    margin: 18px 0 16px;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--color-primary);
+
+    em.serif-italic {
+      font-size: 1.08em;
+      color: var(--color-primary);
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+    }
+  }
+
+  .card-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding: 8px 0 8px 22px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--color-primary);
+      opacity: 0.75;
+
+      &::before {
+        content: "\2192";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        color: var(--color-selected);
+        opacity: 0.85;
+      }
+    }
+  }
+}

@@ -1,12 +1,76 @@
+<div class="project-page" *ngIf="projectData">
 
-<div class="section-header sticky">
-    <p *ngFor="let i of [0, 1, 2, 3, 4]">{{id}}</p>
-  </div>
-<div class="markdown" [innerHTML]="markdownContent">
-    
+  <!-- Hero -->
+  <header class="project-hero">
+    <div class="project-hero__inner">
+      <a class="project-hero__back" (click)="goHome()">
+        <mat-icon class="mat-icon">arrow_back</mat-icon>
+        <span>All work</span>
+      </a>
+
+      <div class="project-hero__content">
+        <span class="eyebrow project-hero__category">{{ projectData.category }}</span>
+        <h1 class="project-hero__title">
+          <em class="serif-italic">{{ projectData.name }}</em>
+        </h1>
+        <p class="project-hero__about">{{ projectData.about }}</p>
+
+        <div class="project-hero__meta">
+          <div class="project-hero__meta-item">
+            <span class="project-hero__meta-label">Stack</span>
+            <div class="project-hero__tags">
+              <span class="project-hero__tag" *ngFor="let lang of projectData.languages">
+                <span class="project-hero__tag-dot" [style.background]="lang.color"></span>
+                {{ lang.name }}
+              </span>
+            </div>
+          </div>
+
+          <div class="project-hero__meta-item" *ngIf="projectData.team && projectData.members && projectData.members.length">
+            <span class="project-hero__meta-label">With</span>
+            <div class="project-hero__members">
+              <a class="project-hero__member" *ngFor="let m of projectData.members; let last = last"
+                 [href]="m.url" target="_blank" rel="noopener noreferrer">
+                {{ m.name }}<span *ngIf="!last">,&nbsp;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-hero__meta-item">
+            <span class="project-hero__meta-label">Links</span>
+            <div class="project-hero__links">
+              <a class="project-hero__link" [href]="projectData.repoUrl" target="_blank" rel="noopener noreferrer">
+                Repository <mat-icon class="mat-icon">arrow_outward</mat-icon>
+              </a>
+              <a class="project-hero__link" *ngIf="projectData.demoUrl" [href]="projectData.demoUrl" target="_blank" rel="noopener noreferrer">
+                Demo <mat-icon class="mat-icon">arrow_outward</mat-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-hero__media" *ngIf="projectData.thumbnail">
+        <img [src]="projectData.thumbnail" [alt]="projectData.name" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Markdown body -->
+  <article class="project-article markdown" [innerHTML]="markdownContent"></article>
+
+  <!-- Similar projects -->
+  <section class="project-related" *ngIf="similarProjects.length">
+    <div class="project-related__head">
+      <span class="eyebrow">More like this</span>
+      <h2>Similar <em class="serif-italic">work</em></h2>
+    </div>
+    <div class="project-related__grid">
+      <project-card *ngFor="let p of similarProjects; let i = index" [project]="p" [index]="i"></project-card>
+    </div>
+  </section>
+
 </div>
 
-<project-details class="project-details" id={{id}}></project-details>
-<project-nav class="project-nav" id={{id}}></project-nav>
 <router-outlet></router-outlet>
-<div #customCursor class="custom-cursor">
+<div #customCursor class="custom-cursor"></div>

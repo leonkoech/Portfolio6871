@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { projects } from '../core/modules/projects';
 import { project } from '../core/models/projectModel';
 import { languages,categories } from '../core/modules/projectCats';
@@ -13,7 +13,7 @@ import { presentations } from '../core/modules/presentations';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   projects: project[] = projects
   presentationsList: presentation[] = presentations
   completeProjects: project[] = projects
@@ -70,6 +70,19 @@ export class HomeComponent implements OnInit {
   summary = true;
   expanded: boolean = false;
   selected:string="about"
+
+  // Section id → movement number for the design.google-style scroll palette swap
+  private readonly sectionMovements: Record<string, number> = {
+    about: 1,
+    'contact-section': 1,
+    education: 2,
+    experience: 2,
+    completeProjectElement: 2,
+    projectElement: 2,
+    'presentations-section': 3,
+    awards: 3,
+  };
+  private movementObserver?: IntersectionObserver;
   
   updateCursorPosition = (event: any) => {
     if (this.customCursor) {
@@ -85,6 +98,48 @@ export class HomeComponent implements OnInit {
    ngAfterViewInit(): void{
     this.scrollListener();
     this.cursorListener();
+    this.setupMovementObserver();
+   }
+
+   ngOnDestroy(): void {
+    this.movementObserver?.disconnect();
+    document.body.classList.remove('movement-1', 'movement-2', 'movement-3');
+   }
+
+   setupMovementObserver(): void {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    // Default movement before observer fires
+    this.setMovement(1);
+
+    this.movementObserver = new IntersectionObserver((entries) => {
+      // Pick the entry closest to the trigger band (highest intersection ratio).
+      let best: IntersectionObserverEntry | null = null;
+      for (const entry of entries) {
+        if (entry.isIntersecting && (!best || entry.intersectionRatio > best.intersectionRatio)) {
+          best = entry;
+        }
+      }
+      if (best) {
+        const id = (best.target as HTMLElement).id;
+        const movement = this.sectionMovements[id];
+        if (movement) this.setMovement(movement);
+      }
+    }, {
+      // Active band sits 25% to 65% from the top of the viewport.
+      rootMargin: '-25% 0px -35% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1.0],
+    });
+
+    Object.keys(this.sectionMovements).forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) this.movementObserver!.observe(el);
+    });
+   }
+
+   setMovement(n: number): void {
+    document.body.classList.remove('movement-1', 'movement-2', 'movement-3');
+    document.body.classList.add(`movement-${n}`);
    }
 
 

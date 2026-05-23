@@ -1,41 +1,61 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { marked } from 'marked';
 import { ViewEncapsulation } from '@angular/core';
+import { project } from '../core/models/projectModel';
+import { projects } from '../core/modules/projects';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
-  encapsulation: ViewEncapsulation.None // Disable view encapsulation
-
-
+  encapsulation: ViewEncapsulation.None
 })
-export class ProjectComponent implements OnInit {
-  id!: string; // or `number` if you expect numeric IDs
+export class ProjectComponent implements OnInit, OnDestroy {
+  id!: string;
   markdownContent: string | Promise<string> = '';
+  projectData: project | undefined;
+  similarProjects: project[] = [];
   @ViewChild("customCursor", { static: true }) customCursor: ElementRef<any> | undefined;
 
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id') || ''; // Get the 'id' parameter
-    this.http.get(`../../assets/project markdowns/${this.id}.md`, { responseType: 'text' })
-  .subscribe({
-    next: (data: string) => {
-      console.log('Data received:', data);
-      this.markdownContent = marked(data);
-    },
-    error: (error) => {
-      console.log("there has been an error")
-      console.error('Error:', error);
-    },
-    complete: () => {
-      console.log('Request complete');
+    // Project pages use the cream "work" palette (movement-2) — better for long-form reading.
+    document.body.classList.remove('movement-1', 'movement-3');
+    document.body.classList.add('movement-2');
+
+    this.id = this.route.snapshot.paramMap.get('id') || '';
+    this.projectData = projects.find((p) => p.id === this.id);
+    if (this.projectData) {
+      this.similarProjects = projects
+        .filter((p) => p.category === this.projectData!.category && p.id !== this.id)
+        .slice(0, 4);
     }
-  });
+
+    this.http.get(`../../assets/project markdowns/${this.id}.md`, { responseType: 'text' })
+      .subscribe({
+        next: (data: string) => {
+          this.markdownContent = marked(data);
+        },
+        error: (error) => {
+          console.error('Error loading markdown:', error);
+        }
+      });
+  }
+
+  goHome() {
+    this.router.navigate(['/']);
+  }
+
+  ngOnDestroy(): void {
+    document.body.classList.remove('movement-2');
+  }
+
+  openInNewPage(link: string) {
+    if (link) window.open(link);
   }
 
   updateCursorPosition = (event: any) => {
@@ -43,33 +63,20 @@ export class ProjectComponent implements OnInit {
       this.customCursor.nativeElement.style.top = `${event.clientY}px`;
       this.customCursor.nativeElement.style.left = `${event.clientX}px`;
     }
- }
- ngAfterViewInit(): void{
-  this.cursorListener();
- }
- 
- cursorListener(){
-  // check device type or something similar
-  if(!this.isMobileTablet()){
-    // if(this.customCursor){
-    //    if(this.initialCursorPos(this.customCursor)){
-    //     this.customCursor.nativeElement.style.display = "none";
-    //   }
-    //   else{
-    //     this.customCursor.nativeElement.style.display = "block";
-    //   }
-    // }
-   
-    window.addEventListener('mousemove', (event) => {
-      this.updateCursorPosition(event);
-    })
   }
- }
+  ngAfterViewInit(): void {
+    this.cursorListener();
+  }
 
- initialCursorPos(customCursor:any){
-  return (customCursor.nativeElement.style.top == 0 &&  customCursor.nativeElement.style.left == 0);
- }
- isMobileTablet(){
-  return (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i))
-}
+  cursorListener() {
+    if (!this.isMobileTablet()) {
+      window.addEventListener('mousemove', (event) => {
+        this.updateCursorPosition(event);
+      })
+    }
+  }
+
+  isMobileTablet() {
+    return (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i))
+  }
 }

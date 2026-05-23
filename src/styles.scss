@@ -3,11 +3,102 @@
 
 html{
     background-color: var(--color-secondary);
-    transition: background-color 0.3s ease;
+    transition: background-color 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transition: background-color 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                color 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+// ---- Scroll-driven palette movements (design.google-style) ----
+// Body class is toggled by the home component's IntersectionObserver,
+// or set explicitly by project pages on init. Vars cascade to everything
+// inside body, overriding the ThemeService's :root values within scope.
+body.movement-1,
+body.movement-3 {
+    --color-primary: #fff9eb;
+    --color-secondary: #12110c;
+    --color-line: #32302a;
+    --color-selected: #9ED0E6;
+    --color-hover: #fff9eb;
+    --color-svg-fill: #32302a;
+    --color-svg-stroke: #32302a;
+}
+
+body.movement-2 {
+    --color-primary: #141414;
+    --color-secondary: #FCFDF7;
+    --color-line: #d8d4c2;
+    --color-selected: #0E3A2E;
+    --color-hover: #141414;
+    --color-svg-fill: #d8d4c2;
+    --color-svg-stroke: #d8d4c2;
+}
+
+// Baseline transition for any element that uses theme color vars.
+// :where() has 0 specificity, so component rules with their own
+// `transition` declarations win — those keep their own hover timings.
+// Elements without a transition rule pick this up and lerp smoothly
+// when body's movement class swaps the CSS vars.
+:where(*),
+:where(*::before),
+:where(*::after) {
+    transition-property: background-color, color, border-color, fill, stroke;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+// Editorial pill button — used across About (View Resume), Projects (View More),
+// Experience (View All), Awards (Read More). Inherits theme colors.
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 999px;
+    color: var(--color-primary);
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap;
+    transition: background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.3s ease;
+
+    .mat-icon,
+    mat-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &:hover {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+
+        .mat-icon,
+        mat-icon {
+            transform: translateX(3px);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 12px 22px;
+        font-size: 12px;
+    }
 }
 
 /* width */

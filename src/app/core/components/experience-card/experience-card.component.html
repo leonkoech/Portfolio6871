@@ -1,11 +1,13 @@
 <div class="experience_card_summary" (click)="navigateToExperience()">
   <div class="experience_card_summary_header">
-    <h2 class="company">{{ experience.company }}</h2>
-    <span class="dates">{{ experience.start }} - {{ experience.end }}</span>
+    <div class="experience_card_summary_meta">
+      <span class="exp-eyebrow">{{ experience.type }}</span>
+      <span class="dates">{{ experience.start }} &mdash; {{ experience.end }}</span>
+    </div>
+    <h2 class="company"><em class="serif-italic">{{ experience.company }}</em></h2>
   </div>
   <div class="experience_card_summary_content">
     <h3 class="title">{{ experience.title }}</h3>
-    <span class="type">{{ experience.type }}</span>
     <span class="location">
       <mat-icon>pin_drop</mat-icon>
       {{ experience.location }}
