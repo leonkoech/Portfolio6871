@@ -1,81 +1,74 @@
 <div class="experience-page">
+
   <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <a routerLink="/" class="back-link">
-        <mat-icon>arrow_back</mat-icon>
-        <span>Back</span>
+  <aside class="exp-sidebar">
+    <div class="exp-sidebar__header">
+      <a routerLink="/" class="exp-sidebar__back">
+        <mat-icon class="mat-icon">arrow_back</mat-icon>
+        <span>All work</span>
       </a>
-      <h2>Experience</h2>
+      <span class="exp-sidebar__eyebrow">Experience</span>
+      <h1 class="exp-sidebar__title">Selected <em class="serif-italic">roles</em></h1>
     </div>
 
-    <nav class="sidebar-nav">
+    <nav class="exp-sidebar__nav">
       <button
         *ngFor="let exp of experiences; let i = index"
-        class="sidebar-item"
-        [class.active]="activeIndex === i"
+        class="exp-sidebar__item"
+        [class.is-active]="activeIndex === i"
         (click)="scrollToExperience(i)">
-        <span class="sidebar-item-company">{{ exp.company }}</span>
-        <span class="sidebar-item-title">{{ exp.title }}</span>
-        <span class="sidebar-item-dates">{{ exp.start }} - {{ exp.end }}</span>
+        <span class="exp-sidebar__item-num">{{ padIndex(i) }}</span>
+        <div class="exp-sidebar__item-body">
+          <span class="exp-sidebar__item-company">{{ exp.company }}</span>
+          <span class="exp-sidebar__item-meta">{{ exp.start }} &mdash; {{ exp.end }}</span>
+        </div>
       </button>
     </nav>
   </aside>
 
   <!-- Main Content -->
-  <main class="main-content" #mainContent>
-    <div class="experiences-container">
-      <div
+  <main class="exp-main" #mainContent>
+    <div class="exp-main__inner">
+      <article
         *ngFor="let exp of experiences; let i = index"
         #experienceSection
-        class="experience-detail"
+        class="exp-entry"
         [attr.data-index]="i">
 
-        <!-- Logo Section -->
-        <div class="logo-section">
-          <div class="spin_image">
-            <img [src]="exp.imageUrl" [alt]="exp.company" />
-          </div>
-          <div class="company-link">
-            <a [href]="exp.website" target="_blank" rel="noopener noreferrer">
-              <span>Visit {{ exp.company }}</span>
-              <mat-icon>arrow_outward</mat-icon>
-            </a>
-          </div>
-        </div>
-
-        <!-- Details Section -->
-        <div class="details-section">
-          <div class="experience-header">
-            <h1>{{ exp.title }}</h1>
-            <div class="experience-meta">
-              <div class="meta-item">
-                <mat-icon>business</mat-icon>
-                <span>{{ exp.company }}</span>
-              </div>
-              <div class="meta-item">
-                <mat-icon>date_range</mat-icon>
-                <span>{{ exp.start }} - {{ exp.end }}</span>
-              </div>
-              <div class="meta-item">
-                <mat-icon>pin_drop</mat-icon>
-                <span>{{ exp.location }}</span>
-              </div>
-            </div>
-            <span class="experience-type">{{ exp.type }}</span>
-            <p class="experience-summary">{{ exp.summary }}</p>
+        <header class="exp-entry__header">
+          <div class="exp-entry__meta">
+            <span class="exp-entry__num">{{ padIndex(i) }}</span>
+            <span class="exp-entry__dot">&middot;</span>
+            <span class="exp-entry__type">{{ exp.type }}</span>
           </div>
 
-          <div class="experience-details">
-            <h3>Key Achievements</h3>
-            <ul>
-              <li *ngFor="let detail of exp.details">
-                {{ detail }}
-              </li>
-            </ul>
+          <h2 class="exp-entry__company">
+            <em class="serif-italic">{{ exp.company }}</em>
+          </h2>
+
+          <div class="exp-entry__role">
+            <span class="exp-entry__title">{{ exp.title }}</span>
+            <span class="exp-entry__sep">&mdash;</span>
+            <span class="exp-entry__dates">{{ exp.start }} &mdash; {{ exp.end }}</span>
+            <span class="exp-entry__sep">&middot;</span>
+            <span class="exp-entry__location">{{ exp.location }}</span>
           </div>
-        </div>
-      </div>
+
+          <p class="exp-entry__summary">{{ exp.summary }}</p>
+
+          <a class="exp-entry__visit" [href]="exp.website" target="_blank" rel="noopener noreferrer">
+            Visit {{ exp.company }}
+            <mat-icon class="mat-icon">arrow_outward</mat-icon>
+          </a>
+        </header>
+
+        <section class="exp-entry__details">
+          <span class="exp-entry__details-label">Highlights</span>
+          <ul>
+            <li *ngFor="let detail of exp.details">{{ detail }}</li>
+          </ul>
+        </section>
+      </article>
     </div>
   </main>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { experiences } from '../core/modules/experience';
 import { experience } from '../core/models/experienceModel';
@@ -8,7 +8,7 @@ import { experience } from '../core/models/experienceModel';
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit, AfterViewInit {
+export class ExperienceComponent implements OnInit, OnDestroy, AfterViewInit {
   experiences: experience[] = experiences;
   activeIndex: number = 0;
   private scrollToIndex: number | null = null;
@@ -20,11 +20,23 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // Cream "work" palette for the experience route — long-form reading on light bg.
+    document.body.classList.remove('movement-1', 'movement-3');
+    document.body.classList.add('movement-2');
+
     this.route.queryParams.subscribe(params => {
       if (params['scrollTo'] !== undefined) {
         this.scrollToIndex = parseInt(params['scrollTo'], 10);
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    document.body.classList.remove('movement-2');
+  }
+
+  padIndex(i: number): string {
+    return String(i + 1).padStart(2, '0');
   }
 
   ngAfterViewInit(): void {
