@@ -473,7 +473,8 @@ input {
     color: var(--color-primary);
     display: flex;
     align-items: center;
-    gap: 56px;
+    justify-content: space-between;
+    gap: 16px;
     overflow: hidden;
     border-top: 1px solid var(--color-line);
     border-bottom: none;
@@ -501,17 +502,14 @@ input {
 
     @include tablet-down {
       margin: 60px 5vw 40px 15vw;
-      gap: 32px;
       padding-top: 14px;
     }
     @include desktop-down {
-      gap: 40px;
       p:nth-child(n + 6) {
         display: none;
       }
     }
     @include phone-only {
-      gap: 24px;
       p:nth-child(n + 3) {
         display: none;
       }
@@ -645,11 +643,11 @@ input {
   -webkit-backdrop-filter: blur(18px);
   border-top: none;
   border-bottom: 1px solid var(--color-line);
-  gap: 40px;
+  gap: 16px;
 
   @include tablet-down {
     padding: 12px 5vw 12px 15vw;
-    gap: 28px;
+    gap: 12px;
   }
 
   p {
