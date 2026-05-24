@@ -18,143 +18,140 @@ input {
 }
 .side_nav {
   position: fixed;
-  width: 5vw;
-  height: 88.89vh;
-  padding-top: 11.11vh;
+  width: 56px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding: 100px 0 40px;
   z-index: 4;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  border-top: 0px;
+  justify-content: center;
+  gap: 12px;
+  border-right: none;
   overflow: hidden;
-  // backdrop-filter: invert(10%);
-  transition: backdrop-filter 2s;
-  transition: width 1s;
+  transition: width 600ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 700ms cubic-bezier(0.22, 1, 0.36, 1),
+              backdrop-filter 600ms ease;
+
   @include tablet-down {
-    // width: 20vw;
-    // height: 89.9vh;
-    // padding-top: 10vh;
-    padding-top: 8.33vh;
-    height: 91.67%;
-    width: 10vw;
+    width: 44px;
+    padding: 80px 0 32px;
   }
+
   div {
-    height: inherit;
+    height: 96px;
+    flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content: center;
-    border: 0.5px solid transparent;
-    transition: border 0.5s;
+    cursor: none;
+
     span {
       transform: rotate(-90deg);
+      transform-origin: center;
+      white-space: nowrap;
       text-align: center;
-      // text-transform: uppercase;
-      @include fontSize($xsm);
-    //   @include tablet-down {
-    //     @include fontSize($xsm);
-    //   }
-      transition: background-color 1s;
-      transition: font-size 0.5s;
-      transition: transform 1s;
-    }
-    &:hover {
-      background-color: $line;
-      cursor: none;
-      backdrop-filter: invert(10%);
-      span {
-        color: $selected;
-        @include fontSize($sm);
-        // @include tablet-down {
-        //   @include fontSize($sm);
-        // }
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--color-primary);
+      opacity: 0.5;
+      transition: opacity 400ms ease, color 400ms ease, font-size 400ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+      @media screen and (min-width: 1200px) {
+        font-size: 11px;
       }
     }
+
+    &:hover span {
+      opacity: 1;
+      color: var(--color-selected);
+    }
   }
+
   .active {
-    border-right: 1px solid $primary;
     span {
-      color: $selected;
-      @include fontSize($sm);
-      @include tablet-down {
-        @include fontSize($sm);
-      }
+      opacity: 1;
+      color: var(--color-selected);
     }
   }
+
   &_expanded {
-    width: 50vw;
-    backdrop-filter: blur(15px);
+    width: 240px;
+    background-color: color-mix(in srgb, var(--color-secondary) 88%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid var(--color-line);
+    gap: 4px;
+    justify-content: center;
+
     @include tablet-down {
-      width: 80vw;
+      width: 70vw;
     }
+
     div {
+      height: auto;
+      padding: 14px 0 14px 28px;
+      align-items: center;
+      justify-content: flex-start;
+
       span {
         transform: rotate(0deg);
-        @include fontSize($md);
-        transition: font-size 0.5s;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        opacity: 0.85;
       }
-      &:hover {
-        border: 0.5px transparent;
-        border-bottom: 0.5px solid $primary;
 
-        span {
-          @include fontSize($lg);
-        }
+      &:hover span {
+        opacity: 1;
       }
     }
-    .active {
-      border-color: transparent;
-      border-bottom: 0.5px solid $selected;
-      span {
-        transform: unset;
-        color: $selected;
-        @include fontSize($lg);
-      }
+
+    .active span {
+      opacity: 1;
+      color: var(--color-selected);
     }
   }
 }
 .menu-button {
+  position: fixed;
+  top: 8px;
+  left: 14px;
+  width: 32px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20vw;
-  height: 80px;
-  transition: backdrop-filter 2s;
-  transition: width 1s;
-  position: fixed;
+  border-radius: 50%;
   z-index: 5;
+  transition: background-color 300ms ease, transform 400ms ease;
+
   @include tablet-down {
-    width: 10vw;
-    height: 60px;
+    top: 6px;
+    left: 10px;
+    width: 28px;
+    height: 28px;
   }
+
   .mat-icon {
-    @include medium_icon();
-    color: $primary;
-    @include tablet-down {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    color: var(--color-primary);
+    opacity: 0.85;
+    transition: color 300ms ease, transform 400ms ease, opacity 300ms ease;
   }
+
+  &:hover .mat-icon {
+    color: var(--color-selected);
+    opacity: 1;
+  }
+
   &_clicked {
-    width: 80vw;
-  }
-  &:hover {
-    cursor: none;
-    mat-icon {
-      color: $selected;
-    }
-  }
-  @include tablet-up {
-    width: 5vw;
     .mat-icon {
-      // @include fontSize($md);
-      @include medium_icon();
-    }
-    &_clicked {
-      width: 50vw;
-      @include fontSize($lg);
+      transform: rotate(0deg);
     }
   }
 }
@@ -469,43 +466,53 @@ input {
 }
 .section {
   &-header {
-    width: 85vw;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 11vw;
-    color: $primary;
-    @include fontSize($xsm);
-    // position: relative;
+    width: auto;
+    height: auto;
+    margin: 80px 3vw 56px 11vw;
+    padding: 16px 0 0;
+    color: var(--color-primary);
     display: flex;
     align-items: center;
+    gap: 56px;
     overflow: hidden;
-    top: 15px;
-    justify-content: space-between;
-    border-bottom: 1px solid $line;
-    border-top: 1px solid $line;
+    border-top: 1px solid var(--color-line);
+    border-bottom: none;
+
     p {
-      @include fontSize($xsm);
-      color: $line;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-    }
-    @include tablet-down {
-      width: 82vw;
-      margin-left: 15vw;
-      height: 30px;
-      p {
-        @include fontSize($xsm);
+      color: var(--color-primary);
+      opacity: 0.45;
+      margin: 0;
+      flex-shrink: 0;
+      white-space: nowrap;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 13px;
       }
     }
+
+    // The first repetition reads as the primary label
+    p:first-child {
+      opacity: 0.85;
+    }
+
+    @include tablet-down {
+      margin: 60px 5vw 40px 15vw;
+      gap: 32px;
+      padding-top: 14px;
+    }
     @include desktop-down {
-      p:nth-child(n + 5) {
-        // font-size: 10px;
+      gap: 40px;
+      p:nth-child(n + 6) {
         display: none;
       }
     }
     @include phone-only {
-      p:nth-child(n + 4) {
-        // font-size: 10px;
+      gap: 24px;
+      p:nth-child(n + 3) {
         display: none;
       }
     }
@@ -625,14 +632,33 @@ input {
 }
 .sticky {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 3;
-  backdrop-filter: blur(10px);
-  margin-top: 0;
-  margin-bottom: 0;
-  border-bottom: 1px solid $primary;
-  border-top: 1px solid $primary;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 14px 3vw 14px 11vw;
+  background: color-mix(in srgb, var(--color-secondary) 82%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: none;
+  border-bottom: 1px solid var(--color-line);
+  gap: 40px;
+
+  @include tablet-down {
+    padding: 12px 5vw 12px 15vw;
+    gap: 28px;
+  }
+
   p {
-    color: $primary;
+    opacity: 0.55;
+    color: var(--color-primary);
+  }
+  p:first-child {
+    opacity: 1;
+    color: var(--color-primary);
   }
 }
 .projects {
